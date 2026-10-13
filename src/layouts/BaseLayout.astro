@@ -40,9 +40,12 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
     <meta property="og:locale" content="ar_AR" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Preconnect for fonts -->
+    <!-- Fonts: non-render-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" /></noscript>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -71,5 +74,68 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
     </main>
     <Footer />
     <FloatingButtons />
+
+    <script>
+      // Force scroll to top on every page load/refresh
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      window.scrollTo(0, 0);
+
+      // Scroll reveal
+      const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            revealObs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+      // Animated number counter
+      function runCounter(el: HTMLElement, target: number, suffix = '') {
+        const dur = 1600;
+        const start = performance.now();
+        const tick = (now: number) => {
+          const p = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(eased * target).toLocaleString('ar-SA') + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+
+      const counterObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const el = e.target as HTMLElement;
+            const target = parseInt(el.dataset.target || '0');
+            const suffix = el.dataset.suffix || '';
+            runCounter(el, target, suffix);
+            counterObs.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+      // Typewriter effect
+      const twEl = document.getElementById('typewriter');
+      if (twEl) {
+        const phrases = ['حظر مؤقت','حظر نهائي','رسالة "لا يمكن لهذا الحساب"','حظر واتساب الأعمال','طلب مراجعة مرفوض'];
+        let pi = 0, ci = 0, deleting = false;
+        const TYPE_SPEED = 80, DELETE_SPEED = 40, PAUSE = 1800;
+        function tick() {
+          const phrase = phrases[pi];
+          if (!deleting) {
+            twEl.textContent = phrase.slice(0, ++ci);
+            if (ci === phrase.length) { deleting = true; setTimeout(tick, PAUSE); return; }
+          } else {
+            twEl.textContent = phrase.slice(0, --ci);
+            if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
+          }
+          setTimeout(tick, deleting ? DELETE_SPEED : TYPE_SPEED);
+        }
+        setTimeout(tick, 600);
+      }
+    </script>
   </body>
 </html>
