@@ -16,33 +16,22 @@ const schema = JSON.stringify([
   },
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "ما الفرق بين الحظر المؤقت والمشدد في واتساب؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "الحظر المؤقت يُرفع تلقائياً بعد 24-72 ساعة. الحظر المشدد يستمر لفترة أطول ويحتاج طلب مراجعة رسمي. الحظر النهائي لا يمكن رفعه بطلب مراجعة عادي."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "كم يستغرق رفع الحظر المشدد؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "واتساب لا تُحدد مدة ثابتة. في الغالب تتراوح بين أسبوع وعدة أسابيع بعد تقديم طلب المراجعة."
-        }
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://wfixerx.com" },
       { "@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://wfixerx.com/مدونة/" },
       { "@type": "ListItem", "position": 3, "name": "حظر واتساب المشدد", "item": "https://wfixerx.com/مدونة/حظر-واتساب-مشدد/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "ما الفرق بين الحظر المؤقت والمشدد في واتساب؟", "acceptedAnswer": { "@type": "Answer", "text": "الحظر المؤقت يُرفع تلقائياً بعد 24-72 ساعة. الحظر المشدد يستمر لأسابيع ويحتاج طلب مراجعة رسمي. الحظر النهائي لا يمكن رفعه بطلب مراجعة عادي." } },
+      { "@type": "Question", "name": "كم يستغرق رفع الحظر المشدد؟", "acceptedAnswer": { "@type": "Answer", "text": "واتساب لا تُحدد مدة ثابتة. في الغالب تتراوح بين أسبوع وعدة أسابيع بعد تقديم طلب المراجعة." } },
+      { "@type": "Question", "name": "هل يمكن رفع الحظر المشدد من أول محاولة؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم، إذا كانت رسالة المراجعة مقنعة والحالة قابلة للحل. لكن البعض يحتاج أكثر من محاولة." } },
+      { "@type": "Question", "name": "هل الحظر المشدد دائم؟", "acceptedAnswer": { "@type": "Answer", "text": "لا، الحظر المشدد ليس دائماً في معظم الحالات. يمكن رفعه بطلب مراجعة رسمي وانتظار قرار فريق واتساب." } },
+      { "@type": "Question", "name": "ماذا أفعل إذا رفض واتساب طلب المراجعة؟", "acceptedAnswer": { "@type": "Answer", "text": "إذا رُفض الطلب، يمكن إعادة التقديم بعد فترة مع تقديم تفاصيل إضافية. يمكن أيضاً التواصل مع متخصصين في استرداد الحسابات للمساعدة." } }
     ]
   }
 ]);
@@ -55,23 +44,23 @@ const schema = JSON.stringify([
 >
 
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2" aria-label="مسار التنقل">
-    <ol class="flex items-center gap-2 text-sm text-gray-400 flex-wrap">
-      <li><a href="/" class="hover:text-[#1A3C6E]">الرئيسية</a></li>
+    <ol class="flex items-center gap-2 text-sm text-white/40 flex-wrap">
+      <li><a href="/" class="hover:text-[#25D366] transition-colors">الرئيسية</a></li>
       <li aria-hidden="true">←</li>
-      <li><a href="/مدونة/" class="hover:text-[#1A3C6E]">المدونة</a></li>
+      <li><a href="/مدونة/" class="hover:text-[#25D366] transition-colors">المدونة</a></li>
       <li aria-hidden="true">←</li>
-      <li class="text-gray-700 font-medium">حظر واتساب المشدد</li>
+      <li class="text-white/70 font-medium">حظر واتساب المشدد</li>
     </ol>
   </nav>
 
-  <header class="bg-gradient-to-b from-red-50 to-white py-12 px-4 sm:px-6 border-b border-gray-100">
+  <header class="bg-gradient-to-b from-[#07111f] to-[#060d1a] py-12 px-4 sm:px-6 border-b border-white/8">
     <div class="max-w-4xl mx-auto">
-      <p class="text-xs text-gray-400 mb-4">أكتوبر 2026 · وقت القراءة: 5 دقائق</p>
-      <h1 class="text-3xl sm:text-4xl font-bold text-[#0A1628] leading-tight mb-6">
+      <p class="text-xs text-white/40 mb-4">أكتوبر 2026 · وقت القراءة: 6 دقائق</p>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
         حظر واتساب المشدد — ما هو وكيف تفكه
       </h1>
-      <p class="text-lg text-gray-600 leading-relaxed">
-        الحظر المشدد أصعب من الحظر العادي ولا يُرفع تلقائياً — لكنه ليس نهائياً في كل الحالات. هذه المقالة تشرح ما يميّزه وكيف تتعامل معه.
+      <p class="text-lg text-white/70 leading-relaxed">
+        الحظر المشدد أصعب من الحظر العادي ولا يُرفع تلقائياً — لكنه ليس نهائياً في كل الحالات. هذه المقالة تشرح ما يميّزه وكيف تتعامل معه بشكل صحيح.
       </p>
     </div>
   </header>
@@ -79,74 +68,79 @@ const schema = JSON.stringify([
   <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
 
     <div class="quick-answer mb-10">
-      <p class="text-xs font-semibold text-[#1A3C6E] uppercase tracking-wider mb-2">الجواب السريع</p>
-      <h2 class="text-xl font-bold text-[#0A1628] mb-3">ما هو حظر واتساب المشدد وكيف يُفك؟</h2>
-      <p class="text-gray-700">حظر واتساب المشدد هو تقييد موسّع يستمر لأسابيع ولا يُرفع تلقائياً. يحدث عادةً بعد تكرار المخالفات أو استخدام نسخ معدّلة. للتعامل معه: <strong>1.</strong> توقف عن أي نشاط مخالف. <strong>2.</strong> قدّم طلب مراجعة رسمي. <strong>3.</strong> انتظر الرد وتواصل مع متخصص إذا احتجت مساعدة.</p>
+      <p class="text-xs font-semibold text-[#25D366] uppercase tracking-wider mb-2">الجواب السريع</p>
+      <h2 class="text-xl font-bold text-white mb-3">ما هو حظر واتساب المشدد وكيف يُفك؟</h2>
+      <p class="text-white/75">حظر واتساب المشدد هو تقييد موسّع يستمر لأسابيع ولا يُرفع تلقائياً. يحدث عادةً بعد تكرار المخالفات أو استخدام نسخ معدّلة. للتعامل معه: <strong class="text-white">1.</strong> توقف عن أي نشاط مخالف. <strong class="text-white">2.</strong> قدّم طلب مراجعة رسمي. <strong class="text-white">3.</strong> انتظر الرد وتواصل مع متخصص إذا احتجت مساعدة.</p>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">ما هو حظر واتساب المشدد؟</h2>
-    <p class="text-gray-700 leading-relaxed mb-6">
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4">ما هو حظر واتساب المشدد؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
       حظر واتساب المشدد هو نوع متقدم من الحظر يقع بين الحظر المؤقت (24-72 ساعة) والحظر النهائي. يعني أن واتساب رصدت مخالفات متكررة أو جدية في استخدام الحساب وقررت تعليقه لفترة طويلة مع إمكانية المراجعة.
     </p>
+    <p class="text-white/70 leading-relaxed mb-6">
+      ما يميّز الحظر المشدد عن الحظر العادي هو مدته الطويلة وحاجته لتدخل فعلي من المستخدم. لا تنتظر رفعه تلقائياً — يجب تقديم طلب مراجعة.
+    </p>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">مقارنة أنواع الحظر</h2>
-    <div class="overflow-x-auto mb-8">
-      <table class="w-full border-collapse text-sm">
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4">مقارنة أنواع الحظر</h2>
+    <div class="overflow-x-auto mb-8 rounded-xl border border-white/10">
+      <table class="w-full text-sm">
         <thead>
-          <tr class="bg-[#0A1628] text-white">
-            <th class="p-3 text-right font-semibold">النوع</th>
-            <th class="p-3 text-right font-semibold">المدة</th>
-            <th class="p-3 text-right font-semibold">الحل</th>
-            <th class="p-3 text-right font-semibold">الصعوبة</th>
+          <tr class="bg-white/5 border-b border-white/10">
+            <th class="p-3 text-right font-semibold text-white/70">النوع</th>
+            <th class="p-3 text-right font-semibold text-white/70">المدة</th>
+            <th class="p-3 text-right font-semibold text-white/70">الحل</th>
+            <th class="p-3 text-right font-semibold text-white/70">الصعوبة</th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="border-b border-gray-200 bg-green-50">
-            <td class="p-3 font-medium">مؤقت</td>
-            <td class="p-3">24-72 ساعة</td>
-            <td class="p-3">انتظار</td>
-            <td class="p-3 text-green-700 font-medium">سهل</td>
+        <tbody class="divide-y divide-white/8">
+          <tr>
+            <td class="p-3 text-white/80 font-medium">مؤقت</td>
+            <td class="p-3 text-white/65">24-72 ساعة</td>
+            <td class="p-3 text-white/65">انتظار</td>
+            <td class="p-3 text-green-400 font-medium">سهل</td>
           </tr>
-          <tr class="border-b border-gray-200 bg-orange-50">
-            <td class="p-3 font-medium">مشدد</td>
-            <td class="p-3">أسابيع</td>
-            <td class="p-3">طلب مراجعة</td>
-            <td class="p-3 text-orange-700 font-medium">متوسط</td>
+          <tr>
+            <td class="p-3 text-white/80 font-medium">مشدد</td>
+            <td class="p-3 text-white/65">أسابيع</td>
+            <td class="p-3 text-white/65">طلب مراجعة</td>
+            <td class="p-3 text-orange-400 font-medium">متوسط</td>
           </tr>
-          <tr class="border-b border-gray-200 bg-red-50">
-            <td class="p-3 font-medium">نهائي</td>
-            <td class="p-3">دائم</td>
-            <td class="p-3">مراجعة قانونية / مساعدة متخصصة</td>
-            <td class="p-3 text-red-700 font-medium">صعب</td>
+          <tr>
+            <td class="p-3 text-white/80 font-medium">نهائي</td>
+            <td class="p-3 text-white/65">دائم</td>
+            <td class="p-3 text-white/65">تدخل متخصص</td>
+            <td class="p-3 text-red-400 font-medium">صعب</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">علامات الحظر المشدد</h2>
-    <ul class="space-y-3 text-gray-700 mb-8">
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4">علامات الحظر المشدد</h2>
+    <ul class="space-y-3 text-white/70 mb-8">
       {[
         "تظهر رسالة الحظر مع عدّاد يمتد لأسبوع أو أكثر.",
         'ظهور رسالة "هذا الحساب لا يمكنه استخدام واتساب" بدون عدّاد.',
         "عدم استجابة التطبيق رغم إعادة التثبيت.",
         "استمرار الحظر بعد انتهاء المدة المذكورة.",
         "رفض طلب المراجعة الأول مع إمكانية إعادة التقديم.",
+        "عدم إمكانية تسجيل الدخول باستخدام نفس الرقم على جهاز جديد.",
       ].map(s => (
         <li class="flex items-start gap-3">
-          <span class="text-red-500 font-bold shrink-0 mt-0.5">!</span>
+          <span class="text-red-400 font-bold shrink-0 mt-0.5">!</span>
           {s}
         </li>
       ))}
     </ul>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">أسباب الحظر المشدد</h2>
-    <ul class="space-y-2 text-gray-700 mb-8">
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4">أسباب الحظر المشدد</h2>
+    <ul class="space-y-3 text-white/70 mb-8">
       {[
-        "تكرار الحظر المؤقت عدة مرات خلال فترة قصيرة.",
-        "استخدام نسخ معدّلة (GB WhatsApp) لفترة طويلة.",
-        "تلقي عدد كبير من التقارير من مستخدمين مختلفين.",
-        "إرسال محتوى مخالف بشكل موثّق.",
-        "نشاط مشبوه (استخدام من عدة أجهزة في نفس الوقت).",
+        "تكرار الحظر المؤقت عدة مرات خلال فترة قصيرة دون تغيير السلوك.",
+        "استخدام نسخ معدّلة (GB WhatsApp, WhatsApp Plus) لفترة طويلة.",
+        "تلقي عدد كبير جداً من التقارير من مستخدمين مختلفين.",
+        "إرسال محتوى مخالف بشكل موثّق في سجل الحساب.",
+        "نشاط مشبوه مثل استخدام الحساب من عدة أجهزة في نفس الوقت.",
+        "ربط الحساب ببرامج أتمتة غير رسمية لفترة طويلة.",
       ].map(c => (
         <li class="flex items-start gap-3">
           <span class="w-2 h-2 rounded-full bg-orange-400 shrink-0 mt-2"></span>
@@ -155,55 +149,55 @@ const schema = JSON.stringify([
       ))}
     </ul>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-6">خطوات رفع الحظر المشدد</h2>
-    <ol class="space-y-4 mb-8">
+    <h2 class="text-2xl font-bold text-white mt-10 mb-6">خطوات رفع الحظر المشدد</h2>
+    <ol class="space-y-5 mb-8">
       {[
         {
           title: "أوقف كل نشاط مخالف فوراً",
-          desc: "إذا كنت تستخدم نسخة معدّلة، احذفها واحذف ملفاتها. إذا كنت ترسل رسائل جماعية، أوقف ذلك تماماً."
+          desc: "إذا كنت تستخدم نسخة معدّلة، احذفها واحذف ملفاتها تماماً. إذا كنت ترسل رسائل جماعية، أوقف ذلك كلياً. البداية الصحيحة شرط للنجاح."
         },
         {
           title: "اضغط على 'طلب المراجعة' داخل التطبيق",
-          desc: "إذا ظهر الزر، استخدمه. أدخل رقم الهاتف بدقة مع رمز الدولة."
+          desc: "إذا ظهر الزر، استخدمه. أدخل رقم الهاتف بدقة مع رمز الدولة (+966 للسعودية، +962 للأردن، +20 لمصر...)."
         },
         {
           title: "اكتب رسالة مراجعة احترافية",
-          desc: "اشرح أنك لم تنتهك السياسات عمداً، أو أن المشكلة حُلّت. كن صادقاً ومختصراً."
+          desc: "اشرح أنك لم تنتهك السياسات عمداً، أو أن المشكلة حُلّت. كن صادقاً ومختصراً. تجنب الوعود المبالغة أو الادعاءات الكاذبة."
         },
         {
           title: "جرّب عبر support.whatsapp.com",
-          desc: "إذا لم تظهر خيار المراجعة داخل التطبيق، توجّه لموقع الدعم الرسمي وقدّم طلباً هناك."
+          desc: "إذا لم تظهر خيار المراجعة داخل التطبيق، توجّه لموقع دعم واتساب الرسمي وقدّم طلباً هناك بنفس التفاصيل."
         },
         {
           title: "انتظر الرد — قد يستغرق أسبوعين",
-          desc: "واتساب لا تُخبرك بمدة محددة. لا تقدّم طلبات متكررة — هذا يؤخر الرد."
+          desc: "واتساب لا تُخبرك بمدة محددة. لا تقدّم طلبات متكررة — هذا يؤخر الرد ويؤثر سلبياً على قضيتك."
         },
       ].map((step, i) => (
         <li class="flex gap-4">
-          <span class="w-8 h-8 rounded-full bg-[#1A3C6E] text-white flex items-center justify-center font-bold shrink-0 mt-0.5 text-sm">{i + 1}</span>
+          <span class="w-9 h-9 rounded-full bg-[#25D366]/15 text-[#25D366] flex items-center justify-center font-bold shrink-0 mt-0.5 text-sm border border-[#25D366]/30">{i + 1}</span>
           <div>
-            <p class="font-bold text-[#0A1628] mb-1">{step.title}</p>
-            <p class="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+            <p class="font-bold text-white mb-1">{step.title}</p>
+            <p class="text-white/65 text-sm leading-relaxed">{step.desc}</p>
           </div>
         </li>
       ))}
     </ol>
 
-    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-8">
-      <p class="font-bold text-amber-800 mb-2">تنبيه مهم</p>
-      <p class="text-amber-700 text-sm leading-relaxed">لا تشارك أبداً كلمة مرورك أو رمز التحقق (OTP) مع أي شخص يدّعي قدرته على فك الحظر. WFixerX لا تطلب هذه المعلومات أبداً.</p>
+    <div class="bg-amber-950/30 border border-amber-500/20 rounded-2xl p-5 mb-8">
+      <p class="font-bold text-amber-400 mb-2">تنبيه مهم — أمانك أولاً</p>
+      <p class="text-amber-300/80 text-sm leading-relaxed">لا تشارك أبداً كلمة مرورك أو رمز التحقق (OTP) مع أي شخص يدّعي قدرته على فك الحظر. WFixerX لا تطلب هذه المعلومات أبداً — وأي شخص يطلبها يريد الاستيلاء على حسابك.</p>
     </div>
 
-    <div class="bg-[#0A1628] rounded-2xl p-6 text-white text-center mb-10">
-      <p class="font-semibold mb-2">حظرك مشدد ولم تنجح وحدك؟</p>
-      <p class="text-white/60 text-sm mb-5">نساعدك في إعداد طلب مراجعة احترافي يرفع فرص النجاح</p>
+    <div class="glass-dark rounded-2xl p-6 text-center mb-10 border border-white/10">
+      <p class="font-semibold text-white mb-2">حظرك مشدد ولم تنجح وحدك؟</p>
+      <p class="text-white/55 text-sm mb-5">نساعدك في تقييم وضعك وإعداد طلب مراجعة يرفع فرص النجاح</p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa">واتساب</a>
         <a href={TG_LINK} target="_blank" rel="noopener" class="btn-tg">تلغرام</a>
       </div>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mb-4">الأسئلة الشائعة</h2>
+    <h2 class="text-2xl font-bold text-white mb-6">الأسئلة الشائعة</h2>
     <div class="space-y-3 mb-10">
       {[
         {
@@ -218,10 +212,21 @@ const schema = JSON.stringify([
           q: "هل يمكن رفع الحظر المشدد من أول محاولة؟",
           a: "نعم، إذا كانت رسالة المراجعة مقنعة والحالة قابلة للحل. لكن البعض يحتاج أكثر من محاولة."
         },
-      ].map(item => (
-        <details class="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
-          <summary class="p-4 font-semibold text-[#0A1628] cursor-pointer hover:bg-gray-100 transition-colors">{item.q}</summary>
-          <p class="px-4 pb-4 text-gray-600 text-sm leading-relaxed">{item.a}</p>
+        {
+          q: "هل الحظر المشدد دائم؟",
+          a: "لا، الحظر المشدد ليس دائماً في معظم الحالات. يمكن رفعه بطلب مراجعة رسمي وانتظار قرار فريق واتساب."
+        },
+        {
+          q: "ماذا أفعل إذا رفض واتساب طلب المراجعة؟",
+          a: "إذا رُفض الطلب، يمكن إعادة التقديم بعد فترة مع تقديم تفاصيل إضافية. يمكن أيضاً التواصل مع متخصصين في استرداد الحسابات للمساعدة."
+        }
+      ].map(faq => (
+        <details class="glass-dark rounded-xl border border-white/10 overflow-hidden">
+          <summary class="px-5 py-4 font-semibold text-white cursor-pointer flex items-center justify-between gap-3">
+            <span>{faq.q}</span>
+            <span class="text-white/40 shrink-0 text-lg">+</span>
+          </summary>
+          <div class="px-5 pb-4 text-white/65 leading-relaxed text-sm">{faq.a}</div>
         </details>
       ))}
     </div>
@@ -232,8 +237,8 @@ const schema = JSON.stringify([
         { href: "/طلب-مراجعة-واتساب/", title: "كيفية طلب المراجعة" },
         { href: "/مدونة/أسباب-حظر-واتساب/", title: "أسباب الحظر" },
       ].map(link => (
-        <a href={link.href} class="bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-[#1A3C6E] hover:bg-blue-50 transition-colors group">
-          <p class="font-semibold text-[#0A1628] text-sm group-hover:text-[#1A3C6E]">{link.title} ←</p>
+        <a href={link.href} class="glass-dark rounded-xl p-4 border border-white/10 hover:border-[#25D366]/40 transition-colors group">
+          <p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366] transition-colors">{link.title} ←</p>
         </a>
       ))}
     </div>

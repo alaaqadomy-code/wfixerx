@@ -21,6 +21,17 @@ const schema = JSON.stringify([
       { "@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://wfixerx.com/مدونة/" },
       { "@type": "ListItem", "position": 3, "name": "حظر واتساب 24 ساعة", "item": "https://wfixerx.com/مدونة/حظر-واتساب-24-ساعة/" }
     ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "كم مدة حظر واتساب 24 ساعة؟", "acceptedAnswer": { "@type": "Answer", "text": "يُرفع حظر 24 ساعة تلقائياً بعد انتهاء المدة. لا تحتاج لأي إجراء — فقط توقف عن استخدام التطبيق تماماً خلال هذه المدة." } },
+      { "@type": "Question", "name": "ماذا أفعل خلال حظر واتساب 24 ساعة؟", "acceptedAnswer": { "@type": "Answer", "text": "أوقف استخدام التطبيق تماماً، أغلقه من الخلفية، واستخدم وسيلة تواصل أخرى. لا تحاول تجاوز الحظر أو تنزيل نسخ معدّلة." } },
+      { "@type": "Question", "name": "لماذا حُظر واتساب لمدة 24 ساعة؟", "acceptedAnswer": { "@type": "Answer", "text": "أشيع الأسباب: إرسال رسائل متكررة لأشخاص لا يعرفونك، إضافة أشخاص لمجموعات دون إذن، أو تلقي عدد من التقارير في وقت قصير." } },
+      { "@type": "Question", "name": "هل يتحول حظر 24 ساعة لحظر دائم؟", "acceptedAnswer": { "@type": "Answer", "text": "إذا تكرر الحظر أكثر من مرة دون تغيير السلوك، قد يتحول لحظر مشدد أو نهائي. تكرار الحظر المؤقت هو إنذار يجب أخذه بجدية." } },
+      { "@type": "Question", "name": "هل حظر 24 ساعة يؤثر على سجل المحادثات؟", "acceptedAnswer": { "@type": "Answer", "text": "لا، المحادثات والملفات تبقى سليمة. الحظر المؤقت يمنع الاستخدام فقط ولا يمسح أي بيانات." } }
+    ]
   }
 ]);
 ---
@@ -32,25 +43,23 @@ const schema = JSON.stringify([
 >
 
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2" aria-label="مسار التنقل">
-    <ol class="flex items-center gap-2 text-sm text-gray-400 flex-wrap">
-      <li><a href="/" class="hover:text-[#1A3C6E]">الرئيسية</a></li>
+    <ol class="flex items-center gap-2 text-sm text-white/40 flex-wrap">
+      <li><a href="/" class="hover:text-[#25D366] transition-colors">الرئيسية</a></li>
       <li aria-hidden="true">←</li>
-      <li><a href="/مدونة/" class="hover:text-[#1A3C6E]">المدونة</a></li>
+      <li><a href="/مدونة/" class="hover:text-[#25D366] transition-colors">المدونة</a></li>
       <li aria-hidden="true">←</li>
-      <li class="text-gray-700 font-medium">حظر واتساب 24 ساعة</li>
+      <li class="text-white/70 font-medium">حظر واتساب 24 ساعة</li>
     </ol>
   </nav>
 
-  <header class="bg-gradient-to-b from-[#f0f6ff] to-white py-12 px-4 sm:px-6 border-b border-gray-100">
+  <header class="bg-gradient-to-b from-[#07111f] to-[#060d1a] py-12 px-4 sm:px-6 border-b border-white/8">
     <div class="max-w-4xl mx-auto">
-      <div class="flex items-center gap-2 mb-4">
-        <span class="text-xs text-gray-400">أكتوبر 2026 · وقت القراءة: 3 دقائق</span>
-      </div>
-      <h1 class="text-3xl sm:text-4xl font-bold text-[#0A1628] leading-tight mb-6">
+      <p class="text-xs text-white/40 mb-4">أكتوبر 2026 · وقت القراءة: 4 دقائق</p>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
         حظر واتساب 24 ساعة — ماذا تفعل وكيف تتجنبه
       </h1>
-      <p class="text-lg text-gray-600 leading-relaxed">
-        واتساب حظر حسابك لمدة 24 ساعة؟ هذا الحظر من أبسط أنواع الحظر وأسهلها حلاً — لكن إذا تكرر قد يتحول لمشكلة أكبر.
+      <p class="text-lg text-white/70 leading-relaxed">
+        واتساب حظر حسابك لمدة 24 ساعة؟ هذا الحظر من أبسط أنواع الحظر وأسهلها حلاً — لكن إذا تكرر قد يتحول لمشكلة أكبر. إليك كل ما تحتاجه.
       </p>
     </div>
   </header>
@@ -58,71 +67,144 @@ const schema = JSON.stringify([
   <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
 
     <div class="quick-answer mb-10">
-      <p class="text-xs font-semibold text-[#1A3C6E] uppercase tracking-wider mb-2">الجواب السريع</p>
-      <h2 class="text-xl font-bold text-[#0A1628] mb-3">ماذا تفعل عند حظر واتساب 24 ساعة؟</h2>
-      <p class="text-gray-700">حظر 24 ساعة هو حظر مؤقت يُرفع تلقائياً. <strong>أوقف استخدام التطبيق تماماً</strong> خلال هذه المدة وانتظر. بعد انتهائها يعمل الحساب مجدداً. لا تحاول تجاوز الحظر بأي طريقة — هذا قد يحوّله لحظر دائم.</p>
+      <p class="text-xs font-semibold text-[#25D366] uppercase tracking-wider mb-2">الجواب السريع</p>
+      <h2 class="text-xl font-bold text-white mb-3">ماذا تفعل عند حظر واتساب 24 ساعة؟</h2>
+      <p class="text-white/75">حظر 24 ساعة هو حظر مؤقت يُرفع تلقائياً. <strong class="text-white">أوقف استخدام التطبيق تماماً</strong> خلال هذه المدة وانتظر. بعد انتهائها يعمل الحساب مجدداً. لا تحاول تجاوز الحظر بأي طريقة — هذا قد يحوّله لحظر دائم.</p>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">ما هو حظر واتساب 24 ساعة؟</h2>
-    <p class="text-gray-700 leading-relaxed mb-4">
-      حظر واتساب 24 ساعة هو: تقييد مؤقت يفرضه واتساب على حساب تجاوز سلوكاً معيناً. يظهر عداد وقت يوضح المدة المتبقية حتى رفع الحظر. هذا النوع الأخف من الحظر ولا يحتاج أي إجراء سوى الانتظار.
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4">ما هو حظر واتساب 24 ساعة؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      حظر واتساب 24 ساعة هو تقييد مؤقت يفرضه واتساب على حساب تجاوز سلوكاً معيناً. يظهر عداد وقت يوضح المدة المتبقية حتى رفع الحظر. هذا النوع الأخف من الحظر ولا يحتاج أي إجراء سوى الانتظار.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-4">
+      عند تلقي هذا الحظر، ترى رسالة مشابهة لـ "حسابك مقيّد مؤقتاً من استخدام واتساب لمدة 24 ساعة". هذا يعني أن النظام الآلي رصد سلوكاً مخالفاً وقيّد الحساب بشكل احترازي.
     </p>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">أسباب حظر واتساب 24 ساعة</h2>
-    <ul class="space-y-2 text-gray-700 mb-6">
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4">أسباب حظر واتساب 24 ساعة</h2>
+    <ul class="space-y-3 text-white/70 mb-8">
       {[
-        "إرسال رسائل متكررة لأشخاص لا يعرفونك.",
-        "إضافة أشخاص لمجموعات دون إذنهم.",
-        "تلقي عدد من التقارير في وقت قصير.",
-        "استخدام التطبيق بشكل مكثف غير اعتيادي.",
-        "محاولة إرسال رسائل جماعية.",
+        "إرسال رسائل متكررة لأشخاص لا يعرفونك أو لا يردون عليك.",
+        "إضافة أشخاص لمجموعات دون الحصول على إذنهم.",
+        "تلقي عدد من التقارير في وقت قصير من مستخدمين مختلفين.",
+        "استخدام التطبيق بشكل مكثف غير اعتيادي يشبه سلوك الروبوتات.",
+        "محاولة إرسال رسائل جماعية بحجم كبير خلال فترة قصيرة.",
+        "تغيير الرقم أو الجهاز بشكل متكرر في وقت قصير.",
       ].map(r => (
         <li class="flex items-start gap-3">
-          <span class="text-orange-500 shrink-0 mt-0.5 font-bold">!</span>
+          <span class="text-orange-400 shrink-0 mt-0.5 font-bold">!</span>
           {r}
         </li>
       ))}
     </ul>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">ماذا تفعل وماذا تتجنب خلال 24 ساعة؟</h2>
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4">ماذا تفعل وماذا تتجنب خلال 24 ساعة؟</h2>
     <div class="grid sm:grid-cols-2 gap-4 mb-8">
-      <div class="bg-green-50 border border-green-200 rounded-xl p-5">
-        <p class="font-bold text-green-800 mb-3">افعل ✓</p>
-        <ul class="space-y-2 text-green-700 text-sm">
-          <li>• انتظر بدون فتح التطبيق</li>
-          <li>• أغلق التطبيق من الخلفية</li>
-          <li>• استخدم وسيلة تواصل أخرى</li>
+      <div class="bg-green-900/20 border border-green-500/25 rounded-xl p-5">
+        <p class="font-bold text-green-400 mb-3">افعل ✓</p>
+        <ul class="space-y-2 text-green-300/80 text-sm">
+          <li>• انتظر بدون محاولة فتح التطبيق</li>
+          <li>• أغلق التطبيق كلياً من الخلفية</li>
+          <li>• استخدم وسيلة تواصل أخرى مؤقتاً</li>
+          <li>• راجع سلوكك الأخير لتحديد السبب</li>
         </ul>
       </div>
-      <div class="bg-red-50 border border-red-200 rounded-xl p-5">
-        <p class="font-bold text-red-800 mb-3">لا تفعل ✗</p>
-        <ul class="space-y-2 text-red-700 text-sm">
-          <li>• لا تحاول تجاوز الحظر</li>
-          <li>• لا تنزّل نسخاً معدّلة</li>
+      <div class="bg-red-900/20 border border-red-500/25 rounded-xl p-5">
+        <p class="font-bold text-red-400 mb-3">لا تفعل ✗</p>
+        <ul class="space-y-2 text-red-300/80 text-sm">
+          <li>• لا تحاول تجاوز الحظر بأي حيلة</li>
+          <li>• لا تنزّل نسخاً معدّلة لتفادي الحظر</li>
           <li>• لا تُنشئ حساباً بديلاً بنفس الرقم</li>
+          <li>• لا تفتح التطبيق قبل انتهاء المدة</li>
         </ul>
       </div>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">تكرّر الحظر؟ انتبه</h2>
-    <p class="text-gray-700 leading-relaxed mb-4">
-      إذا تكرّر حظر 24 ساعة أكثر من مرة، واتساب ترصد هذا السلوك وقد تتحول للحظر المشدد أو النهائي. الحل الدائم هو تغيير السلوك الذي سبب الحظر.
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4">الفرق بين حظر 24 ساعة وأنواع الحظر الأخرى</h2>
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-right py-3 px-4 text-white/60 font-medium">النوع</th>
+            <th class="text-right py-3 px-4 text-white/60 font-medium">المدة</th>
+            <th class="text-right py-3 px-4 text-white/60 font-medium">يُرفع تلقائياً؟</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/8">
+          <tr>
+            <td class="py-3 px-4 text-white/75">حظر 24 ساعة</td>
+            <td class="py-3 px-4 text-[#25D366]">يوم واحد</td>
+            <td class="py-3 px-4 text-green-400">نعم تلقائياً</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 text-white/75">حظر مؤقت مشدد</td>
+            <td class="py-3 px-4 text-orange-400">72 ساعة - أسبوع</td>
+            <td class="py-3 px-4 text-orange-400">نعم مع طلب مراجعة</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 text-white/75">حظر نهائي</td>
+            <td class="py-3 px-4 text-red-400">دائم</td>
+            <td class="py-3 px-4 text-red-400">يحتاج تدخلاً</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4">تكرّر الحظر؟ انتبه جدياً</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      إذا تكرّر حظر 24 ساعة أكثر من مرة، واتساب تسجّل هذا السلوك وقد تتحول للحظر المشدد أو النهائي. الحل الدائم هو تغيير السلوك الذي سبب الحظر — لا مجرد الانتظار.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-4">
+      كل حظر مؤقت هو تحذير من واتساب. تجاهل هذا التحذير يعني المجازفة بفقدان الحساب نهائياً. راجع <a href="/مدونة/أسباب-حظر-واتساب/" class="text-[#25D366] hover:underline">أسباب حظر واتساب</a> لفهم السبب الجذري.
     </p>
 
-    <div class="bg-[#0A1628] rounded-2xl p-6 mt-10 text-white text-center">
-      <p class="font-semibold mb-2">استمر الحظر أكثر من 24 ساعة؟</p>
-      <p class="text-white/60 text-sm mb-4">تواصل معنا لتقييم وضعك</p>
+    <div class="glass-dark rounded-2xl p-6 mt-10 text-center border border-white/10">
+      <p class="font-semibold text-white mb-2">استمر الحظر أكثر من 24 ساعة؟</p>
+      <p class="text-white/55 text-sm mb-4">هذا لم يعد حظر 24 ساعة عادي — تواصل معنا لتقييم وضعك</p>
       <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa">تواصل عبر واتساب</a>
     </div>
 
-    <div class="grid sm:grid-cols-3 gap-4 mt-10">
+    <h2 class="text-2xl font-bold text-white mt-12 mb-6">الأسئلة الشائعة</h2>
+    <div class="space-y-3">
+      {[
+        {
+          q: "كم مدة حظر واتساب 24 ساعة؟",
+          a: "يُرفع حظر 24 ساعة تلقائياً بعد انتهاء المدة. لا تحتاج لأي إجراء — فقط توقف عن استخدام التطبيق تماماً خلال هذه المدة."
+        },
+        {
+          q: "ماذا أفعل خلال حظر واتساب 24 ساعة؟",
+          a: "أوقف استخدام التطبيق تماماً، أغلقه من الخلفية، واستخدم وسيلة تواصل أخرى. لا تحاول تجاوز الحظر أو تنزيل نسخ معدّلة."
+        },
+        {
+          q: "لماذا حُظر واتساب لمدة 24 ساعة؟",
+          a: "أشيع الأسباب: إرسال رسائل متكررة لأشخاص لا يعرفونك، إضافة أشخاص لمجموعات دون إذن، أو تلقي عدد من التقارير في وقت قصير."
+        },
+        {
+          q: "هل يتحول حظر 24 ساعة لحظر دائم؟",
+          a: "إذا تكرر الحظر أكثر من مرة دون تغيير السلوك، قد يتحول لحظر مشدد أو نهائي. تكرار الحظر المؤقت هو إنذار يجب أخذه بجدية."
+        },
+        {
+          q: "هل حظر 24 ساعة يؤثر على سجل المحادثات؟",
+          a: "لا، المحادثات والملفات تبقى سليمة. الحظر المؤقت يمنع الاستخدام فقط ولا يمسح أي بيانات."
+        }
+      ].map(faq => (
+        <details class="glass-dark rounded-xl border border-white/10 overflow-hidden">
+          <summary class="px-5 py-4 font-semibold text-white cursor-pointer flex items-center justify-between gap-3">
+            <span>{faq.q}</span>
+            <span class="text-white/40 shrink-0 text-lg">+</span>
+          </summary>
+          <div class="px-5 pb-4 text-white/65 leading-relaxed text-sm">{faq.a}</div>
+        </details>
+      ))}
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-4 mt-12">
       {[
         { href: "/فك-حظر-واتساب/", title: "دليل فك الحظر الشامل" },
         { href: "/مدونة/أسباب-حظر-واتساب/", title: "أسباب حظر واتساب" },
         { href: "/مدونة/حظر-واتساب-مشدد/", title: "حظر واتساب المشدد" },
       ].map(link => (
-        <a href={link.href} class="bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-[#1A3C6E] hover:bg-blue-50 transition-colors group">
-          <p class="font-semibold text-[#0A1628] text-sm group-hover:text-[#1A3C6E]">{link.title} ←</p>
+        <a href={link.href} class="glass-dark rounded-xl p-4 border border-white/10 hover:border-[#25D366]/40 transition-colors group">
+          <p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366] transition-colors">{link.title} ←</p>
         </a>
       ))}
     </div>

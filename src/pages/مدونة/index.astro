@@ -3,57 +3,226 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const posts = [
   {
-    slug: "حظر-واتساب-24-ساعة",
-    title: "حظر واتساب 24 ساعة — ماذا تفعل وكيف تتجنبه",
-    desc: "ما هو حظر واتساب لمدة 24 ساعة وكيف تتعامل معه وما الأسباب التي تؤدي إليه.",
-    date: "أكتوبر 2026",
-    readTime: "3 دقائق"
-  },
-  {
     slug: "أسباب-حظر-واتساب",
     title: "أسباب حظر واتساب — لماذا يُحظر حسابك؟",
     desc: "الأسباب الرئيسية التي تؤدي لحظر واتساب وكيف تتجنبها للحفاظ على حسابك.",
     date: "أكتوبر 2026",
-    readTime: "4 دقائق"
+    readTime: "4 دقائق",
+    tag: "الأكثر قراءةً"
+  },
+  {
+    slug: "ماذا-تفعل-عند-حظر-واتساب-فجأة",
+    title: "ماذا تفعل عند حظر واتساب فجأة — دليل الإجراءات الفورية",
+    desc: "فتحت واتساب ووجدت حسابك محظوراً؟ الدقائق الأولى مهمة — هذا الدليل يوضح ما تفعله الآن.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: "مهم"
+  },
+  {
+    slug: "مدة-حظر-واتساب",
+    title: "كم مدة حظر واتساب؟ — جميع أنواع الحظر وأوقاتها",
+    desc: "مدة حظر واتساب تعتمد على النوع. هذا الدليل يشرح مدة كل نوع وكيف تُقصّرها.",
+    date: "أكتوبر 2026",
+    readTime: "4 دقائق",
+    tag: ""
+  },
+  {
+    slug: "فرق-حظر-واتساب-مؤقت-ونهائي",
+    title: "الفرق بين حظر واتساب المؤقت والنهائي — كيف تعرف نوعك؟",
+    desc: "معرفة نوع الحظر تُحدّد خطوتك التالية وتُجنّبك إضاعة الوقت في الحل الخاطئ.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: ""
+  },
+  {
+    slug: "حظر-واتساب-24-ساعة",
+    title: "حظر واتساب 24 ساعة — ماذا تفعل وكيف تتجنبه",
+    desc: "ما هو حظر واتساب لمدة 24 ساعة وكيف تتعامل معه وما الأسباب التي تؤدي إليه.",
+    date: "أكتوبر 2026",
+    readTime: "3 دقائق",
+    tag: ""
+  },
+  {
+    slug: "واتساب-محظور-7-أيام",
+    title: "واتساب محظور 7 أيام — ماذا يحدث وكيف تتعامل معه",
+    desc: "حظر سبعة أيام هو نقطة تحوّل خطيرة. اكتشف خياراتك الثلاثة وكيف تزيد فرص الاسترداد.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: ""
   },
   {
     slug: "حظر-واتساب-مشدد",
     title: "حظر واتساب المشدد — ما هو وكيف تفكه",
     desc: "شرح مفصل لحظر واتساب المشدد وكيفية رفعه عبر طلب المراجعة الرسمي.",
     date: "أكتوبر 2026",
-    readTime: "5 دقائق"
+    readTime: "5 دقائق",
+    tag: ""
+  },
+  {
+    slug: "علامات-حظر-واتساب",
+    title: "علامات حظر واتساب — كيف تعرف أن حسابك محظور؟",
+    desc: "التعرف على علامات الحظر المبكرة قبل أن يصبح نهائياً يوفر عليك الكثير.",
+    date: "أكتوبر 2026",
+    readTime: "4 دقائق",
+    tag: ""
+  },
+  {
+    slug: "كيف-تتجنب-حظر-واتساب",
+    title: "كيف تتجنب حظر واتساب — 10 قواعد تحميك",
+    desc: "10 قواعد عملية تحميك من حظر واتساب وتضمن استمرار حسابك بأمان.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: ""
+  },
+  {
+    slug: "حظر-واتساب-بسبب-نسخة-معدلة",
+    title: "حظر واتساب بسبب نسخة معدّلة — كيف تسترد حسابك؟",
+    desc: "استخدام نسخة معدّلة هو السبب الأول للحظر في العالم العربي. هذا الدليل يشرح الخطوات الصحيحة.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: ""
+  },
+  {
+    slug: "حظر-واتساب-بسبب-الرسائل-الجماعية",
+    title: "حظر واتساب بسبب الرسائل الجماعية — كيف تُرسل بأمان",
+    desc: "الرسائل الجماعية سبب شائع للحظر. تعرّف على الحدود الآمنة والبدائل المناسبة.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: ""
+  },
+  {
+    slug: "حظر-واتساب-بسبب-الإبلاغ",
+    title: "حظر واتساب بسبب الإبلاغ — كيف يحدث وكيف تسترد حسابك",
+    desc: "التقارير من المستخدمين أحد أشهر أسباب الحظر. كيف يعمل النظام وكيف تواجهه.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: ""
+  },
+  {
+    slug: "واتساب-محظور-نهائياً",
+    title: "واتساب محظور نهائياً — هل يمكن استعادته؟",
+    desc: "الحظر النهائي ليس نهاية المطاف دائماً. اكتشف الخيارات المتاحة وفرص الاسترداد الحقيقية.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: ""
+  },
+  {
+    slug: "أنواع-حظر-واتساب",
+    title: "أنواع حظر واتساب — الدليل الشامل",
+    desc: "تعرّف على جميع أنواع حظر واتساب: المؤقت، المشدد، والنهائي، وكيف تتعامل مع كل نوع.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: ""
+  },
+  {
+    slug: "حظر-رقم-واتساب",
+    title: "حظر رقم واتساب — الفرق بين حظر الرقم وحظر الحساب",
+    desc: "هل الحظر على رقمك أم على حسابك؟ الفرق مهم جداً لاختيار الحل الصحيح.",
+    date: "أكتوبر 2026",
+    readTime: "4 دقائق",
+    tag: ""
+  },
+  {
+    slug: "هل-يمكن-استخدام-رقم-آخر-بعد-حظر-واتساب",
+    title: "هل يمكن استخدام رقم آخر بعد حظر واتساب؟",
+    desc: "هل الحل هو الرقم الجديد؟ أم محاولة استرداد الرقم القديم؟ الجواب ليس بسيطاً.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: ""
+  },
+  {
+    slug: "استرجاع-حساب-واتساب-محظور",
+    title: "استرجاع حساب واتساب المحظور — الدليل الكامل",
+    desc: "خطوات مفصلة لاسترجاع حساب واتساب المحظور وما يجب فعله لزيادة فرص النجاح.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق",
+    tag: ""
+  },
+  {
+    slug: "فك-حظر-واتساب-مجاناً",
+    title: "فك حظر واتساب مجاناً — ما يمكنك فعله بنفسك",
+    desc: "هناك خطوات يمكنك اتخاذها بنفسك لمحاولة فك الحظر. هذا الدليل يشرحها بالتفصيل.",
+    date: "أكتوبر 2026",
+    readTime: "4 دقائق",
+    tag: ""
+  },
+  {
+    slug: "رابط-طلب-مراجعة-واتساب",
+    title: "رابط طلب مراجعة واتساب — كيف تقدّم الطلب الصحيح",
+    desc: "الرابط الرسمي لطلب مراجعة واتساب وكيفية صياغة الطلب لزيادة فرص نجاحه.",
+    date: "أكتوبر 2026",
+    readTime: "4 دقائق",
+    tag: ""
+  },
+  {
+    slug: "دعم-واتساب-لفك-الحظر",
+    title: "دعم واتساب لفك الحظر — كيف تتواصل مع فريق الدعم",
+    desc: "كيف تتواصل مع دعم واتساب بفعالية وما الذي يجب ذكره لزيادة فرص رفع الحظر.",
+    date: "أكتوبر 2026",
+    readTime: "4 دقائق",
+    tag: ""
+  },
+  {
+    slug: "حظر-واتساب-في-السعودية",
+    title: "حظر واتساب في السعودية — الأسباب والحلول 2026",
+    desc: "الأسباب الخاصة بالمستخدم السعودي وأسرع طرق الاسترداد لحسابات السعودية.",
+    date: "أكتوبر 2026",
+    readTime: "4 دقائق",
+    tag: ""
+  },
+  {
+    slug: "كم-مدة-حظر-واتساب",
+    title: "كم مدة حظر واتساب؟ — الإجابة الكاملة",
+    desc: "كل ما تحتاج معرفته عن مدد حظر واتساب المختلفة وما الذي يؤثر عليها.",
+    date: "أكتوبر 2026",
+    readTime: "4 دقائق",
+    tag: ""
   },
 ];
 ---
 
 <BaseLayout
   title="مدونة WFixerX — كل ما تحتاجه عن حظر واتساب"
-  description="مقالات شاملة ومفصلة حول حظر واتساب: الأسباب، الأنواع، طرق الحل، وكل ما تحتاج معرفته."
+  description="مقالات شاملة ومفصلة حول حظر واتساب: الأسباب، الأنواع، طرق الحل، والدليل الكامل لاسترداد حسابك."
 >
-  <header class="bg-gradient-to-b from-[#f0f6ff] to-white py-12 px-4 sm:px-6 text-center border-b border-gray-100">
+
+  <header class="bg-gradient-to-b from-[#07111f] to-[#060d1a] py-14 px-4 sm:px-6 text-center border-b border-white/8">
     <div class="max-w-3xl mx-auto">
-      <h1 class="text-3xl sm:text-4xl font-bold text-[#0A1628] mb-4">مدونة WFixerX</h1>
-      <p class="text-gray-500 text-lg">كل ما تحتاجه عن حظر واتساب — شرح بسيط ودقيق</p>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">مدونة WFixerX</h1>
+      <p class="text-white/60 text-lg mb-6">كل ما تحتاجه عن حظر واتساب — شرح بسيط ودقيق</p>
+      <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-white/50">
+        <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+        {posts.length} مقالة شاملة
+      </div>
     </div>
   </header>
 
   <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-    <div class="space-y-5">
+    <div class="space-y-4">
       {posts.map(post => (
-        <a href={`/مدونة/${post.slug}/`} class="block bg-white border border-gray-200 rounded-2xl p-6 card-hover group">
+        <a href={`/مدونة/${post.slug}/`} class="glass-dark block rounded-2xl p-5 border border-white/10 hover:border-[#25D366]/30 transition-all group">
           <div class="flex items-center gap-3 mb-3">
-            <span class="text-xs text-gray-400">{post.date}</span>
-            <span class="w-1 h-1 rounded-full bg-gray-300" aria-hidden="true"></span>
-            <span class="text-xs text-gray-400">وقت القراءة: {post.readTime}</span>
+            <span class="text-xs text-white/30">{post.date}</span>
+            <span class="w-1 h-1 rounded-full bg-white/20" aria-hidden="true"></span>
+            <span class="text-xs text-white/30">{post.readTime}</span>
+            {post.tag && (
+              <span class="text-xs bg-[#25D366]/15 text-[#25D366] px-2 py-0.5 rounded-full border border-[#25D366]/20 font-medium">{post.tag}</span>
+            )}
           </div>
-          <h2 class="text-xl font-bold text-[#0A1628] mb-2 group-hover:text-[#1A3C6E] transition-colors">{post.title}</h2>
-          <p class="text-gray-500 text-sm leading-relaxed">{post.desc}</p>
-          <div class="mt-4 flex items-center gap-1 text-[#1A3C6E] text-sm font-medium">
+          <h2 class="text-base sm:text-lg font-bold text-white/85 mb-2 group-hover:text-white transition-colors leading-snug">{post.title}</h2>
+          <p class="text-white/45 text-sm leading-relaxed">{post.desc}</p>
+          <div class="mt-3 flex items-center gap-1 text-[#25D366]/70 text-sm font-medium group-hover:text-[#25D366] transition-colors">
             اقرأ المقال
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="rotate-180" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="rotate-180" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
         </a>
       ))}
+    </div>
+
+    <div class="mt-12 glass-dark rounded-2xl p-6 text-center border border-white/10">
+      <p class="font-semibold text-white mb-2">واجهت مشكلة لم تجد جوابها في المدونة؟</p>
+      <p class="text-white/50 text-sm mb-4">تواصل معنا مباشرةً — نجيب على كل الأسئلة</p>
+      <a href="https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%B3%D8%A4%D8%A7%D9%84%20%D8%AD%D9%88%D9%84%20%D8%AD%D8%B8%D8%B1%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8" target="_blank" rel="noopener" class="btn-wa">تواصل عبر واتساب</a>
     </div>
   </div>
 </BaseLayout>

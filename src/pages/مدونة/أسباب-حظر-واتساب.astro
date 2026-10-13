@@ -12,6 +12,26 @@ const schema = JSON.stringify([
     "author": { "@type": "Organization", "name": "WFixerX" },
     "dateModified": "2026-10-13",
     "inLanguage": "ar"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://wfixerx.com" },
+      { "@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://wfixerx.com/مدونة/" },
+      { "@type": "ListItem", "position": 3, "name": "أسباب حظر واتساب", "item": "https://wfixerx.com/مدونة/أسباب-حظر-واتساب/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "ما هو أكثر أسباب حظر واتساب شيوعاً؟", "acceptedAnswer": { "@type": "Answer", "text": "استخدام نسخ معدّلة من واتساب مثل GB WhatsApp هو السبب الأول. يليه إرسال رسائل جماعية غير مرغوب بها وتلقي تقارير من المستخدمين." } },
+      { "@type": "Question", "name": "هل يمكن حظر واتساب بسبب تقارير الآخرين؟", "acceptedAnswer": { "@type": "Answer", "text": "نعم، إذا أبلغ عنك عدد كافٍ من المستخدمين خلال فترة قصيرة، يمكن أن تتخذ واتساب إجراءً تلقائياً بتقييد حسابك أو حظره." } },
+      { "@type": "Question", "name": "هل استخدام واتساب للأعمال يسبب الحظر؟", "acceptedAnswer": { "@type": "Answer", "text": "استخدام واتساب بيزنس بشكل صحيح لا يسبب الحظر. لكن الإفراط في الرسائل الجماعية أو استخدام برامج أتمتة غير رسمية قد يؤدي لذلك." } },
+      { "@type": "Question", "name": "كيف أعرف سبب حظر واتساب حسابي؟", "acceptedAnswer": { "@type": "Answer", "text": "واتساب لا تحدد السبب دائماً، لكن الغالب يعود لأحد الأسباب الستة المذكورة. يمكنك إرسال طلب مراجعة من داخل التطبيق لمعرفة المزيد." } },
+      { "@type": "Question", "name": "هل يُحظر واتساب بسبب كثرة الرسائل؟", "acceptedAnswer": { "@type": "Answer", "text": "كثرة الرسائل لأشخاص يعرفونك لا تسبب الحظر. المشكلة تكون عند الرسائل الجماعية لأشخاص لا يعرفونك أو يضغطون على تجاهل أو حظر." } }
+    ]
   }
 ]);
 ---
@@ -23,23 +43,23 @@ const schema = JSON.stringify([
 >
 
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2" aria-label="مسار التنقل">
-    <ol class="flex items-center gap-2 text-sm text-gray-400 flex-wrap">
-      <li><a href="/" class="hover:text-[#1A3C6E]">الرئيسية</a></li>
+    <ol class="flex items-center gap-2 text-sm text-white/40 flex-wrap">
+      <li><a href="/" class="hover:text-[#25D366] transition-colors">الرئيسية</a></li>
       <li aria-hidden="true">←</li>
-      <li><a href="/مدونة/" class="hover:text-[#1A3C6E]">المدونة</a></li>
+      <li><a href="/مدونة/" class="hover:text-[#25D366] transition-colors">المدونة</a></li>
       <li aria-hidden="true">←</li>
-      <li class="text-gray-700 font-medium">أسباب حظر واتساب</li>
+      <li class="text-white/70 font-medium">أسباب حظر واتساب</li>
     </ol>
   </nav>
 
-  <header class="bg-gradient-to-b from-[#f0f6ff] to-white py-12 px-4 sm:px-6 border-b border-gray-100">
+  <header class="bg-gradient-to-b from-[#07111f] to-[#060d1a] py-12 px-4 sm:px-6 border-b border-white/8">
     <div class="max-w-4xl mx-auto">
-      <p class="text-xs text-gray-400 mb-4">أكتوبر 2026 · وقت القراءة: 4 دقائق</p>
-      <h1 class="text-3xl sm:text-4xl font-bold text-[#0A1628] leading-tight mb-6">
+      <p class="text-xs text-white/40 mb-4">أكتوبر 2026 · وقت القراءة: 5 دقائق</p>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
         أسباب حظر واتساب — لماذا يُحظر حسابك؟
       </h1>
-      <p class="text-lg text-gray-600 leading-relaxed">
-        فهم سبب الحظر هو الخطوة الأولى لمنعه وللتعامل معه بشكل صحيح. هذه المقالة تشرح أكثر أسباب حظر واتساب شيوعاً.
+      <p class="text-lg text-white/70 leading-relaxed">
+        فهم سبب الحظر هو الخطوة الأولى لمنعه وللتعامل معه بشكل صحيح. هذه المقالة تشرح أكثر أسباب حظر واتساب شيوعاً وكيف تحمي حسابك.
       </p>
     </div>
   </header>
@@ -47,73 +67,109 @@ const schema = JSON.stringify([
   <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
 
     <div class="quick-answer mb-10">
-      <p class="text-xs font-semibold text-[#1A3C6E] uppercase tracking-wider mb-2">الجواب السريع</p>
-      <h2 class="text-xl font-bold text-[#0A1628] mb-3">ما أسباب حظر واتساب؟</h2>
-      <p class="text-gray-700">أكثر أسباب حظر واتساب شيوعاً: <strong>1.</strong> استخدام نسخ معدّلة (GB WhatsApp). <strong>2.</strong> إرسال رسائل جماعية لأشخاص غير موافقين. <strong>3.</strong> تلقي تقارير من مستخدمين. <strong>4.</strong> استخدام برامج أتمتة. <strong>5.</strong> إضافة أشخاص لمجموعات دون إذنهم.</p>
+      <p class="text-xs font-semibold text-[#25D366] uppercase tracking-wider mb-2">الجواب السريع</p>
+      <h2 class="text-xl font-bold text-white mb-3">ما أسباب حظر واتساب؟</h2>
+      <p class="text-white/75">أكثر أسباب حظر واتساب شيوعاً: <strong class="text-white">1.</strong> استخدام نسخ معدّلة (GB WhatsApp). <strong class="text-white">2.</strong> إرسال رسائل جماعية لأشخاص غير موافقين. <strong class="text-white">3.</strong> تلقي تقارير من مستخدمين. <strong class="text-white">4.</strong> استخدام برامج أتمتة. <strong class="text-white">5.</strong> إضافة أشخاص لمجموعات دون إذنهم.</p>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-6">الأسباب الرئيسية لحظر واتساب</h2>
+    <h2 class="text-2xl font-bold text-white mt-10 mb-6">الأسباب الرئيسية لحظر واتساب</h2>
+    <p class="text-white/70 leading-relaxed mb-6">واتساب تمتلك نظاماً ذكياً لرصد الأنشطة المخالفة لشروط الاستخدام. الحظر لا يكون عشوائياً في الغالب — هناك سبب محدد. فهم هذه الأسباب يساعدك على تجنب الحظر والتعامل مع الوضع بشكل صحيح.</p>
 
     <div class="space-y-4">
       {[
         {
           num: "١",
           title: "استخدام نسخ معدّلة من واتساب",
-          desc: "نسخ مثل GB WhatsApp، WhatsApp Plus، أو أي نسخة غير رسمية. واتساب تكشفها تلقائياً وتحظر الحساب فوراً. هذا السبب الأكثر شيوعاً ويؤدي غالباً لحظر نهائي.",
-          severity: "خطر عالٍ"
+          desc: "نسخ مثل GB WhatsApp، WhatsApp Plus، WhatsApp Gold، أو أي نسخة غير رسمية. واتساب تكشفها تلقائياً من خلال التوقيع الرقمي للتطبيق وتحظر الحساب فوراً. هذا السبب الأكثر شيوعاً ويؤدي غالباً لحظر نهائي يصعب رفعه. الحل الوحيد: العودة للتطبيق الرسمي من متجر Google Play أو App Store.",
+          severity: "خطر عالٍ",
+          color: "orange"
         },
         {
           num: "٢",
           title: "إرسال رسائل جماعية (سبام)",
-          desc: "إرسال نفس الرسالة لعدد كبير من الأشخاص خلال وقت قصير، خاصةً إذا كانوا لا يعرفونك. واتساب تعتبر هذا سلوكاً مخالفاً.",
-          severity: "خطر عالٍ"
+          desc: "إرسال نفس الرسالة لعدد كبير من الأشخاص خلال وقت قصير، خاصةً إذا كانوا لا يعرفونك. واتساب تعتبر هذا سلوكاً مخالفاً. حتى في التسويق المشروع، هناك حدود يومية غير معلنة. تجاوزها يؤدي لتقييد الحساب أولاً ثم حظره.",
+          severity: "خطر عالٍ",
+          color: "orange"
         },
         {
           num: "٣",
           title: "تقارير المستخدمين",
-          desc: "إذا أبلّغ عنك عدد كافٍ من الأشخاص خلال فترة قصيرة، واتساب قد تتخذ إجراءً تلقائياً. الأشخاص الذين ترسل لهم رسائل غير مرغوبة هم أكثر من يبلّغون.",
-          severity: "خطر متوسط"
+          desc: "إذا أبلّغ عنك عدد كافٍ من الأشخاص خلال فترة قصيرة، واتساب تتخذ إجراءً تلقائياً. الأشخاص الذين ترسل لهم رسائل غير مرغوبة هم أكثر من يبلّغون. حتى التقارير الكيدية إذا تراكمت قد تؤدي لتقييد مؤقت.",
+          severity: "خطر متوسط",
+          color: "yellow"
         },
         {
           num: "٤",
           title: "برامج الأتمتة والروبوتات",
-          desc: "استخدام برامج خارجية للرد التلقائي أو إدارة رسائل واتساب خارج نطاق API الرسمي. هذا يخالف شروط الاستخدام بشكل صريح.",
-          severity: "خطر عالٍ"
+          desc: "استخدام برامج خارجية للرد التلقائي أو إدارة رسائل واتساب خارج نطاق API الرسمي. هذا يخالف شروط الاستخدام بشكل صريح. إذا كنت بحاجة للأتمتة، استخدم WhatsApp Business API الرسمي فقط.",
+          severity: "خطر عالٍ",
+          color: "orange"
         },
         {
           num: "٥",
           title: "إضافة أشخاص لمجموعات دون إذن",
-          desc: "إذا أضفت أشخاصاً لمجموعات ويحذفون أنفسهم ويبلّغون عنك باستمرار.",
-          severity: "خطر متوسط"
+          desc: "إذا أضفت أشخاصاً لمجموعات ويحذفون أنفسهم ويبلّغون عنك باستمرار، يتراكم هذا كسجل سلبي على حسابك. احصل دائماً على موافقة قبل الإضافة.",
+          severity: "خطر متوسط",
+          color: "yellow"
         },
         {
           num: "٦",
           title: "محتوى مخالف لشروط الاستخدام",
-          desc: "إرسال محتوى ممنوع (مخالف، عنيف، يتعلق بقاصرين).",
-          severity: "حظر فوري ونهائي"
+          desc: "إرسال محتوى ممنوع أو مخالف. هذا النوع من الحظر يكون فورياً ونهائياً وغير قابل للمراجعة في الغالب.",
+          severity: "حظر فوري ونهائي",
+          color: "red"
         },
       ].map(r => (
-        <div class="bg-white border border-gray-200 rounded-xl p-5 flex gap-4">
-          <span class={`w-10 h-10 rounded-full flex items-center justify-center text-white text-lg font-bold shrink-0 ${r.severity === 'حظر فوري ونهائي' ? 'bg-red-600' : r.severity === 'خطر عالٍ' ? 'bg-orange-500' : 'bg-yellow-500'}`}>{r.num}</span>
+        <div class={`rounded-xl p-5 flex gap-4 border ${
+          r.color === 'red' ? 'bg-red-950/30 border-red-500/20' :
+          r.color === 'orange' ? 'bg-orange-950/30 border-orange-500/20' :
+          'bg-yellow-950/20 border-yellow-500/20'
+        }`}>
+          <span class={`w-10 h-10 rounded-full flex items-center justify-center text-white text-lg font-bold shrink-0 ${
+            r.color === 'red' ? 'bg-red-600' : r.color === 'orange' ? 'bg-orange-500' : 'bg-yellow-500'
+          }`}>{r.num}</span>
           <div>
-            <div class="flex items-center gap-2 mb-1">
-              <h3 class="font-bold text-[#0A1628]">{r.title}</h3>
-              <span class={`text-xs px-2 py-0.5 rounded-full font-medium ${r.severity === 'حظر فوري ونهائي' ? 'bg-red-100 text-red-700' : r.severity === 'خطر عالٍ' ? 'bg-orange-100 text-orange-700' : 'bg-yellow-100 text-yellow-700'}`}>{r.severity}</span>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <h3 class="font-bold text-white">{r.title}</h3>
+              <span class={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                r.color === 'red' ? 'bg-red-900/50 text-red-300' :
+                r.color === 'orange' ? 'bg-orange-900/50 text-orange-300' :
+                'bg-yellow-900/50 text-yellow-300'
+              }`}>{r.severity}</span>
             </div>
-            <p class="text-gray-600 text-sm leading-relaxed">{r.desc}</p>
+            <p class="text-white/65 text-sm leading-relaxed">{r.desc}</p>
           </div>
         </div>
       ))}
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-12 mb-4">كيف تتجنب حظر واتساب؟</h2>
-    <ul class="space-y-2 text-gray-700 mb-8">
+    <h2 class="text-2xl font-bold text-white mt-12 mb-6">هل واتساب تُعلمك بالسبب عند الحظر؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">في معظم الحالات، واتساب لا تُخبرك بالسبب المحدد. ما تراه هو رسالة مثل "يتعذر على هذا الحساب استخدام واتساب" أو رسالة طلب المراجعة. هذا يجعل فهم السبب أمراً يعتمد على قراءة سياق استخدامك الأخير.</p>
+    <p class="text-white/70 leading-relaxed mb-4">لكن هناك مؤشرات تساعد على تحديد السبب:</p>
+    <ul class="space-y-2 text-white/70 mb-8">
       {[
-        "استخدم النسخة الرسمية فقط من Google Play أو App Store.",
-        "لا ترسل رسائل جماعية لأشخاص لا يعرفونك.",
-        "أضف فقط من يوافق على الانضمام للمجموعات.",
-        "لا تستخدم برامج أتمتة خارج API الرسمي.",
+        "إذا كنت تستخدم نسخة معدّلة قبل الحظر — هذا هو السبب على الأرجح",
+        "إذا أرسلت رسائل جماعية كثيرة مؤخراً — قد يكون هذا السبب",
+        "إذا كان لديك نشاط تجاري وحصائل لكثير من العملاء — قد يكون أتمتة أو تقارير",
+        "إذا ظهر الحظر فجأة بدون أي نشاط مشبوه — قد يكون تقارير كيدية",
+      ].map(tip => (
+        <li class="flex items-start gap-3">
+          <span class="text-[#25D366] font-bold shrink-0 mt-0.5">←</span>
+          {tip}
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">كيف تتجنب حظر واتساب؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">الوقاية خير من العلاج — اتبع هذه القواعد للحفاظ على حسابك:</p>
+    <ul class="space-y-3 text-white/70 mb-8">
+      {[
+        "استخدم النسخة الرسمية فقط من Google Play أو App Store — لا تثبت أي نسخة من مصادر أخرى.",
+        "لا ترسل رسائل جماعية لأشخاص لا يعرفونك أو لم يطلبوا ذلك.",
+        "احصل على موافقة صريحة قبل إضافة أي شخص لمجموعة.",
+        "لا تستخدم برامج أتمتة خارج API الرسمي من Meta.",
         "ردّ على رسائل العملاء بانتظام — النشاط الطبيعي يحمي الحساب.",
+        "إذا كنت تتلقى تقارير كثيرة، راجع طريقة تواصلك مع الآخرين.",
       ].map(tip => (
         <li class="flex items-start gap-3">
           <span class="text-[#25D366] font-bold shrink-0 mt-0.5">✓</span>
@@ -122,10 +178,73 @@ const schema = JSON.stringify([
       ))}
     </ul>
 
-    <div class="bg-[#0A1628] rounded-2xl p-6 mt-8 text-white text-center">
-      <p class="font-semibold mb-2">تم حظر حسابك رغم ذلك؟</p>
-      <p class="text-white/60 text-sm mb-4">تواصل معنا ونساعدك</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ماذا تفعل إذا تم حظرك رغم اتباع القواعد؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">أحياناً يحدث الحظر بشكل خاطئ أو بسبب تقارير كيدية. في هذه الحالة:</p>
+    <ol class="space-y-3 text-white/70 mb-6">
+      <li class="flex items-start gap-3">
+        <span class="w-7 h-7 rounded-full bg-[#25D366]/20 text-[#25D366] flex items-center justify-center font-bold shrink-0 text-sm mt-0.5">1</span>
+        <span>افتح واتساب وابحث عن زر "طلب مراجعة" في الرسالة التي تظهر لك</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="w-7 h-7 rounded-full bg-[#25D366]/20 text-[#25D366] flex items-center justify-center font-bold shrink-0 text-sm mt-0.5">2</span>
+        <span>اضغط عليه وانتظر الرد — قد يستغرق من ساعات إلى أيام</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="w-7 h-7 rounded-full bg-[#25D366]/20 text-[#25D366] flex items-center justify-center font-bold shrink-0 text-sm mt-0.5">3</span>
+        <span>إذا رُفض الطلب أو لم يتغير الوضع، تواصل معنا للمساعدة في تقييم خياراتك</span>
+      </li>
+    </ol>
+
+    <div class="glass-dark rounded-2xl p-6 mt-8 text-center border border-white/10">
+      <p class="font-semibold text-white mb-2">تم حظر حسابك رغم ذلك؟</p>
+      <p class="text-white/55 text-sm mb-4">تواصل معنا لتقييم وضعك ومعرفة خياراتك</p>
       <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa">تواصل عبر واتساب</a>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-6">الأسئلة الشائعة</h2>
+    <div class="space-y-3">
+      {[
+        {
+          q: "ما هو أكثر أسباب حظر واتساب شيوعاً؟",
+          a: "استخدام نسخ معدّلة من واتساب مثل GB WhatsApp هو السبب الأول. يليه إرسال رسائل جماعية غير مرغوب بها وتلقي تقارير من المستخدمين."
+        },
+        {
+          q: "هل يمكن حظر واتساب بسبب تقارير الآخرين؟",
+          a: "نعم، إذا أبلغ عنك عدد كافٍ من المستخدمين خلال فترة قصيرة، يمكن أن تتخذ واتساب إجراءً تلقائياً بتقييد حسابك أو حظره."
+        },
+        {
+          q: "هل استخدام واتساب للأعمال يسبب الحظر؟",
+          a: "استخدام واتساب بيزنس بشكل صحيح لا يسبب الحظر. لكن الإفراط في الرسائل الجماعية أو استخدام برامج أتمتة غير رسمية قد يؤدي لذلك."
+        },
+        {
+          q: "كيف أعرف سبب حظر واتساب حسابي؟",
+          a: "واتساب لا تحدد السبب دائماً، لكن الغالب يعود لأحد الأسباب الستة المذكورة. يمكنك إرسال طلب مراجعة من داخل التطبيق لمعرفة المزيد."
+        },
+        {
+          q: "هل يُحظر واتساب بسبب كثرة الرسائل؟",
+          a: "كثرة الرسائل لأشخاص يعرفونك لا تسبب الحظر. المشكلة تكون عند الرسائل الجماعية لأشخاص لا يعرفونك أو يضغطون على تجاهل أو حظر."
+        }
+      ].map(faq => (
+        <details class="glass-dark rounded-xl border border-white/10 overflow-hidden">
+          <summary class="px-5 py-4 font-semibold text-white cursor-pointer flex items-center justify-between gap-3">
+            <span>{faq.q}</span>
+            <span class="text-white/40 shrink-0 text-lg">+</span>
+          </summary>
+          <div class="px-5 pb-4 text-white/65 leading-relaxed text-sm">{faq.a}</div>
+        </details>
+      ))}
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-4 mt-12">
+      {[
+        { href: "/فك-حظر-واتساب/", title: "دليل فك الحظر الشامل" },
+        { href: "/مدونة/حظر-واتساب-24-ساعة/", title: "حظر واتساب 24 ساعة" },
+        { href: "/مدونة/حظر-واتساب-مشدد/", title: "حظر واتساب المشدد" },
+      ].map(link => (
+        <a href={link.href} class="glass-dark rounded-xl p-4 border border-white/10 hover:border-[#25D366]/40 transition-colors group">
+          <p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366] transition-colors">{link.title} ←</p>
+        </a>
+      ))}
     </div>
 
   </article>
