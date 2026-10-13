@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A3%D9%83%D8%AB%D8%B1%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
+const TG_LINK = "https://t.me/+962795827790";
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "من نحن — WFixerX",
+  "description": "تعرّف على فريق WFixerX المتخصص في مساعدة أصحاب حسابات واتساب المحظورة.",
+  "url": "https://wfixerx.com/من-نحن/",
+  "about": {
+    "@type": "Organization",
+    "name": "WFixerX",
+    "url": "https://wfixerx.com",
+    "description": "خدمة متخصصة لمساعدة أصحاب حسابات واتساب المحظورة في العالم العربي"
+  }
+});
+---
+
+<BaseLayout
+  title="من نحن — WFixerX"
+  description="تعرّف على WFixerX، الخدمة المتخصصة في مساعدة أصحاب حسابات واتساب المحظورة في السعودية والخليج ومصر."
+  schema={schema}
+>
+
+  <header class="bg-gradient-to-b from-[#0A1628] to-[#1A3C6E] py-16 px-4 sm:px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <div class="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center text-white text-4xl font-bold mx-auto mb-6">W</div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">من نحن</h1>
+      <p class="text-white/70 text-lg">فريق متخصص يساعدك في استعادة حسابك على واتساب</p>
+    </div>
+  </header>
+
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+
+    <h2 class="text-2xl font-bold text-[#0A1628] mb-6">قصة WFixerX</h2>
+    <p class="text-gray-700 leading-relaxed mb-6">
+      WFixerX نشأت من ملاحظة بسيطة: كثير من الناس يفقدون حسابات واتساب يومياً ولا يجدون مساعدة موثوقة ومتخصصة باللغة العربية. معظم الخدمات الموجودة إما غير احترافية، أو تطلب بيانات سرية خطيرة، أو تعطي وعوداً مستحيلة.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-6">
+      فريقنا جمع خبرة واسعة في التعامل مع حالات حظر واتساب المختلفة — من الحظر البسيط إلى الحالات المعقدة. نؤمن بالشفافية الكاملة: نخبرك بالحقيقة حتى لو لم تكن ما تريد سماعه.
+    </p>
+
+    <div class="grid sm:grid-cols-3 gap-5 my-10">
+      {[
+        { num: "+500", label: "حالة تم التعامل معها" },
+        { num: "3", label: "سنوات من الخبرة" },
+        { num: "10+", label: "دولة عربية نخدمها" },
+      ].map(stat => (
+        <div class="bg-[#0A1628] rounded-2xl p-6 text-center text-white">
+          <p class="text-4xl font-bold text-[#25D366] mb-2">{stat.num}</p>
+          <p class="text-white/70 text-sm">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">قيمنا</h2>
+    <div class="space-y-4">
+      {[
+        { icon: "🔐", title: "الأمان أولاً", desc: "لا نطلب كلمة المرور أو رمز التحقق أبداً. خصوصيتك وأمانك غير قابلين للتفاوض." },
+        { icon: "🎯", title: "الصدق", desc: "نخبرك بفرص النجاح الحقيقية — لا نعطيك وعوداً فارغة لأخذ أموالك." },
+        { icon: "🛡️", title: "الاستقلالية", desc: "WFixerX غير تابعة لواتساب أو Meta. نحن خدمة مستقلة تعمل لصالحك أنت." },
+        { icon: "🌍", title: "الخدمة العربية", desc: "نفهم احتياجات المستخدم العربي ونتواصل بلغته ونعرف سياقه الثقافي." },
+      ].map(v => (
+        <div class="flex gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100">
+          <span class="text-3xl shrink-0" aria-hidden="true">{v.icon}</span>
+          <div>
+            <p class="font-semibold text-[#0A1628] mb-1">{v.title}</p>
+            <p class="text-gray-600 text-sm leading-relaxed">{v.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">الدول التي نخدمها</h2>
+    <div class="flex flex-wrap gap-2 mb-8">
+      {["🇸🇦 السعودية", "🇪🇬 مصر", "🇦🇪 الإمارات", "🇰🇼 الكويت", "🇶🇦 قطر", "🇧🇭 البحرين", "🇴🇲 عُمان", "🇯🇴 الأردن", "🇮🇶 العراق", "🇸🇾 سوريا"].map(c => (
+        <span class="bg-[#0A1628] text-white text-sm px-4 py-2 rounded-full">{c}</span>
+      ))}
+    </div>
+
+    <div class="bg-[#0A1628] rounded-2xl p-8 text-center text-white mt-10">
+      <h2 class="text-2xl font-bold mb-3">تواصل معنا</h2>
+      <p class="text-white/60 mb-6">يسعدنا مساعدتك</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa">تواصل عبر واتساب</a>
+        <a href={TG_LINK} target="_blank" rel="noopener" class="btn-tg">تواصل عبر تلغرام</a>
+      </div>
+    </div>
+
+  </article>
+</BaseLayout>

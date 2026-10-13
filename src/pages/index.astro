@@ -1,0 +1,354 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A%20%D9%85%D8%AD%D8%B8%D9%88%D8%B1%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
+const TG_LINK = "https://t.me/+962795827790";
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "كيف أفك حظر واتساب؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لفك حظر واتساب، يمكنك: 1. الانتظار إذا كان الحظر مؤقتاً (24-72 ساعة)، 2. تقديم طلب مراجعة عبر رابط support.whatsapp.com إذا كان الحظر دائماً، 3. التواصل مع فريق WFixerX للمساعدة في إعداد الطلب بالطريقة الصحيحة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكن فك حظر واتساب نهائياً؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم، في حالات كثيرة يمكن رفع الحظر النهائي عبر تقديم طلب مراجعة رسمي. النجاح يعتمد على سبب الحظر وتفاصيل الحساب. WFixerX تساعدك في تحسين فرص قبول الطلب."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما هي مدة حظر واتساب؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "مدة الحظر تعتمد على نوعه: الحظر المؤقت يستمر 24 ساعة إلى أسبوع، الحظر المشدد يمتد لأسابيع، أما الحظر النهائي فيحتاج تقديم طلب مراجعة رسمي."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل تطلبون كلمة المرور أو رمز التحقق؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لا، WFixerX لا تطلب كلمة المرور أو رمز التحقق أبداً. نحن نساعدك في إعداد طلب المراجعة وتقديمه بشكل صحيح دون الحاجة إلى أي بيانات سرية."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "كم يكلف فك حظر واتساب؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "السعر يختلف حسب نوع الحظر وتعقيد الحالة. تواصل معنا عبر واتساب أو تلغرام للحصول على تقييم مجاني لحالتك."
+      }
+    }
+  ]
+});
+---
+
+<BaseLayout
+  title="فك حظر واتساب — احصل على مساعدة متخصصة"
+  description="حسابك على واتساب محظور؟ WFixerX تقدم مساعدة متخصصة لفك حظر واتساب واستعادة حسابك. خبرة حقيقية، لا نطلب كلمة مرور."
+  schema={schema}
+>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero-glow relative overflow-hidden min-h-[92vh] flex items-center">
+    <!-- Decorative blobs -->
+    <div class="absolute top-1/4 right-0 w-96 h-96 bg-[#25D366]/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-1/4 w-80 h-80 bg-[#1A3C6E]/30 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28 relative z-10 w-full">
+      <div class="max-w-3xl">
+
+        <!-- Badge -->
+        <div class="trust-badge mb-6 animate-fade-up w-fit">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          لا نطلب كلمة مرور أبداً
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6 animate-fade-up delay-1">
+          فك حظر واتساب<br>
+          <span class="text-[#25D366]">نساعدك في استعادة حسابك</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-white/70 mb-8 max-w-2xl leading-relaxed animate-fade-up delay-2">
+          حسابك محظور؟ سواء كان الحظر مؤقتاً أو نهائياً أو مشدداً — فريق WFixerX يحلل وضعك ويرشدك لأفضل طريقة للاسترداد.
+        </p>
+
+        <div class="flex flex-wrap gap-3 mb-10 animate-fade-up delay-3">
+          <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa pulse-glow text-base">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            تواصل الآن عبر واتساب
+          </a>
+          <a href={TG_LINK} target="_blank" rel="noopener" class="btn-tg text-base">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.820 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            أو عبر تلغرام
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="flex flex-wrap gap-6 text-sm animate-fade-up delay-4">
+          <div class="flex items-center gap-2 text-white/50">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            نحلل وضعك مجاناً
+          </div>
+          <div class="flex items-center gap-2 text-white/50">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            لا نطلب كلمة المرور
+          </div>
+          <div class="flex items-center gap-2 text-white/50">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            خدمة للسعودية ودول الخليج ومصر
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TRUST BAR ====== -->
+  <section class="bg-[#0d1f3c] py-5" aria-label="مميزاتنا">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+        {[
+          { icon: "🔒", text: "لا نطلب كلمة مرور" },
+          { icon: "⚡", text: "رد سريع خلال ساعات" },
+          { icon: "🌍", text: "السعودية، مصر، الخليج" },
+          { icon: "✅", text: "لسنا تابعين لواتساب" },
+        ].map(item => (
+          <div class="flex items-center justify-center gap-2 text-sm text-white/60 py-1">
+            <span aria-hidden="true">{item.icon}</span>
+            <span>{item.text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== QUICK ANSWER (Featured Snippet Target) ====== -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+    <div class="quick-answer">
+      <p class="text-xs font-semibold text-[#1A3C6E] uppercase tracking-wider mb-2">الجواب السريع</p>
+      <h2 class="text-xl font-bold text-[#0A1628] mb-3">كيف أفك حظر واتساب؟</h2>
+      <p class="text-gray-700 leading-relaxed">
+        لفك حظر واتساب، اتبع هذه الخطوات: <strong>1.</strong> تحقق من نوع الحظر (مؤقت أو دائم). <strong>2.</strong> إذا كان مؤقتاً، انتظر من 24 إلى 72 ساعة دون تشغيل التطبيق. <strong>3.</strong> إذا كان دائماً، قدّم طلب مراجعة رسمياً عبر رابط support.whatsapp.com. <strong>4.</strong> إذا رُفض الطلب أو لم تجد رابط المراجعة، تواصل مع WFixerX للحصول على مساعدة متخصصة.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====== PROBLEMS WE SOLVE ====== -->
+  <section class="bg-gray-50 py-16 sm:py-20" aria-labelledby="problems-heading">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 id="problems-heading" class="text-3xl sm:text-4xl font-bold text-[#0A1628] mb-4">ما المشكلة التي تواجهها؟</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">كل حالة حظر مختلفة — نحدد نوع مشكلتك ونقترح الحل الأمثل</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[
+          {
+            icon: "🚫",
+            title: "حظر واتساب العادي",
+            desc: "حظر مؤقت لانتهاك الشروط أو الإبلاغ المتكرر. عادةً يُرفع خلال 24-72 ساعة.",
+            href: "/فك-حظر-واتساب/",
+            badge: "5,000 بحث/شهر"
+          },
+          {
+            icon: "⛔",
+            title: "رسالة \"لا يمكن لهذا الحساب\"",
+            desc: "الرسالة الأشهر عند الحظر النهائي. نشرح كيفية تقديم طلب المراجعة الصحيح.",
+            href: "/رسالة-لا-يمكن-لهذا-الحساب/",
+            badge: "نمو +900%"
+          },
+          {
+            icon: "🔒",
+            title: "الحظر المشدد",
+            desc: "حظر طويل الأمد أو نهائي يصعب رفعه بمفردك. نساعدك في صياغة طلب احترافي.",
+            href: "/فك-حظر-واتساب/",
+            badge: "حالات صعبة"
+          },
+          {
+            icon: "💼",
+            title: "واتساب الأعمال محظور",
+            desc: "خسارة يومية للنشاط التجاري. نعطيه أولوية قصوى لسرعة الاسترداد.",
+            href: "/حظر-واتساب-للاعمال/",
+            badge: "أعلى قيمة تجارية"
+          },
+          {
+            icon: "🔄",
+            title: "استرجاع حساب واتساب",
+            desc: "إذا فقدت الوصول لحسابك أو تم اختراقه — نرشدك للخطوات الصحيحة.",
+            href: "/استرجاع-حساب-واتساب/",
+            badge: "500 بحث/شهر"
+          },
+          {
+            icon: "📋",
+            title: "طلب مراجعة مرفوض",
+            desc: "رُفض طلبك من قبل؟ نساعدك في إعادة التقديم بطريقة أكثر احترافية.",
+            href: "/طلب-مراجعة-واتساب/",
+            badge: "500 بحث/شهر"
+          },
+        ].map(card => (
+          <a href={card.href} class="bg-white rounded-2xl p-6 border border-gray-100 card-hover group">
+            <div class="flex items-start justify-between mb-4">
+              <span class="text-3xl" aria-hidden="true">{card.icon}</span>
+              <span class="text-xs text-[#1A3C6E] bg-blue-50 px-2.5 py-1 rounded-full font-medium">{card.badge}</span>
+            </div>
+            <h3 class="font-bold text-[#0A1628] text-lg mb-2 group-hover:text-[#1A3C6E] transition-colors">{card.title}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">{card.desc}</p>
+            <div class="mt-4 flex items-center gap-1 text-[#1A3C6E] text-sm font-medium">
+              اقرأ أكثر
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="rotate-180" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== HOW IT WORKS ====== -->
+  <section class="py-16 sm:py-20" aria-labelledby="how-heading">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 id="how-heading" class="text-3xl sm:text-4xl font-bold text-[#0A1628] mb-4">كيف نساعدك؟</h2>
+        <p class="text-gray-500">3 خطوات بسيطة للبدء</p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-8 relative">
+        <!-- Connector Line (desktop) -->
+        <div class="hidden sm:block absolute top-10 right-[16.7%] left-[16.7%] h-0.5 bg-gradient-to-l from-[#25D366] via-[#1A3C6E] to-[#25D366]" aria-hidden="true"></div>
+
+        {[
+          { step: "١", title: "أخبرنا بمشكلتك", desc: "تواصل معنا عبر واتساب أو تلغرام وأخبرنا بنوع المشكلة ونوع الحساب.", color: "bg-[#1A3C6E]" },
+          { step: "٢", title: "نحلل حالتك", desc: "نقيّم الوضع ونشرح لك الخيارات المتاحة ونسبة النجاح المتوقعة بصدق.", color: "bg-[#25D366]" },
+          { step: "٣", title: "نرافقك في الحل", desc: "نساعدك في تنفيذ الخطوات بشكل صحيح ونتابع معك حتى الحل.", color: "bg-[#0088CC]" },
+        ].map((step, i) => (
+          <div class="text-center relative bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+            <div class={`w-16 h-16 ${step.color} rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 relative z-10`}>
+              {step.step}
+            </div>
+            <h3 class="font-bold text-xl text-[#0A1628] mb-3">{step.title}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa text-base inline-flex">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          ابدأ الآن — مجاناً
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== WHY US ====== -->
+  <section class="bg-[#0A1628] py-16 sm:py-20" aria-labelledby="why-heading">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 id="why-heading" class="text-3xl sm:text-4xl font-bold text-white mb-4">لماذا WFixerX؟</h2>
+        <p class="text-white/50">ما يجعلنا مختلفين عن أي خدمة أخرى</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {[
+          { icon: "🔐", title: "لا كلمة مرور", desc: "نساعدك دون الحاجة لأي بيانات سرية. أمانك أولويتنا." },
+          { icon: "🎯", title: "تقييم صادق", desc: "نخبرك بالواقع — لا وعود كاذبة، ولا ضمانات مستحيلة." },
+          { icon: "📱", title: "خبرة حقيقية", desc: "تعاملنا مع مئات الحالات من أنواع حظر مختلفة." },
+          { icon: "⚡", title: "رد سريع", desc: "نرد على استفساراتك خلال ساعات في أيام العمل." },
+        ].map(item => (
+          <div class="bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+            <div class="text-4xl mb-4" aria-hidden="true">{item.icon}</div>
+            <h3 class="font-bold text-white text-lg mb-2">{item.title}</h3>
+            <p class="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Important Notice -->
+      <div class="mt-10 bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
+        <p class="text-white/60 text-sm">
+          <strong class="text-white">تنبيه مهم:</strong> WFixerX خدمة مستقلة غير تابعة لواتساب أو Meta. النتائج تعتمد على قرار واتساب. لا نضمن فك الحظر في جميع الحالات.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ ====== -->
+  <section class="py-16 sm:py-20 max-w-4xl mx-auto px-4 sm:px-6" aria-labelledby="faq-heading">
+    <div class="text-center mb-12">
+      <h2 id="faq-heading" class="text-3xl sm:text-4xl font-bold text-[#0A1628] mb-4">أسئلة شائعة</h2>
+      <p class="text-gray-500">إجابات على أكثر الأسئلة تكراراً</p>
+    </div>
+
+    <div class="space-y-3">
+      {[
+        {
+          q: "كيف أعرف هل حسابي محظور نهائياً أم مؤقتاً؟",
+          a: "إذا ظهرت لك رسالة \"لا يمكن لهذا الحساب استخدام واتساب بعد الآن\" فالحظر نهائي. إذا ظهر عداد وقت (24 ساعة، 3 أيام) فهو مؤقت. WFixerX تساعدك في تحديد النوع بدقة وتوجيهك للحل الصحيح."
+        },
+        {
+          q: "هل تطلبون كلمة المرور أو رمز التحقق؟",
+          a: "لا بأي شكل من الأشكال. WFixerX لا تطلب كلمة المرور أو رمز OTP أبداً. أي شخص يطلب هذه البيانات يحاول الاحتيال عليك."
+        },
+        {
+          q: "ما الفرق بين حظر واتساب العادي والمشدد؟",
+          a: "الحظر العادي مؤقت ويرتفع تلقائياً بعد 24-72 ساعة. الحظر المشدد يستمر لأسابيع ويحتاج تقديم طلب مراجعة رسمي. الحظر النهائي يظهر رسالة \"لا يمكن لهذا الحساب\" ويحتاج طلب مراجعة متكامل."
+        },
+        {
+          q: "هل يمكن فك الحظر من رقم جديد؟",
+          a: "لا. الحظر يطال الرقم ذاته. لا توجد طريقة تقنية لـ 'تجاوز' الحظر. الطريقة الوحيدة المعتمدة هي تقديم طلب مراجعة رسمي عبر واتساب."
+        },
+        {
+          q: "كم تكلف الخدمة؟",
+          a: "السعر يختلف حسب نوع الحظر ومستوى التعقيد. تواصل معنا أولاً لنقيّم حالتك مجاناً، ثم نخبرك بالتفاصيل."
+        },
+      ].map(faq => (
+        <details class="bg-white border border-gray-200 rounded-2xl overflow-hidden group">
+          <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-50 transition-colors">
+            <span class="font-semibold text-[#0A1628] text-base">{faq.q}</span>
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform shrink-0 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+            {faq.a}
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="/الأسئلة-الشائعة/" class="text-[#1A3C6E] font-medium text-sm hover:underline">
+        عرض كل الأسئلة الشائعة ←
+      </a>
+    </div>
+  </section>
+
+  <!-- ====== FINAL CTA ====== -->
+  <section class="bg-gradient-to-br from-[#1A3C6E] to-[#0A1628] py-16 sm:py-20 mx-4 sm:mx-8 rounded-3xl mb-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+        لا تزال مشكلتك قائمة؟
+      </h2>
+      <p class="text-white/60 mb-8 text-lg">
+        تواصل معنا الآن — التقييم الأولي مجاني وسريع
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa pulse-glow text-lg px-8 py-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          تواصل عبر واتساب
+        </a>
+        <a href={TG_LINK} target="_blank" rel="noopener" class="btn-tg text-lg px-8 py-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.820 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          تواصل عبر تلغرام
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

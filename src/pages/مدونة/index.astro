@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = [
+  {
+    slug: "حظر-واتساب-24-ساعة",
+    title: "حظر واتساب 24 ساعة — ماذا تفعل وكيف تتجنبه",
+    desc: "ما هو حظر واتساب لمدة 24 ساعة وكيف تتعامل معه وما الأسباب التي تؤدي إليه.",
+    date: "أكتوبر 2026",
+    readTime: "3 دقائق"
+  },
+  {
+    slug: "أسباب-حظر-واتساب",
+    title: "أسباب حظر واتساب — لماذا يُحظر حسابك؟",
+    desc: "الأسباب الرئيسية التي تؤدي لحظر واتساب وكيف تتجنبها للحفاظ على حسابك.",
+    date: "أكتوبر 2026",
+    readTime: "4 دقائق"
+  },
+  {
+    slug: "حظر-واتساب-مشدد",
+    title: "حظر واتساب المشدد — ما هو وكيف تفكه",
+    desc: "شرح مفصل لحظر واتساب المشدد وكيفية رفعه عبر طلب المراجعة الرسمي.",
+    date: "أكتوبر 2026",
+    readTime: "5 دقائق"
+  },
+];
+---
+
+<BaseLayout
+  title="مدونة WFixerX — كل ما تحتاجه عن حظر واتساب"
+  description="مقالات شاملة ومفصلة حول حظر واتساب: الأسباب، الأنواع، طرق الحل، وكل ما تحتاج معرفته."
+>
+  <header class="bg-gradient-to-b from-[#f0f6ff] to-white py-12 px-4 sm:px-6 text-center border-b border-gray-100">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-bold text-[#0A1628] mb-4">مدونة WFixerX</h1>
+      <p class="text-gray-500 text-lg">كل ما تحتاجه عن حظر واتساب — شرح بسيط ودقيق</p>
+    </div>
+  </header>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="space-y-5">
+      {posts.map(post => (
+        <a href={`/مدونة/${post.slug}/`} class="block bg-white border border-gray-200 rounded-2xl p-6 card-hover group">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-xs text-gray-400">{post.date}</span>
+            <span class="w-1 h-1 rounded-full bg-gray-300" aria-hidden="true"></span>
+            <span class="text-xs text-gray-400">وقت القراءة: {post.readTime}</span>
+          </div>
+          <h2 class="text-xl font-bold text-[#0A1628] mb-2 group-hover:text-[#1A3C6E] transition-colors">{post.title}</h2>
+          <p class="text-gray-500 text-sm leading-relaxed">{post.desc}</p>
+          <div class="mt-4 flex items-center gap-1 text-[#1A3C6E] text-sm font-medium">
+            اقرأ المقال
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="rotate-180" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
