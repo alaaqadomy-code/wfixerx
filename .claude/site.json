@@ -1,0 +1,17 @@
+{
+  "cfAccount": "b951ecc9e456eca48c58d760c46a8659",
+  "name": "wfixerx",
+  "domain": "wfixerx.com",
+  "hosting": "cloudflare-pages-zip",
+  "cfProject": "wfixerx",
+  "wrangler": true,
+  "dist": "dist",
+  "build": "npm run build",
+  "repo": "alaaqadomy-code/wfixerx",
+  "articles": {
+    "format": "astro-md",
+    "dir": "unknown"
+  },
+  "gscProperty": "https://wfixerx.com/",
+  "expectFolder": "wfixerx"
+}
