@@ -21,6 +21,13 @@ const {
 } = Astro.props;
 
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+
+// عنوان الصفحة: لاحقة العلامة تُضاف فقط إن لم تكن موجودة ولم يتجاوز الناتج 60 حرفاً،
+// لأن ما يزيد على ذلك يُقطع في نتائج البحث فتُهدر مساحة الكلمة المفتاحية.
+const BRAND = 'WFixerX';
+const pageTitle = title.includes(BRAND)
+  ? title
+  : (title.length + BRAND.length + 3 <= 60 ? `${title} | ${BRAND}` : title);
 ---
 <!doctype html>
 <html dir="rtl" lang="ar">
@@ -29,12 +36,12 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google-site-verification" content="5KAFuCk1EZv0rb4Bj4yswBl7_quo__0DbqhRDNFBWYM" />
     <meta name="msvalidate.01" content="D909DC0D7874D0FDE4C80DDE330570BD" />
-    <title>{title} | WFixerX</title>
+    <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph -->
-    <meta property="og:title" content={`${title} | WFixerX`} />
+    <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
