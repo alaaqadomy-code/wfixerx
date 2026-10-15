@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A%20%D9%85%D8%AD%D8%B8%D9%88%D8%B1%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
@@ -32,22 +32,22 @@ const schema = JSON.stringify([
 >
 
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2" aria-label="مسار التنقل">
-    <ol class="flex items-center gap-2 text-sm text-gray-400">
+    <ol class="flex items-center gap-2 text-sm text-white/40">
       <li><a href="/" class="hover:text-[#1A3C6E]">الرئيسية</a></li>
       <li aria-hidden="true">←</li>
-      <li class="text-gray-700 font-medium">استرجاع حساب واتساب</li>
+      <li class="text-white/70 font-medium">استرجاع حساب واتساب</li>
     </ol>
   </nav>
 
-  <header class="bg-gradient-to-b from-[#f0f6ff] to-white py-12 px-4 sm:px-6 border-b border-gray-100">
+  <header class="bg-gradient-to-b from-[#07111f] to-[#060d1a] py-12 px-4 sm:px-6 border-b border-white/8">
     <div class="max-w-4xl mx-auto">
       <div class="flex items-center gap-2 mb-4">
-        <span class="text-xs text-gray-400">وقت القراءة: 6 دقائق · آخر تحديث: أكتوبر 2026</span>
+        <span class="text-xs text-white/40">وقت القراءة: 6 دقائق · آخر تحديث: أكتوبر 2026</span>
       </div>
-      <h1 class="text-3xl sm:text-4xl font-bold text-[#0A1628] leading-tight mb-6">
+      <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
         استرجاع حساب واتساب المحظور — الدليل الكامل
       </h1>
-      <p class="text-lg text-gray-600 leading-relaxed">
+      <p class="text-lg text-white/65 leading-relaxed">
         فقدت الوصول لحسابك على واتساب؟ سواء كان محظوراً، مخترقاً، أو تعذّر الدخول إليه — هذا الدليل يشرح كل الحالات وكيف تتعامل مع كل منها.
       </p>
     </div>
@@ -57,8 +57,8 @@ const schema = JSON.stringify([
 
     <div class="quick-answer mb-10">
       <p class="text-xs font-semibold text-[#1A3C6E] uppercase tracking-wider mb-2">الجواب السريع</p>
-      <h2 class="text-xl font-bold text-[#0A1628] mb-3">كيف تسترجع حساب واتساب؟</h2>
-      <ol class="space-y-1 text-gray-700">
+      <h2 class="text-xl font-bold text-white mb-3">كيف تسترجع حساب واتساب؟</h2>
+      <ol class="space-y-1 text-white/70">
         <li><strong>1.</strong> حدد سبب فقدان الوصول: حظر، اختراق، أم مشكلة تسجيل دخول.</li>
         <li><strong>2.</strong> إذا كان حظراً: قدم طلب مراجعة عبر التطبيق أو support.whatsapp.com.</li>
         <li><strong>3.</strong> إذا كان اختراقاً: سجّل الدخول مجدداً برمز التحقق SMS إلى رقمك.</li>
@@ -67,7 +67,7 @@ const schema = JSON.stringify([
       </ol>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4">حالات فقدان الوصول لواتساب — أيّها أنت؟</h2>
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4">حالات فقدان الوصول لواتساب — أيّها أنت؟</h2>
 
     <div class="grid sm:grid-cols-3 gap-4 mb-10">
       {[
@@ -75,49 +75,49 @@ const schema = JSON.stringify([
         { icon: "🔓", title: "حساب مخترق", desc: "شخص آخر يستخدم حسابك أو تم تسجيل دخول دون علمك.", href: "#مخترق" },
         { icon: "📵", title: "تعذّر الدخول", desc: "لا تصلك رسالة التحقق أو تعذّر التحقق من الرقم.", href: "#تحقق" },
       ].map(c => (
-        <a href={c.href} class="bg-white border border-gray-200 rounded-xl p-5 card-hover group">
+        <a href={c.href} class="glass-dark border border-white/10 rounded-xl p-5 card-hover group">
           <div class="text-3xl mb-3" aria-hidden="true">{c.icon}</div>
-          <h3 class="font-bold text-[#0A1628] mb-1 group-hover:text-[#1A3C6E]">{c.title}</h3>
-          <p class="text-gray-500 text-sm">{c.desc}</p>
+          <h3 class="font-bold text-white mb-1 group-hover:text-[#25D366]">{c.title}</h3>
+          <p class="text-white/55 text-sm">{c.desc}</p>
         </a>
       ))}
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4" id="محظور">1. استرجاع حساب واتساب المحظور</h2>
-    <p class="text-gray-700 leading-relaxed mb-4">
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4" id="محظور">1. استرجاع حساب واتساب المحظور</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
       استرجاع حساب واتساب المحظور يتم عبر تقديم طلب مراجعة رسمي. اتبع الخطوات التالية:
     </p>
-    <ol class="space-y-3 text-gray-700 mb-6">
-      <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#1A3C6E] text-white flex items-center justify-center text-sm font-bold shrink-0">١</span><span>افتح واتساب وستظهر رسالة الحظر.</span></li>
-      <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#1A3C6E] text-white flex items-center justify-center text-sm font-bold shrink-0">٢</span><span>ابحث عن زر "طلب مراجعة" واضغط عليه.</span></li>
-      <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#1A3C6E] text-white flex items-center justify-center text-sm font-bold shrink-0">٣</span><span>اكتب رسالة تشرح استخدامك المشروع للحساب.</span></li>
-      <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#1A3C6E] text-white flex items-center justify-center text-sm font-bold shrink-0">٤</span><span>انتظر رد واتساب (أيام إلى أسابيع).</span></li>
+    <ol class="space-y-3 text-white/70 mb-6">
+      <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30 flex items-center justify-center text-sm font-bold shrink-0">١</span><span>افتح واتساب وستظهر رسالة الحظر.</span></li>
+      <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30 flex items-center justify-center text-sm font-bold shrink-0">٢</span><span>ابحث عن زر "طلب مراجعة" واضغط عليه.</span></li>
+      <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30 flex items-center justify-center text-sm font-bold shrink-0">٣</span><span>اكتب رسالة تشرح استخدامك المشروع للحساب.</span></li>
+      <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30 flex items-center justify-center text-sm font-bold shrink-0">٤</span><span>انتظر رد واتساب (أيام إلى أسابيع).</span></li>
     </ol>
 
-    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-8">
-      <p class="text-[#1A3C6E] text-sm">
+    <div class="bg-[#25D366]/10 border border-[#25D366]/30 rounded-xl p-4 mb-8">
+      <p class="text-white/80 text-sm">
         <strong>هل لم يظهر زر المراجعة؟</strong> اقرأ صفحة <a href="/رسالة-لا-يمكن-لهذا-الحساب/" class="underline font-semibold">رسالة "لا يمكن لهذا الحساب"</a> للتفاصيل الكاملة.
       </p>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4" id="مخترق">2. استرجاع حساب واتساب مخترق</h2>
-    <p class="text-gray-700 leading-relaxed mb-4">
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4" id="مخترق">2. استرجاع حساب واتساب مخترق</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
       إذا اخترق شخص ما حسابك، يمكنك استرداده بسهولة طالما ما زلت تمتلك رقم هاتفك:
     </p>
-    <ol class="space-y-3 text-gray-700 mb-6">
+    <ol class="space-y-3 text-white/70 mb-6">
       <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#0A1628] text-white flex items-center justify-center text-sm font-bold shrink-0">١</span><span>افتح واتساب على هاتفك وأدخل رقمك.</span></li>
       <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#0A1628] text-white flex items-center justify-center text-sm font-bold shrink-0">٢</span><span>ستصلك رسالة SMS برمز التحقق — أدخله.</span></li>
       <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#0A1628] text-white flex items-center justify-center text-sm font-bold shrink-0">٣</span><span>سيُطرد الشخص المخترق تلقائياً من حسابك.</span></li>
       <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-[#0A1628] text-white flex items-center justify-center text-sm font-bold shrink-0">٤</span><span>فعّل التحقق بخطوتين من الإعدادات لحماية حسابك مستقبلاً.</span></li>
     </ol>
 
-    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8">
-      <p class="text-amber-800 text-sm font-medium">⚠️ تحذير: لا تشارك أبداً رمز التحقق SMS مع أي شخص — حتى من يدّعي أنه من فريق واتساب أو من مزود خدمة.</p>
+    <div class="bg-amber-900/20 border border-amber-500/30 rounded-xl p-4 mb-8">
+      <p class="text-amber-300 text-sm font-medium">⚠️ تحذير: لا تشارك أبداً رمز التحقق SMS مع أي شخص — حتى من يدّعي أنه من فريق واتساب أو من مزود خدمة.</p>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-4" id="تحقق">3. إذا لم تصلك رسالة التحقق</h2>
-    <p class="text-gray-700 leading-relaxed mb-4">الحلول المقترحة:</p>
-    <ul class="space-y-2 text-gray-700 mb-6">
+    <h2 class="text-2xl font-bold text-white mt-10 mb-4" id="تحقق">3. إذا لم تصلك رسالة التحقق</h2>
+    <p class="text-white/70 leading-relaxed mb-4">الحلول المقترحة:</p>
+    <ul class="space-y-2 text-white/70 mb-6">
       <li class="flex items-start gap-3"><span class="text-[#1A3C6E] font-bold shrink-0">•</span>تأكد من وجود تغطية شبكة جيدة.</li>
       <li class="flex items-start gap-3"><span class="text-[#1A3C6E] font-bold shrink-0">•</span>انتظر دقيقتين ثم اطلب إعادة الإرسال.</li>
       <li class="flex items-start gap-3"><span class="text-[#1A3C6E] font-bold shrink-0">•</span>جرب خيار "مكالمة صوتية" بدلاً من SMS.</li>
@@ -143,8 +143,8 @@ const schema = JSON.stringify([
         { href: "/طلب-مراجعة-واتساب/", title: "طلب مراجعة واتساب" },
         { href: "/خدمة-فك-حظر-واتساب/", title: "خدمة WFixerX" },
       ].map(link => (
-        <a href={link.href} class="bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-[#1A3C6E] hover:bg-blue-50 transition-colors group">
-          <p class="font-semibold text-[#0A1628] text-sm group-hover:text-[#1A3C6E]">{link.title} ←</p>
+        <a href={link.href} class="glass-dark rounded-xl p-4 border border-white/10 hover:border-[#25D366]/40 hover:bg-white/5 transition-colors group">
+          <p class="font-semibold text-white text-sm group-hover:text-[#25D366]">{link.title} ←</p>
         </a>
       ))}
     </div>

@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A%20%D9%85%D8%AD%D8%B8%D9%88%D8%B1%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
@@ -70,10 +70,10 @@ const schema = JSON.stringify([
 >
 
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2" aria-label="مسار التنقل">
-    <ol class="flex items-center gap-2 text-sm text-gray-400 flex-wrap">
+    <ol class="flex items-center gap-2 text-sm text-white/40 flex-wrap">
       <li><a href="/" class="hover:text-[#1A3C6E]">الرئيسية</a></li>
       <li aria-hidden="true">←</li>
-      <li class="text-gray-700 font-medium">حظر واتساب</li>
+      <li class="text-white/70 font-medium">حظر واتساب</li>
     </ol>
   </nav>
 
@@ -100,11 +100,11 @@ const schema = JSON.stringify([
 
     <div class="quick-answer mb-10">
       <p class="text-xs font-semibold text-[#1A3C6E] uppercase tracking-wider mb-2">الجواب السريع</p>
-      <h2 class="text-xl font-bold text-[#0A1628] mb-3">ما هو حظر واتساب؟</h2>
-      <p class="text-gray-700">حظر واتساب هو تقييد تفرضه شركة WhatsApp على حساب انتهك شروط الاستخدام، يمنعه من إرسال أو استقبال الرسائل. ثلاثة أنواع رئيسية: <strong>مؤقت</strong> (24-72 ساعة، يُرفع وحده)، <strong>مشدد</strong> (أسابيع، يحتاج مراجعة)، <strong>نهائي</strong> (دائم، يحتاج متابعة متخصصة).</p>
+      <h2 class="text-xl font-bold text-white mb-3">ما هو حظر واتساب؟</h2>
+      <p class="text-white/70">حظر واتساب هو تقييد تفرضه شركة WhatsApp على حساب انتهك شروط الاستخدام، يمنعه من إرسال أو استقبال الرسائل. ثلاثة أنواع رئيسية: <strong>مؤقت</strong> (24-72 ساعة، يُرفع وحده)، <strong>مشدد</strong> (أسابيع، يحتاج مراجعة)، <strong>نهائي</strong> (دائم، يحتاج متابعة متخصصة).</p>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-6">أنواع حظر واتساب</h2>
+    <h2 class="text-2xl font-bold text-white mt-10 mb-6">أنواع حظر واتساب</h2>
 
     <div class="grid sm:grid-cols-3 gap-4 mb-10">
       {[
@@ -130,16 +130,16 @@ const schema = JSON.stringify([
           icon: "🔒"
         }
       ].map(t => (
-        <div class={`rounded-2xl p-5 border-2 ${t.color === 'green' ? 'border-green-200 bg-green-50' : t.color === 'orange' ? 'border-orange-200 bg-orange-50' : 'border-red-200 bg-red-50'}`}>
+        <div class={`rounded-2xl p-5 border-2 ${t.color === 'green' ? 'border-green-700/40 bg-green-900/20' : t.color === 'orange' ? 'border-orange-700/40 bg-orange-900/20' : 'border-red-700/40 bg-red-900/20'}`}>
           <div class="text-3xl mb-3">{t.icon}</div>
-          <h3 class={`font-bold text-lg mb-1 ${t.color === 'green' ? 'text-green-800' : t.color === 'orange' ? 'text-orange-800' : 'text-red-800'}`}>{t.title}</h3>
-          <p class={`text-sm font-semibold mb-2 ${t.color === 'green' ? 'text-green-600' : t.color === 'orange' ? 'text-orange-600' : 'text-red-600'}`}>المدة: {t.duration}</p>
-          <p class={`text-sm ${t.color === 'green' ? 'text-green-700' : t.color === 'orange' ? 'text-orange-700' : 'text-red-700'}`}>{t.desc}</p>
+          <h3 class={`font-bold text-lg mb-1 ${t.color === 'green' ? 'text-green-300' : t.color === 'orange' ? 'text-orange-300' : 'text-red-300'}`}>{t.title}</h3>
+          <p class={`text-sm font-semibold mb-2 ${t.color === 'green' ? 'text-green-400' : t.color === 'orange' ? 'text-orange-400' : 'text-red-400'}`}>المدة: {t.duration}</p>
+          <p class={`text-sm ${t.color === 'green' ? 'text-green-300/80' : t.color === 'orange' ? 'text-orange-200' : 'text-red-300/80'}`}>{t.desc}</p>
         </div>
       ))}
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-6">أسباب حظر واتساب</h2>
+    <h2 class="text-2xl font-bold text-white mt-10 mb-6">أسباب حظر واتساب</h2>
     <div class="grid sm:grid-cols-2 gap-4 mb-10">
       {[
         { title: "نسخ معدّلة", desc: "GB WhatsApp وغيرها — السبب الأكثر شيوعاً للحظر النهائي" },
@@ -149,14 +149,14 @@ const schema = JSON.stringify([
         { title: "محتوى مخالف", desc: "مواد محظورة تؤدي لحظر فوري ونهائي" },
         { title: "إضافة بلا إذن", desc: "إضافة أشخاص لمجموعات ويبلغون عنك باستمرار" },
       ].map(c => (
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4">
-          <h3 class="font-bold text-[#0A1628] mb-1">{c.title}</h3>
-          <p class="text-gray-500 text-sm">{c.desc}</p>
+        <div class="glass-dark border border-white/10 rounded-xl p-4">
+          <h3 class="font-bold text-white mb-1">{c.title}</h3>
+          <p class="text-white/55 text-sm">{c.desc}</p>
         </div>
       ))}
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mt-10 mb-6">كيف تتعامل مع حظر واتساب؟</h2>
+    <h2 class="text-2xl font-bold text-white mt-10 mb-6">كيف تتعامل مع حظر واتساب؟</h2>
     <ol class="space-y-4 mb-10">
       {[
         { step: "حدّد نوع الحظر", desc: "هل يظهر عداد وقت؟ هل الرسالة تقول 'لا يمكن استخدام واتساب'؟ هذا يحدد المسار." },
@@ -165,11 +165,11 @@ const schema = JSON.stringify([
         { step: "للحظر المشدد: قدّم مراجعة", desc: "اضغط 'طلب مراجعة' أو توجّه لـ support.whatsapp.com." },
         { step: "للحظر النهائي: اطلب مساعدة", desc: "تواصل معنا لتقييم الحالة ومعرفة الخيارات المتاحة." },
       ].map((s, i) => (
-        <li class="flex gap-4 bg-white border border-gray-200 rounded-xl p-4">
+        <li class="flex gap-4 glass-dark border border-white/10 rounded-xl p-4">
           <span class="w-8 h-8 bg-[#1A3C6E] text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">{i + 1}</span>
           <div>
-            <p class="font-bold text-[#0A1628] mb-1">{s.step}</p>
-            <p class="text-gray-600 text-sm">{s.desc}</p>
+            <p class="font-bold text-white mb-1">{s.step}</p>
+            <p class="text-white/65 text-sm">{s.desc}</p>
           </div>
         </li>
       ))}
@@ -184,7 +184,7 @@ const schema = JSON.stringify([
       </div>
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mb-6">الأسئلة الشائعة عن حظر واتساب</h2>
+    <h2 class="text-2xl font-bold text-white mb-6">الأسئلة الشائعة عن حظر واتساب</h2>
     <div class="space-y-3 mb-10">
       {[
         {
@@ -204,14 +204,14 @@ const schema = JSON.stringify([
           a: "يمكن إعادة التقديم بعد فترة مع رسالة مختلفة. في الحالات الصعبة، يساعد متخصص في تحليل الوضع وتقديم طلب أفضل."
         },
       ].map(item => (
-        <details class="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
-          <summary class="p-4 font-semibold text-[#0A1628] cursor-pointer hover:bg-gray-100 transition-colors">{item.q}</summary>
-          <p class="px-4 pb-4 text-gray-600 text-sm leading-relaxed">{item.a}</p>
+        <details class="glass-dark border border-white/10 rounded-xl overflow-hidden">
+          <summary class="p-4 font-semibold text-white cursor-pointer hover:bg-white/5 transition-colors">{item.q}</summary>
+          <p class="px-4 pb-4 text-white/65 text-sm leading-relaxed">{item.a}</p>
         </details>
       ))}
     </div>
 
-    <h2 class="text-2xl font-bold text-[#0A1628] mb-4">اقرأ أيضاً</h2>
+    <h2 class="text-2xl font-bold text-white mb-4">اقرأ أيضاً</h2>
     <div class="grid sm:grid-cols-2 gap-4">
       {[
         { href: "/فك-حظر-واتساب/", title: "دليل فك حظر واتساب الشامل", desc: "الخطوات التفصيلية لكل نوع حظر" },
@@ -219,9 +219,9 @@ const schema = JSON.stringify([
         { href: "/حظر-واتساب-للاعمال/", title: "حظر واتساب الأعمال", desc: "خاص بحسابات WhatsApp Business" },
         { href: "/مدونة/حظر-واتساب-مشدد/", title: "الحظر المشدد تفصيلاً", desc: "ما هو وكيف تفكه خطوة بخطوة" },
       ].map(link => (
-        <a href={link.href} class="bg-gray-50 border border-gray-200 rounded-xl p-4 hover:border-[#1A3C6E] hover:bg-blue-50 transition-colors group">
-          <p class="font-bold text-[#0A1628] mb-1 group-hover:text-[#1A3C6E]">{link.title} ←</p>
-          <p class="text-gray-500 text-sm">{link.desc}</p>
+        <a href={link.href} class="glass-dark border border-white/10 rounded-xl p-4 hover:border-[#25D366]/40 hover:bg-white/5 transition-colors group">
+          <p class="font-bold text-white mb-1 group-hover:text-[#25D366]">{link.title} ←</p>
+          <p class="text-white/55 text-sm">{link.desc}</p>
         </a>
       ))}
     </div>

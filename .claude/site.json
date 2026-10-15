@@ -5,6 +5,7 @@
   "hosting": "cloudflare-pages-zip",
   "cfProject": "wfixerx",
   "wrangler": true,
+  "productionBranch": "main",
   "dist": "dist",
   "build": "npm run build",
   "repo": "alaaqadomy-code/wfixerx",

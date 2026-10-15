@@ -1,10 +1,50 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import WhatsAppBanScreen from '../components/WhatsAppBanScreen.astro';
 
 const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A%20%D9%85%D8%AD%D8%B8%D9%88%D8%B1%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
 const TG_LINK = "https://t.me/+962795827790";
 
 const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "كيف تفك حظر واتساب خطوة بخطوة؟",
+    "description": "دليل تفصيلي لفك حظر واتساب — من تحديد نوع الحظر إلى تقديم طلب المراجعة الرسمي",
+    "totalTime": "PT45M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "حدّد نوع الحظر",
+        "text": "افتح واتساب وراجع الرسالة: عداد وقت = حظر مؤقت. رسالة 'لا يمكن لهذا الحساب' = حظر نهائي."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "الحظر المؤقت — انتظر",
+        "text": "أغلق التطبيق تماماً وانتظر 24 إلى 72 ساعة دون فتحه. لا تعيد التثبيت ولا تحاول تجاوز الحظر."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "الحظر النهائي — اضغط طلب مراجعة",
+        "text": "ابحث عن زر 'طلب مراجعة' داخل شاشة الحظر في التطبيق، أو ادخل على support.whatsapp.com وقدّم طلبك."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "اكتب رسالة المراجعة",
+        "text": "اشرح وضعك باختصار واحترافية. لا تكرر الطلب بنفس الكلمات إذا رُفض سابقاً."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "انتظر الرد أو احصل على مساعدة",
+        "text": "قد يأخذ الرد من أيام إلى أسابيع. إذا رُفض الطلب أو صعب عليك الصياغة، تواصل مع WFixerX."
+      }
+    ]
+  },
   {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -74,6 +114,10 @@ const schema = JSON.stringify([
   </header>
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+
+    <div class="flex justify-center mb-10">
+      <WhatsAppBanScreen type="final" />
+    </div>
 
     <!-- Quick Answer Box -->
     <div class="quick-answer mb-10">
@@ -204,20 +248,87 @@ const schema = JSON.stringify([
       <li class="flex items-start gap-3"><span class="text-orange-400 shrink-0">→</span>لا تعرف سبب الحظر ولا كيف تصيغ طلباً مناسباً.</li>
     </ul>
 
-    <!-- Internal Links -->
-    <h2 class="text-2xl font-bold text-white mt-10 mb-4">مواضيع ذات صلة</h2>
-    <div class="grid sm:grid-cols-2 gap-4">
-      {[
-        { href: "/رسالة-لا-يمكن-لهذا-الحساب/", title: "رسالة \"لا يمكن لهذا الحساب استخدام واتساب\"", desc: "شرح تفصيلي لهذه الرسالة وكيفية التعامل معها." },
-        { href: "/طلب-مراجعة-واتساب/", title: "كيف تقدم طلب مراجعة واتساب", desc: "خطوات تقديم الطلب الرسمي وزيادة فرص القبول." },
-        { href: "/حظر-واتساب-للاعمال/", title: "حظر واتساب الأعمال", desc: "كيف تسترد حساب Business محظور بأسرع وقت." },
-        { href: "/مدونة/أسباب-حظر-واتساب/", title: "أسباب حظر واتساب", desc: "لماذا يُحظر حسابك وكيف تتجنب الحظر مستقبلاً." },
-      ].map(link => (
-        <a href={link.href} class="glass-dark rounded-xl p-4 border border-white/10 hover:border-[#25D366]/40 transition-colors group">
-          <p class="font-semibold text-white/80 mb-1 text-sm group-hover:text-[#25D366] transition-colors">{link.title}</p>
-          <p class="text-white/45 text-xs">{link.desc}</p>
-        </a>
-      ))}
+    <!-- Topic Cluster Hub -->
+    <h2 class="text-2xl font-bold text-white mt-12 mb-2">دليل حظر واتساب — جميع المواضيع</h2>
+    <p class="text-white/50 text-sm mb-8">كل ما تحتاج معرفته منظّم في ثلاثة محاور</p>
+
+    <div class="space-y-8">
+      <!-- Cluster 1: أنواع الحظر -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-[#25D366]/15 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] text-sm font-bold">١</span>
+          <h3 class="text-lg font-bold text-white">أنواع الحظر ومدده</h3>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-3">
+          {[
+            { href: "/مدونة/أنواع-حظر-واتساب/", title: "أنواع حظر واتساب — الدليل الشامل" },
+            { href: "/مدونة/فرق-حظر-واتساب-مؤقت-ونهائي/", title: "الفرق بين الحظر المؤقت والنهائي" },
+            { href: "/مدونة/حظر-واتساب-24-ساعة/", title: "حظر واتساب 24 ساعة" },
+            { href: "/مدونة/واتساب-محظور-7-أيام/", title: "واتساب محظور 7 أيام" },
+            { href: "/مدونة/حظر-واتساب-مشدد/", title: "حظر واتساب المشدد" },
+            { href: "/مدونة/واتساب-محظور-نهائياً/", title: "واتساب محظور نهائياً — هل يُسترد؟" },
+            { href: "/مدونة/مدة-حظر-واتساب/", title: "مدة حظر واتساب" },
+            { href: "/مدونة/كم-مدة-حظر-واتساب/", title: "كم مدة حظر واتساب؟" },
+            { href: "/مدونة/علامات-حظر-واتساب/", title: "علامات حظر واتساب" },
+            { href: "/مدونة/ماذا-تفعل-عند-حظر-واتساب-فجأة/", title: "ماذا تفعل عند الحظر فجأة؟" },
+          ].map(link => (
+            <a href={link.href} class="glass-dark rounded-xl px-4 py-3 border border-white/10 hover:border-[#25D366]/40 transition-colors group flex items-center gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#25D366]/60 shrink-0"></span>
+              <p class="text-sm font-medium text-white/75 group-hover:text-white transition-colors">{link.title}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Cluster 2: أسباب الحظر -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-orange-500/15 border border-orange-500/30 flex items-center justify-center text-orange-400 text-sm font-bold">٢</span>
+          <h3 class="text-lg font-bold text-white">أسباب الحظر والوقاية</h3>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-3">
+          {[
+            { href: "/مدونة/أسباب-حظر-واتساب/", title: "أسباب حظر واتساب — الأكثر شيوعاً" },
+            { href: "/مدونة/حظر-واتساب-بسبب-نسخة-معدلة/", title: "الحظر بسبب نسخة معدّلة" },
+            { href: "/مدونة/حظر-واتساب-بسبب-الرسائل-الجماعية/", title: "الحظر بسبب الرسائل الجماعية" },
+            { href: "/مدونة/حظر-واتساب-بسبب-الإبلاغ/", title: "الحظر بسبب الإبلاغ" },
+            { href: "/مدونة/حظر-رقم-واتساب/", title: "حظر رقم واتساب — الفرق عن حظر الحساب" },
+            { href: "/مدونة/كيف-تتجنب-حظر-واتساب/", title: "كيف تتجنب حظر واتساب — 10 قواعد" },
+          ].map(link => (
+            <a href={link.href} class="glass-dark rounded-xl px-4 py-3 border border-white/10 hover:border-orange-500/40 transition-colors group flex items-center gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-orange-400/60 shrink-0"></span>
+              <p class="text-sm font-medium text-white/75 group-hover:text-white transition-colors">{link.title}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Cluster 3: الحلول -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400 text-sm font-bold">٣</span>
+          <h3 class="text-lg font-bold text-white">الحلول والاسترداد</h3>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-3">
+          {[
+            { href: "/رسالة-لا-يمكن-لهذا-الحساب/", title: "رسالة \"لا يمكن لهذا الحساب\"" },
+            { href: "/طلب-مراجعة-واتساب/", title: "طلب مراجعة واتساب — الخطوات الصحيحة" },
+            { href: "/استرجاع-حساب-واتساب/", title: "استرجاع حساب واتساب المحظور" },
+            { href: "/مدونة/فك-حظر-واتساب-مجاناً/", title: "فك حظر واتساب مجاناً" },
+            { href: "/مدونة/استرجاع-حساب-واتساب-محظور/", title: "دليل استرجاع الحساب المحظور" },
+            { href: "/مدونة/رابط-طلب-مراجعة-واتساب/", title: "رابط طلب مراجعة واتساب" },
+            { href: "/مدونة/دعم-واتساب-لفك-الحظر/", title: "التواصل مع دعم واتساب" },
+            { href: "/مدونة/هل-يمكن-استخدام-رقم-آخر-بعد-حظر-واتساب/", title: "هل تستخدم رقماً آخر بعد الحظر؟" },
+            { href: "/حظر-واتساب-للاعمال/", title: "حظر واتساب الأعمال" },
+            { href: "/مدونة/حظر-واتساب-في-السعودية/", title: "حظر واتساب في السعودية" },
+          ].map(link => (
+            <a href={link.href} class="glass-dark rounded-xl px-4 py-3 border border-white/10 hover:border-blue-500/40 transition-colors group flex items-center gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400/60 shrink-0"></span>
+              <p class="text-sm font-medium text-white/75 group-hover:text-white transition-colors">{link.title}</p>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
 
     <!-- Final CTA -->

@@ -218,11 +218,12 @@ const schema = JSON.stringify([
       ))}
     </div>
 
-    <div class="grid sm:grid-cols-3 gap-4 mt-12">
+    <div class="grid sm:grid-cols-2 gap-4 mt-12">
       {[
         { href: "/فك-حظر-واتساب/", title: "دليل فك الحظر الشامل" },
+        { href: "/مدونة/ماذا-تفعل-عند-حظر-واتساب-فجأة/", title: "ماذا تفعل عند الحظر فجأة؟" },
         { href: "/مدونة/أسباب-حظر-واتساب/", title: "أسباب حظر واتساب" },
-        { href: "/مدونة/حظر-واتساب-مشدد/", title: "حظر واتساب المشدد" },
+        { href: "/مدونة/أنواع-حظر-واتساب/", title: "أنواع حظر واتساب" },
       ].map(link => (
         <a href={link.href} class="glass-dark rounded-xl p-4 border border-white/10 hover:border-[#25D366]/40 transition-colors group">
           <p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366] transition-colors">{link.title} ←</p>

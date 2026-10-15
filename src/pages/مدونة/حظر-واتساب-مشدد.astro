@@ -231,11 +231,12 @@ const schema = JSON.stringify([
       ))}
     </div>
 
-    <div class="grid sm:grid-cols-3 gap-4">
+    <div class="grid sm:grid-cols-2 gap-4">
       {[
         { href: "/فك-حظر-واتساب/", title: "دليل فك الحظر الشامل" },
+        { href: "/مدونة/واتساب-محظور-نهائياً/", title: "واتساب محظور نهائياً" },
         { href: "/طلب-مراجعة-واتساب/", title: "كيفية طلب المراجعة" },
-        { href: "/مدونة/أسباب-حظر-واتساب/", title: "أسباب الحظر" },
+        { href: "/مدونة/واتساب-محظور-7-أيام/", title: "واتساب محظور 7 أيام" },
       ].map(link => (
         <a href={link.href} class="glass-dark rounded-xl p-4 border border-white/10 hover:border-[#25D366]/40 transition-colors group">
           <p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366] transition-colors">{link.title} ←</p>

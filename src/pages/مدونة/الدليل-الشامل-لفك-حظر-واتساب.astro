@@ -1,0 +1,542 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A%20%D9%85%D8%AD%D8%B8%D9%88%D8%B1%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
+const TG_LINK = "https://t.me/+962795827790";
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "الدليل الشامل لفك حظر واتساب 2026 — كل ما تحتاجه في مكان واحد",
+    "description": "الدليل الأكثر شمولاً لفك حظر واتساب 2026: أنواع الحظر، الأسباب، خطوات الحل، طلب المراجعة، وكيف تتجنب الحظر مستقبلاً.",
+    "author": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
+    "publisher": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
+    "datePublished": "2026-10-13",
+    "dateModified": "2026-10-13",
+    "inLanguage": "ar",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wfixerx.com/مدونة/الدليل-الشامل-لفك-حظر-واتساب/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://wfixerx.com" },
+      { "@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://wfixerx.com/مدونة/" },
+      { "@type": "ListItem", "position": 3, "name": "الدليل الشامل لفك حظر واتساب", "item": "https://wfixerx.com/مدونة/الدليل-الشامل-لفك-حظر-واتساب/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "كيف أفك حظر واتساب؟",
+        "acceptedAnswer": { "@type": "Answer", "text": "لفك حظر واتساب: (1) افتح التطبيق وتحقق من نوع الرسالة. (2) إذا ظهر عداد — انتظر انتهاء المدة. (3) إذا ظهرت رسالة 'لا يمكن لهذا الحساب' — اضغط 'طلب مراجعة' واكتب رسالة واضحة. (4) انتظر رد واتساب 5-10 أيام. (5) إذا رُفض — أعد الطلب بصياغة مختلفة بعد أسبوع." }
+      },
+      {
+        "@type": "Question",
+        "name": "ما أنواع حظر واتساب؟",
+        "acceptedAnswer": { "@type": "Answer", "text": "ثلاثة أنواع: (1) الحظر المؤقت: يظهر عداد تنازلي (24 ساعة أو 7 أيام) وينتهي تلقائياً. (2) الحظر المشدد: لا عداد ولكن يظهر زر 'طلب مراجعة' — يمكن رفعه. (3) الحظر النهائي: رسالة 'لا يمكن لهذا الحساب استخدام واتساب بعد الآن' — يحتاج طلب مراجعة رسمي." }
+      },
+      {
+        "@type": "Question",
+        "name": "ما أسباب حظر واتساب؟",
+        "acceptedAnswer": { "@type": "Answer", "text": "الأسباب الرئيسية: (1) استخدام نسخ معدّلة مثل GB WhatsApp — السبب الأول. (2) إرسال رسائل جماعية لأعداد كبيرة بسرعة. (3) تقارير كثيرة من مستخدمين آخرين. (4) إضافة أشخاص لمجموعات دون إذنهم. (5) استخدام برامج أتمتة أو روبوتات. (6) نشاط مشبوه يخالف سياسات واتساب." }
+      },
+      {
+        "@type": "Question",
+        "name": "كم مدة حظر واتساب؟",
+        "acceptedAnswer": { "@type": "Answer", "text": "تعتمد المدة على النوع: الحظر المؤقت ينتهي خلال 24 ساعة أو 7 أيام تلقائياً. الحظر المشدد يُرفع بعد قبول طلب المراجعة (أيام إلى أسابيع). الحظر النهائي بلا مدة محددة — يستمر حتى قبول طلب المراجعة أو رفضه نهائياً." }
+      },
+      {
+        "@type": "Question",
+        "name": "هل يمكن فك الحظر النهائي عن واتساب؟",
+        "acceptedAnswer": { "@type": "Answer", "text": "نعم في كثير من الحالات. تقديم طلب مراجعة رسمي عبر التطبيق هو الطريقة الوحيدة. نسبة النجاح تعتمد على: سبب الحظر، جودة صياغة الطلب، تاريخ الحساب، وعدم تكرار المخالفة. الطلبات المكتوبة باحترافية لها فرص نجاح أعلى بكثير." }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف أعرف لماذا حُظر واتساب؟",
+        "acceptedAnswer": { "@type": "Answer", "text": "واتساب لا يخبرك بالسبب المحدد مباشرة. لكن يمكن تخمينه من: (1) نوع النشاط الأخير (رسائل جماعية، إضافة أشخاص، استخدام نسخة معدّلة). (2) نوع الرسالة التي تظهر عند فتح التطبيق. (3) توقيت الحظر بالنسبة لآخر نشاط قمت به." }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هو طلب مراجعة واتساب؟",
+        "acceptedAnswer": { "@type": "Answer", "text": "طلب المراجعة هو رسالة رسمية ترسلها لفريق واتساب عبر التطبيق نفسه لطلب إعادة النظر في قرار الحظر. يظهر زر 'طلب مراجعة' في شاشة الحظر. يجب كتابة رسالة واضحة تشرح هويتك وسبب استخدامك للحساب وأنك لم تنتهك السياسات عمداً." }
+      },
+      {
+        "@type": "Question",
+        "name": "ماذا أفعل إذا رُفض طلب مراجعة واتساب؟",
+        "acceptedAnswer": { "@type": "Answer", "text": "إذا رُفض الطلب: (1) لا تُعيد نفس الرسالة فوراً. (2) انتظر أسبوعاً على الأقل. (3) أعد صياغة الطلب بزاوية مختلفة — ركّز على أهمية الحساب وأنك لن تكرر المخالفة. (4) قدّم تفاصيل أكثر عن هويتك واستخدامك. (5) إذا رُفض مرتين — تواصل مع متخصص لمساعدتك في الصياغة." }
+      },
+      {
+        "@type": "Question",
+        "name": "هل استخدام واتساب الذهبي أو الأزرق يسبب الحظر؟",
+        "acceptedAnswer": { "@type": "Answer", "text": "نعم بشكل مؤكد. واتساب الذهبي وواتساب الأزرق وGB WhatsApp وأي نسخة معدّلة تُسبّب الحظر لأنها تنتهك شروط الاستخدام. واتساب تكتشفها تلقائياً. الحل: احذفها فوراً وثبّت النسخة الرسمية، ثم قدّم طلب مراجعة وذكر فيه أنك لم تكن تعلم بالمخالفة." }
+      },
+      {
+        "@type": "Question",
+        "name": "هل يمكن استخدام رقم آخر بعد حظر واتساب؟",
+        "acceptedAnswer": { "@type": "Answer", "text": "نعم، يمكنك تسجيل رقم جديد على واتساب. لكن الحظر الأصلي يبقى على الرقم القديم وقد يمتد للجهاز في حالات الحظر الشديد. الأفضل هو محاولة استرداد الرقم القديم أولاً، لأن الرقم الجديد لن يعيد لك جهات الاتصال والمحادثات السابقة." }
+      }
+    ]
+  }
+]);
+---
+
+<BaseLayout
+  title="الدليل الشامل لفك حظر واتساب 2026 — كل ما تحتاجه في مكان واحد"
+  description="الدليل الأكثر شمولاً لفك حظر واتساب 2026: أنواع الحظر الثلاثة، أسباب الحظر، خطوات فك الحظر خطوة بخطوة، طلب المراجعة الصحيح، وكل ما تحتاجه."
+  schema={schema}
+>
+
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2" aria-label="مسار التنقل">
+    <ol class="flex items-center gap-2 text-sm text-white/40 flex-wrap">
+      <li><a href="/" class="hover:text-[#25D366] transition-colors">الرئيسية</a></li>
+      <li aria-hidden="true">←</li>
+      <li><a href="/مدونة/" class="hover:text-[#25D366] transition-colors">المدونة</a></li>
+      <li aria-hidden="true">←</li>
+      <li class="text-white/70 font-medium">الدليل الشامل لفك حظر واتساب</li>
+    </ol>
+  </nav>
+
+  <header class="bg-gradient-to-b from-[#07111f] to-[#060d1a] py-12 px-4 sm:px-6 border-b border-white/8">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="text-xs font-medium text-[#25D366] bg-[#25D366]/10 px-3 py-1 rounded-full border border-[#25D366]/20">الدليل الشامل</span>
+        <span class="text-xs text-white/35">آخر تحديث: أكتوبر 2026</span>
+        <span class="text-xs text-white/35">· وقت القراءة: 12 دقيقة</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+        الدليل الشامل لفك حظر واتساب 2026
+      </h1>
+      <p class="text-lg text-white/70 leading-relaxed max-w-3xl">
+        كل ما تحتاج معرفته في مكان واحد: ما هو حظر واتساب، أنواعه الثلاثة، أسبابه، وخطوات فكّه بدقة — سواء كان حظراً مؤقتاً أو نهائياً أو مشدداً.
+      </p>
+      <div class="flex flex-wrap gap-3 mt-6">
+        <div class="flex items-center gap-2 text-sm text-white/50 bg-white/5 rounded-lg px-3 py-2">
+          <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+          محدّث 2026
+        </div>
+        <div class="flex items-center gap-2 text-sm text-white/50 bg-white/5 rounded-lg px-3 py-2">
+          <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+          شامل لجميع الأنواع
+        </div>
+        <div class="flex items-center gap-2 text-sm text-white/50 bg-white/5 rounded-lg px-3 py-2">
+          <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+          خطوات عملية
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+
+    <!-- Quick Answer -->
+    <div class="quick-answer mb-10">
+      <p class="text-xs font-semibold text-[#25D366] uppercase tracking-wider mb-2">الجواب السريع</p>
+      <h2 class="text-xl font-bold text-white mb-3">كيف تفك حظر واتساب؟</h2>
+      <p class="text-white/75 leading-relaxed">
+        لفك حظر واتساب: افتح التطبيق وحدّد نوع الحظر. <strong class="text-white">الحظر المؤقت</strong> (عداد ظاهر) ينتهي تلقائياً — لا تفتح التطبيق حتى ينتهي. <strong class="text-white">الحظر النهائي أو المشدد</strong> يحتاج طلب مراجعة رسمي عبر التطبيق — اضغط "طلب مراجعة"، اكتب رسالة واضحة، وانتظر رد واتساب 5-10 أيام.
+      </p>
+    </div>
+
+    <!-- فهرس المحتوى -->
+    <div class="glass-dark rounded-2xl p-6 border border-white/10 mb-10">
+      <p class="font-bold text-white mb-4 text-sm">محتويات هذا الدليل</p>
+      <ol class="space-y-2 text-sm">
+        {[
+          { n: "١", text: "ما هو حظر واتساب؟", id: "ما-هو" },
+          { n: "٢", text: "أنواع حظر واتساب الثلاثة", id: "انواع" },
+          { n: "٣", text: "أسباب حظر واتساب الأكثر شيوعاً", id: "اسباب" },
+          { n: "٤", text: "كيف تعرف نوع حظرك؟", id: "تشخيص" },
+          { n: "٥", text: "خطوات فك الحظر — كل نوع على حدة", id: "خطوات" },
+          { n: "٦", text: "طلب المراجعة — الصياغة الصحيحة", id: "مراجعة" },
+          { n: "٧", text: "ماذا بعد رفض الطلب؟", id: "رفض" },
+          { n: "٨", text: "كيف تتجنب الحظر مستقبلاً؟", id: "وقاية" },
+          { n: "٩", text: "الأسئلة الشائعة", id: "faq" },
+        ].map(item => (
+          <li class="flex items-center gap-3">
+            <span class="w-6 h-6 rounded bg-white/5 text-white/40 text-xs flex items-center justify-center shrink-0">{item.n}</span>
+            <a href={`#${item.id}`} class="text-white/60 hover:text-[#25D366] transition-colors">{item.text}</a>
+          </li>
+        ))}
+      </ol>
+    </div>
+
+    <!-- Section 1: ما هو حظر واتساب -->
+    <h2 id="ما-هو" class="text-2xl font-bold text-white mt-10 mb-4">ما هو حظر واتساب؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      <strong class="text-white">حظر واتساب</strong> هو منع تطبيق واتساب (المملوك لشركة Meta) لحساب محدد من استخدام الخدمة، بسبب مخالفة شروط الاستخدام أو الاشتباه بنشاط غير مشروع. الحظر يُطبَّق على رقم الهاتف المرتبط بالحساب، وقد يكون مؤقتاً أو دائماً.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-4">
+      واتساب تستخدم أنظمة كشف آلية تراقب أنماط الاستخدام، وعندما تكتشف سلوكاً يخالف السياسات — تُحظر الحساب فوراً دون إشعار مسبق. <strong class="text-white">الجيد أن كثيراً من حالات الحظر قابلة للحل</strong> إذا اتُّبعت الخطوات الصحيحة.
+    </p>
+
+    <div class="glass-dark rounded-xl p-5 border border-white/10 mb-8 flex gap-4">
+      <span class="text-2xl shrink-0">📌</span>
+      <div>
+        <p class="font-bold text-white mb-1">مهم جداً</p>
+        <p class="text-white/65 text-sm">حظر واتساب لا علاقة له بحجب الحكومة أو شركة الاتصالات — هو قرار من واتساب مباشرة على حسابك تحديداً، ويمكن الاعتراض عليه رسمياً.</p>
+      </div>
+    </div>
+
+    <!-- Section 2: أنواع الحظر -->
+    <h2 id="انواع" class="text-2xl font-bold text-white mt-12 mb-4">أنواع حظر واتساب الثلاثة</h2>
+    <p class="text-white/70 leading-relaxed mb-6">
+      قبل أي خطوة، يجب أن تعرف نوع الحظر الذي تواجهه — لأن الحل يختلف تماماً من نوع لآخر.
+    </p>
+
+    <div class="space-y-5 mb-8">
+      <div class="glass-dark rounded-2xl p-6 border border-[#25D366]/20">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-[#25D366]/15 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] font-bold text-lg shrink-0">١</div>
+          <div class="flex-1">
+            <h3 class="text-lg font-bold text-white mb-2">الحظر المؤقت — عداد تنازلي</h3>
+            <p class="text-white/65 text-sm leading-relaxed mb-3">تظهر رسالة مع <strong class="text-white/90">عداد تنازلي</strong> (24 ساعة أو 7 أيام). هذا النوع ينتهي تلقائياً بمجرد انتهاء المدة — لا تحتاج أي إجراء سوى الانتظار.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 px-2 py-1 rounded">مؤقت</span>
+              <span class="text-xs bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 px-2 py-1 rounded">ينتهي تلقائياً</span>
+              <span class="text-xs bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 px-2 py-1 rounded">لا يحتاج طلب</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-dark rounded-2xl p-6 border border-orange-500/20">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/30 flex items-center justify-center text-orange-400 font-bold text-lg shrink-0">٢</div>
+          <div class="flex-1">
+            <h3 class="text-lg font-bold text-white mb-2">الحظر المشدد — بدون عداد</h3>
+            <p class="text-white/65 text-sm leading-relaxed mb-3">لا يوجد عداد، لكن يظهر <strong class="text-white/90">زر "طلب مراجعة"</strong>. هذا حظر أشد من المؤقت لكن يمكن رفعه بتقديم طلب مراجعة صحيح.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-orange-500/10 text-orange-400 border border-orange-500/20 px-2 py-1 rounded">يحتاج طلب مراجعة</span>
+              <span class="text-xs bg-orange-500/10 text-orange-400 border border-orange-500/20 px-2 py-1 rounded">قابل للحل</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-dark rounded-2xl p-6 border border-red-500/20">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-red-500/15 border border-red-500/30 flex items-center justify-center text-red-400 font-bold text-lg shrink-0">٣</div>
+          <div class="flex-1">
+            <h3 class="text-lg font-bold text-white mb-2">الحظر النهائي — "لا يمكن لهذا الحساب"</h3>
+            <p class="text-white/65 text-sm leading-relaxed mb-3">تظهر رسالة: <em class="text-white/80 not-italic font-medium">"لا يمكن لهذا الحساب استخدام واتساب بعد الآن"</em>. هذا الحظر الأشد — لكنه ليس نهاية الطريق. طلب المراجعة لا يزال ممكناً وكثير من الحالات تُحَل.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-red-500/10 text-red-400 border border-red-500/20 px-2 py-1 rounded">الأشد</span>
+              <span class="text-xs bg-red-500/10 text-red-400 border border-red-500/20 px-2 py-1 rounded">يحتاج مراجعة دقيقة</span>
+              <span class="text-xs bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 px-2 py-1 rounded">قابل للحل في كثير من الحالات</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: الأسباب -->
+    <h2 id="اسباب" class="text-2xl font-bold text-white mt-12 mb-4">أسباب حظر واتساب — الأكثر شيوعاً في 2026</h2>
+    <p class="text-white/70 leading-relaxed mb-6">
+      واتساب لا تخبرك بالسبب المحدد، لكن الأسباب التالية هي المسؤولة عن 95% من حالات الحظر:
+    </p>
+
+    <div class="space-y-3 mb-8">
+      {[
+        {
+          rank: "١",
+          title: "استخدام نسخ معدّلة",
+          desc: "GB WhatsApp، واتساب الذهبي، واتساب الأزرق، وأي نسخة غير رسمية — واتساب تكتشفها تلقائياً وتحظر الحساب فوراً.",
+          level: "الأكثر شيوعاً",
+          color: "red"
+        },
+        {
+          rank: "٢",
+          title: "إرسال رسائل جماعية بكميات كبيرة",
+          desc: "إرسال نفس الرسالة لمئات الأشخاص في وقت قصير — يُصنَّف كسلوك إرسال بريد مزعج (Spam).",
+          level: "شائع جداً",
+          color: "orange"
+        },
+        {
+          rank: "٣",
+          title: "تقارير من مستخدمين آخرين",
+          desc: "عندما يُبلّغ عنك عدد كبير من الأشخاص في فترة قصيرة — تُفعَّل الحظر التلقائي حتى لو كانت التقارير كيدية.",
+          level: "شائع",
+          color: "orange"
+        },
+        {
+          rank: "٤",
+          title: "إضافة أشخاص لمجموعات دون إذنهم",
+          desc: "إضافة أرقام لمجموعات دون موافقتهم — وخاصة إذا أبلّغوا عن الرسائل كمزعجة.",
+          level: "متوسط",
+          color: "yellow"
+        },
+        {
+          rank: "٥",
+          title: "استخدام برامج أتمتة أو روبوتات",
+          desc: "أي برنامج يُدير حساب واتساب بشكل آلي — مخالف للشروط ويُسبّب حظراً فورياً.",
+          level: "متوسط",
+          color: "yellow"
+        },
+        {
+          rank: "٦",
+          title: "نشاط مشبوه أو مخالفة للسياسات",
+          desc: "مشاركة محتوى محظور، أو تصرفات تخالف سياسات الاستخدام المقبول لواتساب.",
+          level: "أقل شيوعاً",
+          color: "white"
+        },
+      ].map(item => (
+        <div class="glass-dark rounded-xl p-4 border border-white/10 flex gap-4">
+          <span class="w-8 h-8 rounded-lg bg-white/5 text-white/50 text-sm flex items-center justify-center shrink-0 font-bold">{item.rank}</span>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <p class="font-bold text-white text-sm">{item.title}</p>
+              <span class={`text-xs px-2 py-0.5 rounded font-medium ${item.color === 'red' ? 'bg-red-900/40 text-red-300' : item.color === 'orange' ? 'bg-orange-900/40 text-orange-300' : item.color === 'yellow' ? 'bg-yellow-900/40 text-yellow-300' : 'bg-white/5 text-white/40'}`}>{item.level}</span>
+            </div>
+            <p class="text-white/55 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Section 4: التشخيص -->
+    <h2 id="تشخيص" class="text-2xl font-bold text-white mt-12 mb-4">كيف تعرف نوع حظرك؟</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      افتح واتساب وانظر ماذا تقول الرسالة:
+    </p>
+    <div class="glass-dark rounded-2xl p-6 border border-white/10 mb-8">
+      <div class="space-y-4">
+        {[
+          { q: "هل تظهر رسالة مع عداد تنازلي؟", a: "← حظر مؤقت — انتظر انتهاء العداد", color: "green" },
+          { q: "هل تظهر رسالة بدون عداد مع زر 'طلب مراجعة'؟", a: "← حظر مشدد — قدّم طلب مراجعة", color: "orange" },
+          { q: "هل تظهر 'لا يمكن لهذا الحساب استخدام واتساب'؟", a: "← حظر نهائي — اتبع خطوات المراجعة أدناه", color: "red" },
+        ].map(item => (
+          <div class="flex gap-4 items-start">
+            <span class={`w-3 h-3 rounded-full shrink-0 mt-1.5 ${item.color === 'green' ? 'bg-[#25D366]' : item.color === 'orange' ? 'bg-orange-400' : 'bg-red-400'}`}></span>
+            <div>
+              <p class="text-white/80 font-medium text-sm">{item.q}</p>
+              <p class={`text-sm mt-0.5 font-semibold ${item.color === 'green' ? 'text-[#25D366]' : item.color === 'orange' ? 'text-orange-400' : 'text-red-400'}`}>{item.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Section 5: الخطوات -->
+    <h2 id="خطوات" class="text-2xl font-bold text-white mt-12 mb-4">خطوات فك حظر واتساب — كل نوع على حدة</h2>
+
+    <h3 class="text-lg font-bold text-[#25D366] mt-8 mb-4">أولاً: فك الحظر المؤقت (24 ساعة - 7 أيام)</h3>
+    <ol class="space-y-3 mb-6">
+      {[
+        "أغلق واتساب تماماً — لا تحاول الدخول مجدداً.",
+        "انتظر حتى ينتهي العداد الظاهر على الشاشة.",
+        "بعد انتهاء المدة، افتح التطبيق — يجب أن يعمل مجدداً.",
+        "لا تُكرر السبب الذي أدى للحظر وإلا سيتصاعد لحظر أشد.",
+      ].map((step, i) => (
+        <li class="flex gap-4">
+          <span class="w-8 h-8 rounded-full bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">{i + 1}</span>
+          <p class="text-white/70 leading-relaxed pt-1">{step}</p>
+        </li>
+      ))}
+    </ol>
+
+    <h3 class="text-lg font-bold text-orange-400 mt-8 mb-4">ثانياً: فك الحظر المشدد</h3>
+    <ol class="space-y-3 mb-6">
+      {[
+        "افتح واتساب وابحث عن زر 'طلب مراجعة' في شاشة الحظر.",
+        "إذا كانت المشكلة نسخة معدّلة — احذفها أولاً وثبّت النسخة الرسمية ثم قدّم الطلب.",
+        "اكتب رسالة مختصرة وواضحة: من أنت، كيف تستخدم واتساب، أنك لم تنتهك القواعد عمداً.",
+        "أرسل الطلب وانتظر 5-10 أيام.",
+        "إذا لم يصلك رد — أعد المحاولة بعد أسبوع بصياغة مختلفة.",
+      ].map((step, i) => (
+        <li class="flex gap-4">
+          <span class="w-8 h-8 rounded-full bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">{i + 1}</span>
+          <p class="text-white/70 leading-relaxed pt-1">{step}</p>
+        </li>
+      ))}
+    </ol>
+
+    <h3 class="text-lg font-bold text-red-400 mt-8 mb-4">ثالثاً: فك الحظر النهائي</h3>
+    <ol class="space-y-3 mb-8">
+      {[
+        "افتح واتساب — ستظهر رسالة 'لا يمكن لهذا الحساب استخدام واتساب بعد الآن'.",
+        "ابحث عن زر 'طلب مراجعة' في نفس الشاشة واضغط عليه.",
+        "صِغ رسالتك بعناية: اشرح هويتك، أهمية الحساب، وأنك ملتزم بالشروط.",
+        "لا تذكر أنك ستتوقف عن فعل شيء — بل أكّد أنك لم تنتهك القواعد أو أنك لم تكن تعلم.",
+        "أرسل الطلب وانتظر الرد — قد يأخذ من أيام إلى أسابيع.",
+        "إذا رُفض — انتظر أسبوعاً وأعد بصياغة مختلفة أو استعن بمتخصص.",
+      ].map((step, i) => (
+        <li class="flex gap-4">
+          <span class="w-8 h-8 rounded-full bg-red-500/15 text-red-400 border border-red-500/30 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">{i + 1}</span>
+          <p class="text-white/70 leading-relaxed pt-1">{step}</p>
+        </li>
+      ))}
+    </ol>
+
+    <!-- CTA mid -->
+    <div class="bg-gradient-to-l from-[#1A3C6E] to-[#0A1628] rounded-2xl p-6 my-8 text-white">
+      <p class="font-semibold text-lg mb-2">لم تنجح الخطوات بمفردك؟</p>
+      <p class="text-white/70 text-sm mb-4">WFixerX تساعدك في تشخيص حالتك وإعداد طلب مراجعة احترافي يرفع فرص القبول.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa">تواصل عبر واتساب</a>
+        <a href={TG_LINK} target="_blank" rel="noopener" class="btn-tg">أو تلغرام</a>
+      </div>
+    </div>
+
+    <!-- Section 6: طلب المراجعة -->
+    <h2 id="مراجعة" class="text-2xl font-bold text-white mt-12 mb-4">طلب مراجعة واتساب — الصياغة الصحيحة</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      الفرق بين طلب ناجح وطلب مرفوض يكمن في الصياغة. إليك ما يجب أن تتضمّنه رسالتك:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        { label: "✓ تعريف موجز بنفسك", desc: "من أنت وكيف تستخدم واتساب (شخصي / عمل)." },
+        { label: "✓ مدة استخدام الحساب", desc: "كلما كان الحساب أقدم وأكثر نشاطاً — زادت الفرصة." },
+        { label: "✓ أهمية الحساب لك", desc: "للعمل أو للتواصل مع العائلة — اذكر ذلك بصدق." },
+        { label: "✓ التزام بالشروط", desc: "أكّد أنك تلتزم بسياسات واتساب ولم تنتهكها عمداً." },
+        { label: "✗ لا تذكر التفاصيل التقنية", desc: "لا تشرح ما فعلته — فقط أكّد حسن نيتك." },
+        { label: "✗ لا تتوسّل أو تُكثر", desc: "رسالة مختصرة ومحترمة أفضل من فقرات طويلة." },
+      ].map(item => (
+        <div class="flex gap-3">
+          <span class={`text-sm font-bold shrink-0 ${item.label.startsWith('✓') ? 'text-[#25D366]' : 'text-red-400'}`}>{item.label}</span>
+          <span class="text-white/60 text-sm">{item.desc}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- مثال على الطلب -->
+    <div class="glass-dark rounded-xl border border-white/10 p-5 mb-8">
+      <p class="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3">مثال على صياغة ناجحة</p>
+      <p class="text-white/75 text-sm leading-relaxed italic">
+        "مرحباً، أنا [اسمك] وقد استخدمت هذا الحساب منذ [السنة] للتواصل مع عائلتي وزملاء العمل. لاحظت أن الحساب مقيّد ولا أعلم السبب الدقيق. أؤكد أنني لم أنتهك سياسات الاستخدام عمداً وأنني ملتزم بشروط الخدمة. أرجو إعادة النظر في هذا القرار. شكراً."
+      </p>
+    </div>
+
+    <!-- Section 7: بعد الرفض -->
+    <h2 id="رفض" class="text-2xl font-bold text-white mt-12 mb-4">ماذا تفعل إذا رُفض طلب المراجعة؟</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      رفض الطلب لا يعني نهاية الطريق — لكنه يعني أن الرسالة لم تكن مقنعة كافياً.
+    </p>
+    <div class="space-y-4 mb-8">
+      {[
+        { step: "انتظر أسبوعاً كاملاً", desc: "إعادة المحاولة الفورية تُقلل الفرص — انتظر قبل التقديم مجدداً." },
+        { step: "غيّر الصياغة كلياً", desc: "لا تُعد نفس الرسالة — واتساب تتعرف على الرسائل المكررة." },
+        { step: "أضف تفاصيل جديدة", desc: "ذكّر بعمر الحساب، عدد جهات الاتصال، أهمية الحساب لك." },
+        { step: "إذا رُفض مرتين أو أكثر", desc: "تواصل مع متخصص لمساعدتك في إعداد طلب أقوى وأكثر احترافية." },
+      ].map((item, i) => (
+        <div class="flex gap-4">
+          <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 text-white/50 text-sm flex items-center justify-center shrink-0 font-bold">{i + 1}</span>
+          <div>
+            <p class="font-bold text-white text-sm mb-1">{item.step}</p>
+            <p class="text-white/60 text-sm">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Section 8: الوقاية -->
+    <h2 id="وقاية" class="text-2xl font-bold text-white mt-12 mb-4">كيف تتجنب حظر واتساب مستقبلاً؟</h2>
+    <div class="grid sm:grid-cols-2 gap-3 mb-8">
+      {[
+        "استخدم النسخة الرسمية فقط — لا للنسخ المعدّلة أبداً",
+        "لا ترسل نفس الرسالة لأعداد كبيرة في وقت قصير",
+        "أضف أشخاصاً للمجموعات فقط بعد إذنهم",
+        "لا تستخدم برامج أتمتة أو روبوتات لإدارة واتساب",
+        "للأعمال الكبيرة — استخدم واتساب للأعمال أو API الرسمي",
+        "تجنّب مشاركة محتوى مخالف أو قد يُبلَّغ عنه",
+      ].map(tip => (
+        <div class="glass-dark rounded-xl px-4 py-3 border border-white/10 flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-[#25D366] shrink-0"></span>
+          <p class="text-sm text-white/70">{tip}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Section 9: FAQ -->
+    <h2 id="faq" class="text-2xl font-bold text-white mt-12 mb-6">الأسئلة الشائعة عن حظر واتساب</h2>
+    <div class="space-y-3 mb-10">
+      {[
+        {
+          q: "كيف أفك حظر واتساب؟",
+          a: "حدّد نوع الحظر أولاً. الحظر المؤقت ينتهي تلقائياً. الحظر المشدد أو النهائي يحتاج طلب مراجعة رسمي عبر التطبيق مع رسالة مكتوبة باحترافية."
+        },
+        {
+          q: "كم مدة حظر واتساب؟",
+          a: "الحظر المؤقت: 24 ساعة أو 7 أيام. الحظر المشدد أو النهائي: لا مدة محددة — يستمر حتى قبول طلب المراجعة أو رفضه."
+        },
+        {
+          q: "هل يمكن فك الحظر النهائي؟",
+          a: "نعم في كثير من الحالات. طلب المراجعة هو الطريقة الوحيدة، والنجاح يعتمد على سبب الحظر وجودة صياغة الطلب."
+        },
+        {
+          q: "هل واتساب الذهبي يسبب الحظر؟",
+          a: "نعم بشكل مؤكد. واتساب الذهبي وأي نسخة معدّلة تُسبّب الحظر لأنها مخالفة لشروط الاستخدام. يجب حذفها والانتقال للنسخة الرسمية."
+        },
+        {
+          q: "ماذا أفعل إذا ظهر عداد 24 ساعة؟",
+          a: "لا شيء — فقط انتظر. لا تفتح التطبيق قبل انتهاء العداد. بعد 24 ساعة يُرفع الحظر تلقائياً."
+        },
+        {
+          q: "هل يمكن أن يحظر واتساب حسابي بسبب شخص واحد أبلّغ عني؟",
+          a: "تقرير واحد نادراً ما يُسبّب الحظر. لكن عدة تقارير متزامنة من أشخاص مختلفين تُفعّل الحظر التلقائي — حتى لو كانت كيدية."
+        },
+        {
+          q: "هل يمكن استرداد المحادثات بعد فك الحظر؟",
+          a: "إذا كان لديك نسخة احتياطية (Backup) على Google Drive أو iCloud — نعم يمكن استعادتها. إذا لم يكن هناك نسخة احتياطية — المحادثات القديمة لن تُسترد."
+        },
+        {
+          q: "هل أحتاج مساعدة متخصصة لفك حظر واتساب؟",
+          a: "إذا كان الحظر مؤقتاً — لا. إذا كان مشدداً أو نهائياً ورُفض طلبك أكثر من مرة — مساعدة متخصص في صياغة الطلب ترفع فرص النجاح بشكل ملحوظ."
+        },
+      ].map(faq => (
+        <details class="glass-dark rounded-xl border border-white/10 overflow-hidden">
+          <summary class="px-5 py-4 font-semibold text-white cursor-pointer flex items-center justify-between gap-3">
+            <span>{faq.q}</span>
+            <span class="text-white/40 shrink-0 text-lg">+</span>
+          </summary>
+          <div class="px-5 pb-4 text-white/65 leading-relaxed text-sm">{faq.a}</div>
+        </details>
+      ))}
+    </div>
+
+    <!-- Internal links cluster -->
+    <div class="glass-dark rounded-2xl p-6 border border-white/10 mb-8">
+      <p class="font-bold text-white mb-4 text-sm">اقرأ أيضاً — دليل كل نوع على حدة</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {[
+          { href: "/فك-حظر-واتساب/", title: "دليل فك الحظر الشامل", desc: "الصفحة الرئيسية لكل ما يتعلق بفك الحظر" },
+          { href: "/مدونة/أنواع-حظر-واتساب/", title: "أنواع حظر واتساب", desc: "مقارنة تفصيلية بين الأنواع الثلاثة" },
+          { href: "/مدونة/أسباب-حظر-واتساب/", title: "أسباب حظر واتساب", desc: "لماذا يُحظر حسابك وكيف تتجنبه" },
+          { href: "/طلب-مراجعة-واتساب/", title: "دليل طلب المراجعة", desc: "الخطوات الصحيحة لكتابة الطلب" },
+          { href: "/مدونة/حظر-واتساب-24-ساعة/", title: "حظر واتساب 24 ساعة", desc: "ماذا تفعل وكيف تتعامل معه" },
+          { href: "/مدونة/واتساب-محظور-نهائياً/", title: "واتساب محظور نهائياً", desc: "هل يمكن استعادته؟" },
+          { href: "/مدونة/فك-حظر-واتساب-مجاناً/", title: "فك الحظر مجاناً", desc: "ما يمكنك فعله بنفسك" },
+          { href: "/حظر-واتساب-للاعمال/", title: "حظر واتساب الأعمال", desc: "حلول خاصة بأصحاب الأعمال" },
+        ].map(link => (
+          <a href={link.href} class="flex gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#25D366]/60 shrink-0 mt-2"></span>
+            <div>
+              <p class="text-sm font-semibold text-white/75 group-hover:text-[#25D366] transition-colors">{link.title}</p>
+              <p class="text-xs text-white/35 mt-0.5">{link.desc}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="mt-8 bg-[#0A1628] rounded-2xl p-8 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">لا تزال مشكلتك قائمة؟</h2>
+      <p class="text-white/60 mb-6 text-sm">نقيّم حالتك مجاناً ونرشدك للحل المناسب — التواصل لا يلزمك بشيء</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa pulse-glow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          تواصل عبر واتساب
+        </a>
+        <a href={TG_LINK} target="_blank" rel="noopener" class="btn-tg">
+          تواصل عبر تلغرام
+        </a>
+      </div>
+    </div>
+
+  </article>
+</BaseLayout>
