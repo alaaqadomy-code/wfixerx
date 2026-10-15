@@ -4,6 +4,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%AD%D8%B3%D8%A7%D8%A8%20%D8%A3%D8%B9%D9%85%D8%A7%D9%84%D9%8A%20%D9%85%D8%AD%D8%B8%D9%88%D8%B1%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
 const TG_LINK = "https://t.me/+962795827790";
 
+const BIZ_FAQS = [
+  { q: "حسابي التجاري محظور، هل أنقل نشاطي إلى رقم جديد فوراً؟", a: "لا، ليس قبل أن تعرف نوع الحظر. الحظر المؤقت والمشدد ينتهي برفع الحساب نفسه، ونقل عملائك إلى رقم جديد ثم إعادتهم يربكهم ويضرب ثقتهم بنشاطك. والأخطر أن الرقم الجديد سيُحظر بالنمط نفسه خلال أيام إن كان سبب الحظر هو طريقة إرسالك لا الرقم. شخّص أولاً، وانقل فقط إن تأكد الحظر النهائي." },
+  { q: "كم يستغرق استرداد حساب واتساب للأعمال؟", a: "الرد على طلب المراجعة يأتي عادة خلال 24 إلى 48 ساعة، وحسابات الأعمال قد تأخذ وقتاً أطول لأن فحصها أعمق ويشمل نمط الإرسال وتقييم الجودة والكتالوج. الحظر المؤقت يُرفع تلقائياً بانتهاء مدته، والمشدد قد يمتد إلى 30 يوماً. لا أحد يستطيع تسريع القرار نفسه، لكن الطلب الصحيح من المحاولة الأولى يوفّر عليك دورة انتظار كاملة." },
+  { q: "هل يمكن استرداد الحساب إذا كان السبب رسائل جماعية؟", a: "نعم في حالات كثيرة، خصوصاً إن كان نشاطك تجارياً مشروعاً والرسائل موجهة لعملاء فعليين. المراجعة تنظر إلى السياق: متجر يرسل تأكيد طلبات ليس كمن يرسل دعاية لقائمة مشتراة. المهم أن يشرح الاستئناف طبيعة نشاطك وأن تُظهر تعديل النمط، لأن الوعد بالتصحيح دون تغيير حقيقي ينتهي بحظر ثانٍ." },
+  { q: "ما الفرق بين تقييد الإرسال وحظر الحساب؟", a: "التقييد يعني أن الحساب يعمل لكن بحد أقل للرسائل، وهو تحذير قبل الحظر وفرصة لتصحيح المسار. الحظر يعني إيقاف الحساب كلياً. من يتجاهل التقييد ويواصل نمطه ينتقل إلى الحظر غالباً، فالتقييد يُعامَل كإنذار جدّي لا كإزعاج مؤقت." },
+  { q: "هل أحتاج الانتقال إلى واجهة الأعمال الرسمية؟", a: "إن كنت ترسل حملات تسويقية أو إشعارات بالآلاف فنعم، لأن تطبيق الأعمال العادي غير مصمم لذلك وسيُقيّدك تكراراً. وإن كان نشاطك محادثات فردية مع عملاء يبدأون التواصل فالتطبيق العادي كافٍ تماماً. الواجهة الرسمية تتطلب إعداداً وقوالب معتمدة وكلفة، فهي حل لمن يحتاجها لا ترقية لكل أحد." },
+  { q: "هل تعطون حسابات الأعمال أولوية فعلية؟", a: "نعم، لأن كل ساعة تعطّل تعني خسارة دخل حقيقية. نبدأ بالتشخيص فوراً، ونفحص معك نوع الحساب وتقييم الجودة ونمط الإرسال، ونجهّز الاستئناف بالتفصيل الذي يناسب مسار الأعمال لا الحساب الشخصي. لكننا لا نضمن النتيجة ولا نسرّع قرار واتساب، فلا توجد جهة تفعل ذلك." },
+  { q: "فقدت محادثات عملائي، هل يمكن استعادتها؟", a: "إن كانت لديك نسخة احتياطية حديثة فنعم بعد استرداد الحساب أو عند تثبيته على جهاز جديد. وإن لم تكن فالاحتمال ضعيف جداً، لأن الرسائل مشفّرة ولا تُحفظ على خوادم الشركة. لهذا النسخ الاحتياطي الدوري ضرورة لأي نشاط تجاري يبيع عبر المحادثات، ويجب تفعيله اليوم لا بعد المشكلة." },
+];
+
 const schema = JSON.stringify([
   {
     "@context": "https://schema.org",
@@ -11,8 +21,17 @@ const schema = JSON.stringify([
     "headline": "حظر واتساب الأعمال — كيف تسترد حسابك Business",
     "description": "حسابك على واتساب بيزنس محظور؟ دليل شامل لاسترداد حساب WhatsApp Business المحظور وحماية نشاطك التجاري.",
     "author": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
-    "dateModified": "2026-10-13",
+    "dateModified": "2026-10-16",
     "inLanguage": "ar"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": BIZ_FAQS.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
   },
   {
     "@context": "https://schema.org",
@@ -135,6 +154,134 @@ const schema = JSON.stringify([
         </li>
       ))}
     </ol>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">كم يكلفك كل يوم حظر؟ احسب قبل أن تنتظر</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      حظر الحساب الشخصي إزعاج، أما حظر حساب الأعمال فخسارة مالية تتراكم بالساعة. الرقم المعطّل موجود على
+      إعلاناتك ومتجرك وبطاقتك ولافتتك، والعميل الذي لا يجد رداً يذهب إلى منافسك ولا يعود غالباً. ولهذا تحديداً
+      يقع أصحاب الأعمال في فخ الحلول السريعة الخطأ: رقم جديد متعجّل، أو نسخة معدّلة، أو خدمة تطلب رمز التحقق.
+      كل واحد من هذه الثلاثة يحوّل حظراً قابلاً للرفع إلى خسارة نهائية.
+    </p>
+    <div class="bg-amber-900/20 border border-amber-500/30 rounded-xl p-5 mb-6">
+      <p class="text-white font-semibold mb-2">القاعدة الأولى لصاحب النشاط التجاري</p>
+      <p class="text-white/70 text-sm leading-relaxed">
+        لا تنقل نشاطك إلى رقم جديد قبل أن تعرف نوع حظرك. إن كان مؤقتاً أو مشدداً فالرقم سيعود، ونقل عملائك
+        إلى رقم آخر مرتين يربكهم ويضرب ثقتهم. وإن كان السبب نمط إرسالك فالرقم الجديد سيُحظر بنفس النمط خلال أيام.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">الأسباب الستة الأكثر شيوعاً لحظر حسابات الأعمال</h2>
+    <div class="space-y-4 mb-6">
+      <div class="glass-dark rounded-xl p-5 border border-white/8">
+        <h3 class="font-bold text-white mb-2 text-base">١. رسائل جماعية إلى أرقام لم توافق</h3>
+        <p class="text-white/60 text-sm leading-relaxed">السبب الأول بلا منافس. إرسال العرض نفسه إلى قائمة مشتراة أو مجموعة أرقام لم تطلب رسائلك يرفع معدل الحجب والإبلاغ بسرعة، والنظام يقرأ ذلك سلوكاً دعائياً. <a href="/مدونة/حظر-واتساب-بسبب-الرسائل-الجماعية/" class="text-[#25D366] hover:underline">التفاصيل هنا</a>.</p>
+      </div>
+      <div class="glass-dark rounded-xl p-5 border border-white/8">
+        <h3 class="font-bold text-white mb-2 text-base">٢. معدل حجب وإبلاغ مرتفع</h3>
+        <p class="text-white/60 text-sm leading-relaxed">لا يهم أن رسالتك مشروعة: ما يهم هو كم شخصاً حجبك أو أبلغ عنك. عشرات الإبلاغات في وقت قصير تكفي لتقييد الحساب حتى لو كان نشاطك سليماً تماماً.</p>
+      </div>
+      <div class="glass-dark rounded-xl p-5 border border-white/8">
+        <h3 class="font-bold text-white mb-2 text-base">٣. نمو مفاجئ في حجم الإرسال</h3>
+        <p class="text-white/60 text-sm leading-relaxed">الحساب الذي يرسل عشرات الرسائل يومياً ثم يرسل الآلاف بعد حملة أو موسم يبدو مخترقاً أو آلياً. التدرج يحمي، والقفزة تُقيّد.</p>
+      </div>
+      <div class="glass-dark rounded-xl p-5 border border-white/8">
+        <h3 class="font-bold text-white mb-2 text-base">٤. استخدام تطبيق غير رسمي للإرسال الآلي</h3>
+        <p class="text-white/60 text-sm leading-relaxed">أدوات الإرسال الجماعي ونسخ واتساب المعدّلة تُكتشف وتؤدي إلى حظر صعب الرفع، لأن الانتهاك هنا موثّق تقنياً لا مستنتجاً من السلوك.</p>
+      </div>
+      <div class="glass-dark rounded-xl p-5 border border-white/8">
+        <h3 class="font-bold text-white mb-2 text-base">٥. مخالفة سياسة التجارة في المنتج المعروض</h3>
+        <p class="text-white/60 text-sm leading-relaxed">بعض الفئات ممنوعة على كتالوج الأعمال بغض النظر عن قانونيتها محلياً. الكتالوج المخالف يُقيّد الحساب كاملاً لا المنتج وحده.</p>
+      </div>
+      <div class="glass-dark rounded-xl p-5 border border-white/8">
+        <h3 class="font-bold text-white mb-2 text-base">٦. تقييم جودة منخفض تراكمياً</h3>
+        <p class="text-white/60 text-sm leading-relaxed">حسابات الأعمال لها تقييم جودة يتدهور مع كل إبلاغ ويتحسن مع التفاعل الإيجابي. التدهور الطويل ينتهي بتقييد الإرسال ثم الحظر، وغالباً بلا تحذير واضح.</p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">أول ساعة بعد الحظر: خمس خطوات بالترتيب</h2>
+    <ol class="space-y-4 mb-6">
+      <li class="flex gap-3">
+        <span class="shrink-0 w-8 h-8 rounded-full bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] font-bold flex items-center justify-center text-sm">١</span>
+        <div><p class="text-white font-semibold mb-1">صوّر رسالة الحظر كما هي</p><p class="text-white/60 text-sm">نصها الحرفي يحدد نوع الحظر ومسار المراجعة. لا تعتمد على ما تتذكره، فكلمة واحدة تغيّر التشخيص.</p></div>
+      </li>
+      <li class="flex gap-3">
+        <span class="shrink-0 w-8 h-8 rounded-full bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] font-bold flex items-center justify-center text-sm">٢</span>
+        <div><p class="text-white font-semibold mb-1">أوقف أي إرسال جماعي فوراً</p><p class="text-white/60 text-sm">إن كان لك أرقام أخرى أو أدوات إرسال، أوقفها الآن. النشاط المستمر أثناء المراجعة يضعف موقفك.</p></div>
+      </li>
+      <li class="flex gap-3">
+        <span class="shrink-0 w-8 h-8 rounded-full bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] font-bold flex items-center justify-center text-sm">٣</span>
+        <div><p class="text-white font-semibold mb-1">أبلغ عملاءك عبر قناة أخرى</p><p class="text-white/60 text-sm">منشور أو رسالة نصية أو مكالمة: «رقمنا تحت صيانة مؤقتة، تواصلوا هنا». هذا يحفظ الطلبات ويمنع ظنّ الإغلاق.</p></div>
+      </li>
+      <li class="flex gap-3">
+        <span class="shrink-0 w-8 h-8 rounded-full bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] font-bold flex items-center justify-center text-sm">٤</span>
+        <div><p class="text-white font-semibold mb-1">قدّم طلب مراجعة واحداً مدروساً</p><p class="text-white/60 text-sm">طلب واحد صحيح أفضل من خمسة متعجلة. الطلبات المكرّرة تُقرأ إلحاحاً آلياً وقد تُغلق الحالة. <a href="/طلب-مراجعة-واتساب/" class="text-[#25D366] hover:underline">كيف تكتبه</a>.</p></div>
+      </li>
+      <li class="flex gap-3">
+        <span class="shrink-0 w-8 h-8 rounded-full bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] font-bold flex items-center justify-center text-sm">٥</span>
+        <div><p class="text-white font-semibold mb-1">انتظر الرد دون محاولات دخول متكررة</p><p class="text-white/60 text-sm">الرد عادة في 24 إلى 48 ساعة. محاولات الدخول المتكررة أو تغيير الجهاز أثناء المراجعة تعقّد الحالة.</p></div>
+      </li>
+    </ol>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">تطبيق الأعمال أم الواجهة الرسمية؟ الفرق يحدد مسارك</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-right border-collapse text-sm">
+        <thead>
+          <tr class="border-b border-white/15">
+            <th class="py-3 px-3 text-white font-bold">الوجه</th>
+            <th class="py-3 px-3 text-white font-bold">تطبيق واتساب للأعمال</th>
+            <th class="py-3 px-3 text-white font-bold">واجهة الأعمال الرسمية</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold">لمن</th>
+            <td class="py-3 px-3 text-white/70">نشاط صغير ومتوسط يرد بنفسه</td>
+            <td class="py-3 px-3 text-white/70">حجم كبير وأنظمة مرتبطة</td>
+          </tr>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold">حد الإرسال</th>
+            <td class="py-3 px-3 text-white/70">غير معلن ويُقيّد بالسلوك</td>
+            <td class="py-3 px-3 text-white/70">درجات معلنة تُرفع بالجودة</td>
+          </tr>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold">مسار المراجعة</th>
+            <td class="py-3 px-3 text-white/70">من داخل التطبيق</td>
+            <td class="py-3 px-3 text-white/70">من لوحة إدارة الحساب التجاري</td>
+          </tr>
+          <tr>
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold">الحملات التسويقية</th>
+            <td class="py-3 px-3 text-white/70">غير مناسب وسببٌ شائع للحظر</td>
+            <td class="py-3 px-3 text-white/70">مسموح بقوالب معتمدة وموافقة مسبقة</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-6">
+      كثير من حالات الحظر التي تصلنا سببها الحقيقي واحد: نشاط بحجم الواجهة الرسمية يُدار من تطبيق الأعمال
+      العادي. الاسترداد هنا نصف الحل فقط، والنصف الآخر هو نقل الحملات إلى المسار الذي يتحملها قبل أن يتكرر
+      الحظر نهائياً. ولمن يسعى لشارة التوثيق، <a href="/مدونة/توثيق-حساب-واتساب/" class="text-[#25D366] hover:underline">هذا دليل الشروط والخطوات</a>.
+    </p>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">بعد الاسترداد: كيف لا يتكرر؟</h2>
+    <ul class="space-y-3 mb-6 text-white/70">
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> اجعل الاشتراك طوعياً: العميل يرسل أولاً أو يوافق صراحة على الاستقبال.</li>
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> اجعل إلغاء الاشتراك سهلاً ومعلناً في الرسالة. من يستطيع الخروج لا يبلّغ عنك.</li>
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> لا ترسل نصاً واحداً لمئات الأرقام. نوّع الصياغة واربطها بسياق العميل وطلبه السابق.</li>
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> تدرّج في الحجم: ارفع عدد الرسائل اليومي ببطء بدل القفزات الموسمية.</li>
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> احذف أدوات الإرسال الآلي غير الرسمية نهائياً، فوجودها وحده خطر دائم.</li>
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> راقب تقييم الجودة أسبوعياً وتصرّف عند أول تدهور لا بعد الحظر.</li>
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> احفظ نسخة احتياطية دورية للمحادثات، فهي سجل عملائك. <a href="/مدونة/نسخ-احتياطي-واتساب/" class="text-[#25D366] hover:underline">الطريقة</a>.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-6">أسئلة أصحاب الأعمال</h2>
+    <div class="space-y-3 mb-6">
+      {BIZ_FAQS.map(f => (
+        <details class="bg-[#0a1628] border border-white/8 rounded-xl">
+          <summary class="p-4 font-semibold text-white cursor-pointer hover:bg-white/5 transition-colors">{f.q}</summary>
+          <p class="px-4 pb-4 text-white/60 text-sm leading-relaxed">{f.a}</p>
+        </details>
+      ))}
+    </div>
 
     <!-- CTA -->
     <div class="bg-gradient-to-l from-[#0088CC] to-[#006fa8] rounded-2xl p-6 my-8 text-white">

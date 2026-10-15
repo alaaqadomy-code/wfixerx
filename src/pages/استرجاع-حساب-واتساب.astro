@@ -5,6 +5,7 @@ const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%
 const TG_LINK = "https://t.me/+962795827790";
 
 const schema = JSON.stringify([
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"كيف أسترجع حساب واتساب المحظور؟","acceptedAnswer":{"@type":"Answer","text":"ابدأ بتشخيص نوع الحظر من نص الرسالة على شاشتك. الحظر المؤقت ينتهي تلقائياً بمدته، والنهائي يحتاج طلب مراجعة واحداً مكتوباً بصيغة صحيحة عبر القناة الرسمية. لا توجد طريقة تقنية لتجاوز الحظر، وأي برنامج يدّعي ذلك يضرك ولا ينفعك."}},{"@type":"Question","name":"هل تعود محادثاتي بعد استرجاع الحساب؟","acceptedAnswer":{"@type":"Answer","text":"تعود فقط إن كانت لديك نسخة احتياطية حديثة. رسائل واتساب مشفّرة ولا تُحفظ على خوادم الشركة، فما ليس في نسخة احتياطية لا يستطيع أحد إرجاعه ولا واتساب نفسها. فعّل النسخ الاحتياطي اليوم لا بعد المشكلة."}},{"@type":"Question","name":"فقدت رقمي، هل يمكن استرجاع الحساب؟","acceptedAnswer":{"@type":"Answer","text":"الاحتمال ضعيف جداً لأن ملكية الرقم هي أساس إثبات ملكية الحساب، والتحقق يجري برسالة أو مكالمة إلى الرقم نفسه. إن كان بإمكانك استعادة الشريحة من مشغّل الاتصالات فهذا أفضل مسار متاح."}},{"@type":"Question","name":"كم يستغرق استرجاع الحساب؟","acceptedAnswer":{"@type":"Answer","text":"الحظر المؤقت ينتهي بمدته المحددة، وغالباً 24 إلى 72 ساعة. وطلب المراجعة للحظر النهائي يأتي رده عادة خلال 24 إلى 48 ساعة. الحساب المخترق يُستعاد أسرع بإعادة التحقق بالرقم إن تحركت فوراً."}},{"@type":"Question","name":"هل أنشئ حساباً جديداً بنفس الرقم؟","acceptedAnswer":{"@type":"Answer","text":"لا تفعل ذلك قبل معرفة نوع حظرك. إن كان الحظر على الرقم فالحساب الجديد سيُمنع أيضاً، وقد تخسر فرصة المراجعة. وإن نجح الإنشاء فستفقد محادثاتك السابقة ما لم تكن لديك نسخة احتياطية."}}]},
   {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -123,6 +124,83 @@ const schema = JSON.stringify([
       <li class="flex items-start gap-3"><span class="text-[#1A3C6E] font-bold shrink-0">•</span>جرب خيار "مكالمة صوتية" بدلاً من SMS.</li>
       <li class="flex items-start gap-3"><span class="text-[#1A3C6E] font-bold shrink-0">•</span>أعد تشغيل الهاتف وحاول مجدداً.</li>
       <li class="flex items-start gap-3"><span class="text-[#1A3C6E] font-bold shrink-0">•</span>إذا استمرت المشكلة، تواصل مع شركة الاتصالات.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">شخّص حالتك في سؤالين قبل أي خطوة</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      «استرجاع الحساب» عبارة تجمع حالات مختلفة تماماً، ولكل واحدة مسار لا يشبه غيره. الخطأ الأكثر تكراراً هو
+      تطبيق حل حالة على حالة أخرى. أجب على سؤالين فقط لتعرف أين أنت:
+    </p>
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div class="glass-dark rounded-xl p-5 border border-white/8">
+        <h3 class="font-bold text-white mb-2 text-base">السؤال الأول: هل تصلك رسالة التحقق؟</h3>
+        <p class="text-white/60 text-sm leading-relaxed mb-2">إن وصل الرمز ودخلت ثم ظهرت رسالة منع، فالحساب محظور والمسار هو طلب المراجعة.</p>
+        <p class="text-white/60 text-sm leading-relaxed">وإن لم يصل الرمز أصلاً فالمشكلة في الرقم أو الشبكة أو الجهاز لا في حظر الحساب. <a href="/مدونة/واتساب-لا-يرسل-كود-التحقق/" class="text-[#25D366] hover:underline">الحلول هنا</a>.</p>
+      </div>
+      <div class="glass-dark rounded-xl p-5 border border-white/8">
+        <h3 class="font-bold text-white mb-2 text-base">السؤال الثاني: هل الرقم ما زال معك؟</h3>
+        <p class="text-white/60 text-sm leading-relaxed mb-2">إن كانت الشريحة بيدك فكل المسارات متاحة لك، لأن ملكية الرقم هي أساس إثبات ملكية الحساب.</p>
+        <p class="text-white/60 text-sm leading-relaxed">وإن فقدت الرقم نهائياً فالاسترجاع شبه مستحيل، وهذه حقيقة لا نجمّلها. <a href="/مدونة/استرجاع-حساب-واتساب-بدون-رقم/" class="text-[#25D366] hover:underline">ما الممكن فعلاً</a>.</p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">جدول الحالات: أين تقع وما مسارك؟</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-right border-collapse text-sm">
+        <thead>
+          <tr class="border-b border-white/15">
+            <th class="py-3 px-3 text-white font-bold">حالتك</th>
+            <th class="py-3 px-3 text-white font-bold">العلامة الفارقة</th>
+            <th class="py-3 px-3 text-white font-bold">فرصة الاسترجاع</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">حظر مؤقت</th>
+            <td class="py-3 px-3 text-white/70 align-top">عدّاد أيام أو ساعات يظهر على الشاشة</td>
+            <td class="py-3 px-3 text-white/70 align-top">عالية: ينتهي تلقائياً بمدته</td>
+          </tr>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">حظر نهائي</th>
+            <td class="py-3 px-3 text-white/70 align-top">«لا يمكن لهذا الحساب استخدام واتساب بعد الآن»</td>
+            <td class="py-3 px-3 text-white/70 align-top">متوسطة إلى ضعيفة: تعتمد على سبب الحظر</td>
+          </tr>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">حساب مخترق</th>
+            <td class="py-3 px-3 text-white/70 align-top">نشاط غريب أو خروج مفاجئ من الحساب</td>
+            <td class="py-3 px-3 text-white/70 align-top">عالية إن تحركت سريعاً بإعادة التحقق</td>
+          </tr>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">حُذف الحساب</th>
+            <td class="py-3 px-3 text-white/70 align-top">أنت حذفته أو حُذف من جهازك</td>
+            <td class="py-3 px-3 text-white/70 align-top">الحساب يُعاد بالرقم، أما المحادثات فبالنسخة الاحتياطية فقط</td>
+          </tr>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">فُقد الرقم</th>
+            <td class="py-3 px-3 text-white/70 align-top">الشريحة لم تعد معك ولا يمكن استعادتها</td>
+            <td class="py-3 px-3 text-white/70 align-top">ضعيفة جداً: ملكية الرقم شرط أساسي</td>
+          </tr>
+          <tr>
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">حظر شخصي</th>
+            <td class="py-3 px-3 text-white/70 align-top">حسابك يعمل مع الآخرين وشخص واحد لا يستلم</td>
+            <td class="py-3 px-3 text-white/70 align-top">لا توجد خدمة: القرار لصاحب الحساب الآخر</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">المحادثات والصور: ما يُسترجع وما يضيع</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      استعادة الحساب شيء واستعادة محتواه شيء آخر، والناس يخلطون بينهما فيصابون بخيبة بعد نجاح الاسترداد. رسائل
+      واتساب مشفّرة طرفاً لطرف ولا تُحفظ على خوادم الشركة، ومعنى ذلك بالعربية الواضحة: <strong class="text-white">ما
+      ليس في نسخة احتياطية لا يستطيع أحد إرجاعه، ولا واتساب نفسها</strong>. وأي خدمة تَعِد بإرجاع رسائل بلا نسخة
+      احتياطية تكذب عليك.
+    </p>
+    <ul class="space-y-2 mb-6 text-white/70">
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> لديك نسخة احتياطية حديثة: المحادثات تعود كاملة عند إعادة التثبيت. <a href="/مدونة/نسخ-احتياطي-واتساب/" class="text-[#25D366] hover:underline">كيف تتأكد</a>.</li>
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> لا نسخة احتياطية: الحساب يعود فارغاً، والصور المحفوظة في معرض هاتفك تبقى. <a href="/مدونة/استرجاع-صور-واتساب/" class="text-[#25D366] hover:underline">تفاصيل الصور</a>.</li>
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> تنقل إلى هاتف جديد: النقل له مسار خاص بين أندرويد وآيفون. <a href="/مدونة/نقل-محادثات-واتساب/" class="text-[#25D366] hover:underline">الطريقة</a>.</li>
+      <li class="flex gap-2"><span class="text-[#25D366] shrink-0">•</span> فعّل التحقق بخطوتين الآن لا بعد المشكلة، فهو أرخص حماية متاحة. <a href="/مدونة/التحقق-بخطوتين-واتساب/" class="text-[#25D366] hover:underline">خطوة بخطوة</a>.</li>
     </ul>
 
     <!-- CTA -->

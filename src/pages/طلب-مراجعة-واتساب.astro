@@ -133,6 +133,95 @@ const schema = JSON.stringify([
       <li class="flex items-start gap-3"><span class="text-orange-500 shrink-0">→</span>تواصل مع WFixerX — لدينا خبرة في هذه الحالات.</li>
     </ul>
 
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">صيغة طلب مراجعة جاهزة — انسخها وعدّلها</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      أكثر الطلبات تُرفض لا لأن صاحبها مخطئ بل لأن نصه طويل أو عاطفي أو يعترف بما لا يلزم. الصيغة الناجحة قصيرة
+      وواقعية ومحددة. هذه قاعدة جاهزة، بدّل ما بين القوسين بمعلوماتك واحذف ما لا ينطبق عليك:
+    </p>
+    <div class="bg-[#07111f] border border-[#25D366]/25 rounded-xl p-5 mb-5">
+      <p class="text-white/80 text-sm leading-loose">
+        السلام عليكم،<br>
+        رقمي (رقمك بالصيغة الدولية) ومُنع من استخدام واتساب بتاريخ (التاريخ).<br>
+        أستخدم التطبيق الرسمي من المتجر فقط، ولم أستخدم أي نسخة معدّلة أو أداة إرسال آلي.<br>
+        استخدامي للحساب (شخصي للتواصل مع الأهل والعمل / تجاري لنشاط مرخّص يرد على عملاء يبدأون المحادثة).<br>
+        لم أرسل رسائل إلى أرقام لم تتواصل معي، ولا أعلم سبباً واضحاً للقرار، وأعتقد أنه جاء بالخطأ.<br>
+        أرجو إعادة النظر في الحساب، وأنا ملتزم بشروط الاستخدام.<br>
+        شكراً لوقتكم.
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div class="bg-emerald-900/15 border border-emerald-500/25 rounded-xl p-5">
+        <h3 class="font-bold text-white mb-3 text-base">✓ اكتب هذا</h3>
+        <ul class="space-y-2 text-white/65 text-sm">
+          <li>• الرقم بالصيغة الدولية كاملاً</li>
+          <li>• تاريخ الحظر أو تاريخه التقريبي</li>
+          <li>• أنك تستخدم التطبيق الرسمي فقط</li>
+          <li>• طبيعة استخدامك في سطر واحد</li>
+          <li>• طلب إعادة النظر بعبارة مهذبة</li>
+        </ul>
+      </div>
+      <div class="bg-red-900/15 border border-red-500/25 rounded-xl p-5">
+        <h3 class="font-bold text-white mb-3 text-base">✗ لا تكتب هذا</h3>
+        <ul class="space-y-2 text-white/65 text-sm">
+          <li>• «ربما أرسلت رسائل كثيرة» وأي إقرار مشابه</li>
+          <li>• قصة طويلة عاطفية عن ضرر الحظر عليك</li>
+          <li>• تهديداً بالشكوى أو بالقانون أو بالإعلام</li>
+          <li>• مطالبة بمهلة أو تعويض</li>
+          <li>• نصاً منسوخاً حرفياً بلا تعديل على حالتك</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ماذا يحدث بعد الإرسال؟ الجدول الزمني</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-right border-collapse text-sm">
+        <thead>
+          <tr class="border-b border-white/15">
+            <th class="py-3 px-3 text-white font-bold">المرحلة</th>
+            <th class="py-3 px-3 text-white font-bold">التوقيت المعتاد</th>
+            <th class="py-3 px-3 text-white font-bold">ما تفعله فيها</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">تأكيد الاستلام</th>
+            <td class="py-3 px-3 text-white/70 align-top">فوري أو خلال ساعات</td>
+            <td class="py-3 px-3 text-white/70 align-top">لا شيء. وجود التأكيد يعني أن الطلب دخل الطابور فعلاً.</td>
+          </tr>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">المراجعة</th>
+            <td class="py-3 px-3 text-white/70 align-top">24 إلى 48 ساعة غالباً</td>
+            <td class="py-3 px-3 text-white/70 align-top">لا ترسل طلباً ثانياً ولا تحاول الدخول مراراً، فالتكرار يضرك.</td>
+          </tr>
+          <tr class="border-b border-white/8">
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">الرد بالقبول</th>
+            <td class="py-3 px-3 text-white/70 align-top">يُرفع الحظر غالباً فوراً</td>
+            <td class="py-3 px-3 text-white/70 align-top">سجّل الدخول وعالج السبب قبل أي شيء آخر، فالعود إلى النمط نفسه يعني حظراً نهائياً.</td>
+          </tr>
+          <tr>
+            <th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">الرد بالرفض</th>
+            <td class="py-3 px-3 text-white/70 align-top">نص قصير بلا تفصيل عادة</td>
+            <td class="py-3 px-3 text-white/70 align-top">اقرأه بدقة فهو يشير للسبب، ولا تعد الطلب نفسه. المحاولة الثانية تحتاج زاوية مختلفة.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">رُفض طلبي: ما الخطوات الباقية؟</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      الرفض ليس نهاية الطريق دائماً، لكن تكرار الطلب نفسه بالنص نفسه لا يغيّر شيئاً. المسارات المتاحة بعد الرفض
+      ثلاثة فقط، وكلها تحتاج تغييراً حقيقياً في الزاوية لا في الصياغة وحدها:
+    </p>
+    <ol class="space-y-3 mb-6 text-white/70">
+      <li class="flex gap-3"><span class="text-[#25D366] font-bold shrink-0">١.</span> <span><strong class="text-white">البريد الرسمي:</strong> إن كان طلبك الأول من داخل التطبيق فالبريد مسار مستقل يُقرأ بشرياً في حالات. <a href="/مدونة/ايميل-واتساب-لفك-الحظر/" class="text-[#25D366] hover:underline">العنوان والصيغة</a>.</span></li>
+      <li class="flex gap-3"><span class="text-[#25D366] font-bold shrink-0">٢.</span> <span><strong class="text-white">مسار حسابات الأعمال:</strong> إن كان حسابك تجارياً فله قناة مراجعة مختلفة أعمق من مسار الحساب الشخصي. <a href="/حظر-واتساب-للاعمال/" class="text-[#25D366] hover:underline">التفاصيل</a>.</span></li>
+      <li class="flex gap-3"><span class="text-[#25D366] font-bold shrink-0">٣.</span> <span><strong class="text-white">معلومة جديدة حقيقية:</strong> إن ظهر ما يفسر الحظر (اختراق مثلاً أو خطأ في التصنيف) فهذه مادة لطلب جديد مختلف، لا إعادة للقديم.</span></li>
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-6">
+      وإن كان الرفض مبنياً على انتهاك موثّق كاستخدام نسخة معدّلة فالفرصة ضعيفة جداً، والصدق هنا أنفع لك من
+      محاولات متكررة تستهلك وقتك. أرسل لنا نص الرفض ونخبرك مجاناً في أي خانة تقع حالتك.
+    </p>
+
     <!-- CTA -->
     <div class="bg-gradient-to-l from-[#1A3C6E] to-[#0A1628] rounded-2xl p-6 my-8 text-white">
       <p class="font-semibold text-lg mb-2">تريد مساعدة في كتابة الطلب؟</p>

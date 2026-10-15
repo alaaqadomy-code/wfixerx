@@ -1,27 +1,67 @@
-﻿---
+---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A3%D9%83%D8%AB%D8%B1%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
 const TG_LINK = "https://t.me/+962795827790";
 
-const schema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "من نحن — WFixerX",
-  "description": "تعرّف على فريق WFixerX المتخصص في مساعدة أصحاب حسابات واتساب المحظورة.",
-  "url": "https://wfixerx.com/من-نحن/",
-  "about": {
-    "@type": "Organization",
-    "name": "WFixerX",
-    "url": "https://wfixerx.com",
-    "description": "خدمة متخصصة لمساعدة أصحاب حسابات واتساب المحظورة في العالم العربي"
+const COMMITMENTS = [
+  { icon: "🔐", title: "لا نطلب كلمة المرور أو رمز التحقق", desc: "في أي مرحلة ولأي سبب. من يطلب رمز التحقق منك يحاول سرقة حسابك لا استعادته، وهذه القاعدة تنطبق علينا كما تنطبق على غيرنا. كل ما نحتاجه هو نص رسالة الحظر ووصف ما حدث." },
+  { icon: "🎯", title: "لا نضمن النتيجة ولا ندّعي واسطة", desc: "القرار النهائي لواتساب وحدها، ولا جهة خارجها تملك صلاحية الرفع. من يقول لك إن له موظفاً أو واسطة داخل الشركة يكذب عليك. نبيع العمل الذي يرفع احتمال القبول، لا النتيجة نفسها." },
+  { icon: "🛡️", title: "مستقلون تماماً عن واتساب وميتا", desc: "WFixerX ليست تابعة لـWhatsApp LLC ولا Meta Platforms ولا تمثلهما ولا تملك أي وصول إلى أنظمتهما. نحن خبرة في المسار الرسمي المتاح للجميع مجاناً، لا أكثر." },
+  { icon: "💬", title: "نقول لك «لا» حين لا نستطيع", desc: "إن كانت حالتك بلا فرصة حقيقية، أو كان بإمكانك حلها بنفسك مجاناً في دقائق، نقول ذلك في أول رد ولا نأخذ منك شيئاً. العميل الذي نوفّر عليه معاملة لا يحتاجها يعود حين يحتاجنا فعلاً." },
+  { icon: "🔒", title: "ما ترسله يبقى عندك وعندنا", desc: "لقطة الشاشة ووصف حالتك تُستخدم للتشخيص فقط ولا تُشارك مع أي طرف. لا نبيع بيانات ولا نبني قوائم تسويقية من حالات الناس." },
+  { icon: "⚖️", title: "لا طرق غير مشروعة", desc: "لا نستخدم نسخاً معدّلة ولا أدوات تجاوز ولا ندّعي وجود برنامج «يفك الحظر». هذه الأشياء إما غير موجودة أو تضرك، وكلها تحوّل حظراً قابلاً للرفع إلى خسارة نهائية." },
+];
+
+const FAQS = [
+  { q: "من يقف وراء WFixerX؟", a: "خدمة عربية مستقلة متخصصة في حالة واحدة بعينها: حسابات واتساب المحظورة. لا نقدم خدمات تقنية عامة ولا تسويقاً ولا برمجة، والتخصص الضيق هو ما يبني الخبرة. التواصل كله مباشر عبر واتساب أو تلغرام مع من يتابع حالتك فعلاً، لا عبر نظام تذاكر آلي." },
+  { q: "لماذا لا تعلنون الأسعار على الموقع؟", a: "لأن السعر يتبع الحالة فعلاً لا شكلاً. حساب أعمال معلّق بمسار مراجعة معقد لا يشبه حظراً مؤقتاً لثلاثة أيام، وتسعيرة موحدة معلنة ستظلم الحالة البسيطة أو تضلل المعقدة. التقييم الأولي مجاني دائماً، وتعرف السعر مع التشخيص قبل أي التزام، ولك أن ترفض بعده بلا سبب." },
+  { q: "كيف أعرف أنكم لستم عملية احتيال؟", a: "بثلاثة اختبارات نرحب بها: أننا لا نطلب رمز التحقق أبداً، وأننا لا نضمن النتيجة، وأن التقييم مجاني قبل أي دفع. طبّق هذه الاختبارات الثلاثة على أي جهة تتعامل معها لا علينا وحدنا. ومدونتنا تشرح كل خطوة مجاناً، فمن يريد أن يفعلها بنفسه يجد كل شيء عندنا بلا مقابل." },
+  { q: "هل تنشرون قصص نجاح وأسماء عملاء؟", a: "لا ننشر لقطات محادثات أو أسماء أو أرقام عملاء، ولا نضع أرقام إنجازات لا يمكن التحقق منها. من حُظر حسابه لا يحب أن تُعرض حالته، والأرقام التي لا يستطيع القارئ التحقق منها لا تعني شيئاً. ما نعرضه هو كيف نعمل بالتفصيل، لتحكم أنت." },
+  { q: "ماذا لو لم أكن راضياً؟", a: "أخبرنا. إن كان الخلل منّا في التشخيص أو الصياغة أو المتابعة فنصححه. أما نتيجة قرار واتساب فليست في يدنا ولا في يد أحد، ولهذا نقول منذ السطر الأول إننا لا نضمنها، كي لا يبنى التعامل على توقّع لا نستطيع الوفاء به." },
+];
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "من نحن — WFixerX",
+    "description": "من نحن وكيف نعمل ولماذا نرفض ضمان النتيجة: التزامات WFixerX المكتوبة تجاه أصحاب حسابات واتساب المحظورة.",
+    "url": "https://wfixerx.com/من-نحن/",
+    "inLanguage": "ar",
+    "about": {
+      "@type": "Organization",
+      "name": "WFixerX",
+      "url": "https://wfixerx.com",
+      "description": "خدمة عربية مستقلة متخصصة في مساعدة أصحاب حسابات واتساب المحظورة: تشخيص نوع الحظر، إعداد طلب المراجعة، والمتابعة. بلا ضمان نتيجة ودون طلب رمز تحقق.",
+      "areaServed": ["SA", "EG", "AE", "KW", "QA", "BH", "OM", "JO", "IQ"],
+      "knowsAbout": ["حظر واتساب", "فك حظر واتساب", "استرجاع حساب واتساب", "طلب مراجعة واتساب", "حظر واتساب الأعمال"],
+      "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "availableLanguage": "Arabic", "url": "https://wa.me/962795827790" }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://wfixerx.com" },
+      { "@type": "ListItem", "position": 2, "name": "من نحن", "item": "https://wfixerx.com/من-نحن/" }
+    ]
   }
-});
+]);
 ---
 
 <BaseLayout
-  title="من نحن — WFixerX"
-  description="تعرّف على WFixerX، الخدمة المتخصصة في مساعدة أصحاب حسابات واتساب المحظورة في السعودية والخليج ومصر."
+  title="من نحن — WFixerX | خدمة مستقلة بلا ضمان ودون طلب رمز تحقق"
+  description="من نحن وكيف نعمل ولماذا نرفض ضمان فك الحظر: التزامات WFixerX المكتوبة، وما نفعله وما لا نفعله، لأصحاب حسابات واتساب المحظورة في السعودية والخليج ومصر."
   schema={schema}
 >
 
@@ -29,41 +69,42 @@ const schema = JSON.stringify({
     <div class="max-w-3xl mx-auto">
       <div class="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center text-white text-4xl font-bold mx-auto mb-6">W</div>
       <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">من نحن</h1>
-      <p class="text-white/70 text-lg">فريق متخصص يساعدك في استعادة حسابك على واتساب</p>
+      <p class="text-white/70 text-lg">خدمة مستقلة متخصصة في حسابات واتساب المحظورة — بلا ضمان نتيجة ودون طلب رمز تحقق</p>
     </div>
   </header>
 
   <article class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
 
-    <h2 class="text-2xl font-bold text-white mb-6">قصة WFixerX</h2>
-    <p class="text-white/70 leading-relaxed mb-6">
-      WFixerX نشأت من ملاحظة بسيطة: كثير من الناس يفقدون حسابات واتساب يومياً ولا يجدون مساعدة موثوقة ومتخصصة باللغة العربية. معظم الخدمات الموجودة إما غير احترافية، أو تطلب بيانات سرية خطيرة، أو تعطي وعوداً مستحيلة.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-6">
-      فريقنا جمع خبرة واسعة في التعامل مع حالات حظر واتساب المختلفة — من الحظر البسيط إلى الحالات المعقدة. نؤمن بالشفافية الكاملة: نخبرك بالحقيقة حتى لو لم تكن ما تريد سماعه.
-    </p>
-
-    <div class="grid sm:grid-cols-3 gap-5 my-10">
-      {[
-        { num: "+500", label: "حالة تم التعامل معها" },
-        { num: "3", label: "سنوات من الخبرة" },
-        { num: "10+", label: "دولة عربية نخدمها" },
-      ].map(stat => (
-        <div class="bg-[#0A1628] rounded-2xl p-6 text-center text-white">
-          <p class="text-4xl font-bold text-[#25D366] mb-2">{stat.num}</p>
-          <p class="text-white/70 text-sm">{stat.label}</p>
-        </div>
-      ))}
+    <div class="glass-dark rounded-2xl p-7 border border-white/8 mb-10">
+      <h2 class="text-2xl font-bold text-white mb-4">من نحن في سطور</h2>
+      <p class="text-white/70 leading-relaxed mb-4">
+        WFixerX خدمة عربية مستقلة تساعد أصحاب حسابات واتساب المحظورة على تشخيص نوع الحظر وسببه، وإعداد طلب
+        مراجعة مكتوب بصيغة صحيحة، وتقديمه في القناة الرسمية المناسبة، ثم متابعة الرد. نعمل عبر واتساب وتلغرام
+        للسعودية ومصر والإمارات والكويت وقطر والبحرين وعُمان والأردن والعراق.
+      </p>
+      <p class="text-white/70 leading-relaxed">
+        <strong class="text-white">ما لا نفعله أهم مما نفعله:</strong> لا نطلب رمز التحقق أبداً، ولا نضمن رفع
+        الحظر، ولا ننتمي إلى واتساب أو ميتا، ولا نستخدم نسخاً معدّلة أو أدوات تجاوز. القرار النهائي لواتساب
+        وحدها، ونحن نبيع العمل الذي يرفع احتمال القبول لا النتيجة.
+      </p>
     </div>
 
-    <h2 class="text-2xl font-bold text-white mt-10 mb-4">قيمنا</h2>
-    <div class="space-y-4">
-      {[
-        { icon: "🔐", title: "الأمان أولاً", desc: "لا نطلب كلمة المرور أو رمز التحقق أبداً. خصوصيتك وأمانك غير قابلين للتفاوض." },
-        { icon: "🎯", title: "الصدق", desc: "نخبرك بفرص النجاح الحقيقية — لا نعطيك وعوداً فارغة لأخذ أموالك." },
-        { icon: "🛡️", title: "الاستقلالية", desc: "WFixerX غير تابعة لواتساب أو Meta. نحن خدمة مستقلة تعمل لصالحك أنت." },
-        { icon: "🌍", title: "الخدمة العربية", desc: "نفهم احتياجات المستخدم العربي ونتواصل بلغته ونعرف سياقه الثقافي." },
-      ].map(v => (
+    <h2 class="text-2xl font-bold text-white mb-4">لماذا وُجدت هذه الخدمة؟</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      من يُحظر حسابه يجد نفسه بين خيارين سيئين. الأول محتوى عام يكرر النصائح نفسها بلا تفريق بين أنواع الحظر،
+      فيقدم طلب مراجعة خاطئاً للنوع الخطأ ويحرق محاولته الأولى. والثاني خدمات تَعِد بضمان مستحيل، وبعضها يطلب
+      رمز التحقق فيسرق الحساب الذي جاء صاحبه ليستعيده.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-10">
+      الفراغ بين الخيارين هو ما نشغله: تشخيص دقيق لنوع حظرك، وصياغة استئناف لا تضرك، وقناة صحيحة، ومتابعة،
+      وصدق في تقييم فرصك ولو كان الصدق أن نقول لك إنه لا توجد فرصة. وكل ما نفعله مشروح مجاناً في
+      <a href="/مدونة/" class="text-[#25D366] hover:underline">مدونتنا</a> لمن يريد أن يفعله بنفسه، ولن نلومه.
+    </p>
+
+    <h2 class="text-2xl font-bold text-white mb-5">التزاماتنا المكتوبة</h2>
+    <p class="text-white/60 text-sm mb-6">ليست شعارات: هذه بنود تستطيع محاسبتنا عليها، وتستطيع تطبيقها اختباراً على أي جهة أخرى تتعامل معها.</p>
+    <div class="space-y-4 mb-10">
+      {COMMITMENTS.map(v => (
         <div class="flex gap-4 bg-white/5 rounded-xl p-5 border border-white/8">
           <span class="text-3xl shrink-0" aria-hidden="true">{v.icon}</span>
           <div>
@@ -74,19 +115,69 @@ const schema = JSON.stringify({
       ))}
     </div>
 
-    <h2 class="text-2xl font-bold text-white mt-10 mb-4">الدول التي نخدمها</h2>
-    <div class="flex flex-wrap gap-2 mb-8">
-      {["🇸🇦 السعودية", "🇪🇬 مصر", "🇦🇪 الإمارات", "🇰🇼 الكويت", "🇶🇦 قطر", "🇧🇭 البحرين", "🇴🇲 عُمان", "🇯🇴 الأردن", "🇮🇶 العراق", "🇸🇾 سوريا"].map(c => (
+    <h2 class="text-2xl font-bold text-white mb-4">ما نتخصص فيه بالضبط</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-10">
+      <div class="glass-dark rounded-xl p-5 border border-white/8">
+        <h3 class="font-bold text-white mb-2 text-base">الحالات التي نراها يومياً</h3>
+        <ul class="space-y-2 text-white/60 text-sm">
+          <li>• رسالة «لا يمكن لهذا الحساب استخدام واتساب بعد الآن»</li>
+          <li>• حظر مؤقت أو مشدد بمدة محددة</li>
+          <li>• «حسابك مقيد حالياً» وتقييد الإرسال</li>
+          <li>• حسابات الأعمال المعلّقة وخسارة الدخل اليومي</li>
+          <li>• طلب مراجعة قُدّم ورُفض، وتحتاج زاوية أفضل</li>
+          <li>• حظر بسبب إبلاغات أو رسائل جماعية في نشاط مشروع</li>
+        </ul>
+      </div>
+      <div class="glass-dark rounded-xl p-5 border border-white/8">
+        <h3 class="font-bold text-white mb-2 text-base">ما هو خارج خدمتنا</h3>
+        <ul class="space-y-2 text-white/60 text-sm">
+          <li>• الوصول إلى حساب لا تملكه</li>
+          <li>• تجاوز الحظر بأدوات أو نسخ غير رسمية</li>
+          <li>• حظر ناتج عن نشاط احتيالي أو إساءة حقيقية</li>
+          <li>• الحظر الشخصي: من حظره مستخدم آخر لا الشركة</li>
+          <li>• استعادة رسائل بلا نسخة احتياطية موجودة</li>
+          <li>• أي شيء يتطلب رمز التحقق أو كلمة المرور</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mb-4">الدول التي نخدمها</h2>
+    <div class="flex flex-wrap gap-2 mb-4">
+      {["🇸🇦 السعودية", "🇪🇬 مصر", "🇦🇪 الإمارات", "🇰🇼 الكويت", "🇶🇦 قطر", "🇧🇭 البحرين", "🇴🇲 عُمان", "🇯🇴 الأردن", "🇮🇶 العراق"].map(c => (
         <span class="bg-[#0A1628] text-white text-sm px-4 py-2 rounded-full">{c}</span>
+      ))}
+    </div>
+    <p class="text-white/60 text-sm mb-10">
+      مسار المراجعة لدى واتساب واحد عالمياً، والتواصل كله عبر واتساب أو تلغرام، فلا يهم مكانك ولا فارق التوقيت.
+    </p>
+
+    <h2 class="text-2xl font-bold text-white mb-6">أسئلة عنّا</h2>
+    <div class="space-y-3 mb-10">
+      {FAQS.map(f => (
+        <details class="bg-[#0a1628] border border-white/8 rounded-xl">
+          <summary class="p-4 font-semibold text-white cursor-pointer hover:bg-white/5 transition-colors">{f.q}</summary>
+          <p class="px-4 pb-4 text-white/60 text-sm leading-relaxed">{f.a}</p>
+        </details>
       ))}
     </div>
 
     <div class="bg-[#0A1628] rounded-2xl p-8 text-center text-white mt-10">
       <h2 class="text-2xl font-bold mb-3">تواصل معنا</h2>
-      <p class="text-white/60 mb-6">يسعدنا مساعدتك</p>
+      <p class="text-white/60 mb-6">التقييم الأولي مجاني — أرسل نص رسالة الحظر ونخبرك بوضعك بصدق</p>
       <div class="flex flex-wrap justify-center gap-3">
         <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa">تواصل عبر واتساب</a>
         <a href={TG_LINK} target="_blank" rel="noopener" class="btn-tg">تواصل عبر تلغرام</a>
+      </div>
+      <p class="mt-5 text-xs text-white/40">لا نطلب رمز تحقق · لا ضمان للنتيجة · القرار النهائي لواتساب</p>
+    </div>
+
+    <div class="wf-crawl-links mt-12 pt-8 border-t border-white/8">
+      <h2 class="text-lg font-bold text-white mb-4">ابدأ من هنا</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <a href="/خدمة-فك-حظر-واتساب/" class="bg-[#0a1628] border border-white/8 rounded-xl p-4 hover:border-[#25D366]/40 transition-colors group"><p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366]">خدمة فك حظر واتساب ←</p></a>
+        <a href="/فك-حظر-واتساب/" class="bg-[#0a1628] border border-white/8 rounded-xl p-4 hover:border-[#25D366]/40 transition-colors group"><p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366]">فك حظر واتساب — الدليل الشامل ←</p></a>
+        <a href="/حظر-واتساب-للاعمال/" class="bg-[#0a1628] border border-white/8 rounded-xl p-4 hover:border-[#25D366]/40 transition-colors group"><p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366]">حظر واتساب للأعمال ←</p></a>
+        <a href="/إخلاء-المسؤولية/" class="bg-[#0a1628] border border-white/8 rounded-xl p-4 hover:border-[#25D366]/40 transition-colors group"><p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366]">إخلاء المسؤولية ←</p></a>
       </div>
     </div>
 
