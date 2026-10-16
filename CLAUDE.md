@@ -12,6 +12,7 @@
 | النشر | Cloudflare Pages، المشروع **wfixerx**، عبر wrangler مباشرة من سطر الأوامر |
 | IndexNow Key | `b751903050f94f32ad47312fa5150f8b` (ملف `public/b751903050f94f32ad47312fa5150f8b.txt`) |
 | التقنية | Astro + TypeScript، مخرجات في `dist/` |
+| GA4 | الخاصية `559269084`، معرّف القياس `G-YVQGL7XQLE` (الوسم في `src/layouts/BaseLayout.astro`) |
 
 ## طريقة النشر الصحيحة (سطر الأوامر — بلا متصفح)
 ```powershell
