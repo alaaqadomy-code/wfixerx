@@ -41,7 +41,7 @@ function sectionHtml(sec) {
 function build(a) {
   const url = `https://wfixerx.com/مدونة/${a.slug}/`;
   const schema = JSON.stringify([
-    { "@context": "https://schema.org", "@type": "Article", headline: a.title, description: a.metaDesc, author: { "@type": "Organization", name: "WFixerX", url: "https://wfixerx.com" }, publisher: { "@type": "Organization", name: "WFixerX", url: "https://wfixerx.com" }, datePublished: a.date, dateModified: a.date, inLanguage: "ar", mainEntityOfPage: url, url },
+    { "@context": "https://schema.org", "@type": "Article", headline: a.title, description: a.metaDesc, author: { "@type": "Organization", name: "WFixerX", url: "https://wfixerx.com" }, publisher: { "@type": "Organization", name: "WFixerX", url: "https://wfixerx.com" }, datePublished: a.date, dateModified: a.modified || a.date, inLanguage: "ar", mainEntityOfPage: url, url },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://wfixerx.com/" }, { "@type": "ListItem", position: 2, name: "المدونة", item: "https://wfixerx.com/مدونة/" }, { "@type": "ListItem", position: 3, name: a.crumb, item: url } ] },
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: a.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
   ]);
@@ -99,7 +99,7 @@ ${a.related.map((r) => `        <a href="${r.href}" class="bg-[#0a1628] border b
       </div>
     </div>
 
-    <p class="text-white/40 text-xs leading-relaxed mt-10">WFixerX خدمة مستقلة غير تابعة لواتساب أو ميتا، ولا تضمن رفع الحظر؛ القرار النهائي لدى واتساب. آخر تحديث: 15 أكتوبر 2026.</p>
+    <p class="text-white/40 text-xs leading-relaxed mt-10">WFixerX خدمة مستقلة غير تابعة لواتساب أو ميتا، ولا تضمن رفع الحظر؛ القرار النهائي لدى واتساب. آخر تحديث: ${a.modifiedLabel || "15 أكتوبر 2026"}.</p>
 
   </article>
 </BaseLayout>
