@@ -4,6 +4,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A%20%D9%85%D8%AD%D8%B8%D9%88%D8%B1%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
 const TG_LINK = "https://t.me/+962795827790";
 
+const faqs = [
+  { q: "ما هو رابط طلب مراجعة واتساب؟", a: "رابط طلب مراجعة واتساب الرسمي هو support.whatsapp.com — يمكنك الوصول إليه من متصفح الإنترنت وتقديم طلبك مباشرة." },
+  { q: "كم يستغرق طلب مراجعة واتساب؟", a: "يستغرق طلب المراجعة من 3 أيام إلى 4 أسابيع حسب تعقيد الحالة وحجم الطلبات لدى واتساب." },
+  { q: "ماذا أكتب في طلب مراجعة واتساب؟", a: "اكتب فقرة قصيرة بصيغة هادئة ومحددة: من أنت وطبيعة استخدامك للحساب، وأنك لم تنتهك السياسات عن قصد أو أنك أزلت سبب المشكلة كحذف نسخة معدّلة، ثم تعهّد واضح بعدم تكرارها. اجعلها بضعة أسطر لا صفحة. تجنّب الغضب والاتهام والتكرار والعبارات العامة، ولا تضع كلمة مرور ولا رمز تحقق في نص الطلب." },
+  { q: "كم مرة يمكنني تقديم طلب مراجعة؟", a: "لا حدّ رسمياً معلناً، لكن الإلحاح يضرّك. أرسل طلباً واحداً وانتظر رده. إن جاء الرفض فانتظر أسبوعاً على الأقل قبل طلب آخر، وأعد صياغته من زاوية جديدة بدل إرسال النص نفسه مرة ثانية. تكرار الطلب ذاته يومياً يُقرأ كإزعاج آلي ويضعف ملفك." },
+  { q: "هل أحتاج مستنداً أو إثبات هوية مع الطلب؟", a: "طلب المراجعة العادي من التطبيق لا يحتاج مستندات؛ ملكية الرقم نفسها هي إثباتك. أما حسابات الأعمال فقد يُطلب منها ما يثبت نشاط النشاط التجاري، وتُدار مراجعة حسابات واجهة الأعمال الرسمية من لوحة إدارة الحساب التجاري لا من التطبيق. ولن يطلب منك واتساب يوماً كلمة مرورك أو رمز التحقق." },
+];
+
 const schema = JSON.stringify([
   {
     "@context": "https://schema.org",
@@ -17,25 +25,14 @@ const schema = JSON.stringify([
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "ما هو رابط طلب مراجعة واتساب؟",
-        "acceptedAnswer": { "@type": "Answer", "text": "رابط طلب مراجعة واتساب الرسمي هو support.whatsapp.com — يمكنك الوصول إليه من متصفح الإنترنت وتقديم طلبك مباشرة." }
-      },
-      {
-        "@type": "Question",
-        "name": "كم يستغرق طلب مراجعة واتساب؟",
-        "acceptedAnswer": { "@type": "Answer", "text": "يستغرق طلب المراجعة من 3 أيام إلى 4 أسابيع حسب تعقيد الحالة وحجم الطلبات لدى واتساب." }
-      }
-    ]
+    "mainEntity": faqs.filter(f => !f.noSchema).map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
   }
 ]);
 ---
 
 <BaseLayout
   title="طلب مراجعة واتساب — الرابط الرسمي وطريقة التقديم الصحيحة"
-  description="طلب مراجعة واتساب خطوة بخطوة: صيغة جاهزة للنسخ، ما تكتبه وما لا تكتبه أبداً، الجدول الزمني بعد الإرسال، والمسارات المتاحة إن رُفض طلبك. طلب واحد مدروس أفضل من خمسة متعجلة."
+  description="طلب مراجعة واتساب خطوة بخطوة: صيغة جاهزة، ما تكتبه وما لا تكتبه، الجدول الزمني بعد الإرسال، والمسارات إن رُفض طلبك. طلب واحد مدروس أفضل من خمسة."
   schema={schema}
 >
 
@@ -259,5 +256,19 @@ const schema = JSON.stringify([
         <a href="/مدونة/واتساب-محظور-7-أيام/" class="bg-[#0a1628] border border-white/8 rounded-xl p-4 hover:border-[#25D366]/40 transition-colors group"><p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366]">واتساب محظور 7 أيام ←</p></a>
       </div>
     </div>
+  
+    <!-- FAQ Section -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 mt-12">
+      <h2 class="text-2xl font-bold text-white mb-6">أسئلة شائعة عن طلب المراجعة</h2>
+      <div class="space-y-3">
+        {faqs.map(item => (
+          <details class="bg-[#0a1628] border border-white/8 rounded-xl overflow-hidden">
+            <summary class="p-4 font-semibold text-white cursor-pointer hover:bg-white/5 transition-colors">{item.q}</summary>
+            <p class="px-4 pb-4 text-white/65 text-sm leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
   </article>
 </BaseLayout>

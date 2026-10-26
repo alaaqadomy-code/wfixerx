@@ -5,6 +5,14 @@ import WhatsAppBanScreen from '../components/WhatsAppBanScreen.astro';
 const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A%20%D9%85%D8%AD%D8%B8%D9%88%D8%B1%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
 const TG_LINK = "https://t.me/+962795827790";
 
+const faqs = [
+  { q: "ماذا تعني رسالة لا يمكن لهذا الحساب استخدام واتساب بعد الآن؟", a: "هذه الرسالة تعني أن حسابك محظور بشكل نهائي من واتساب بسبب انتهاك شروط الاستخدام. الحل هو تقديم طلب مراجعة رسمي عبر الزر الظاهر في التطبيق أو عبر support.whatsapp.com." },
+  { q: "هل يمكن حل رسالة لا يمكن لهذا الحساب؟", a: "نعم، في كثير من الحالات يمكن حلها عبر تقديم طلب مراجعة رسمي ومكتوب بشكل صحيح. WFixerX تساعدك في إعداد هذا الطلب." },
+  { q: "ما الفرق بين هذه الرسالة ورسالة العداد التنازلي؟", a: "العداد التنازلي يعني حظراً مؤقتاً ينتهي وحده بانتهاء المدة، فلا تحتاج معه إلى أي إجراء. أما «لا يمكن لهذا الحساب استخدام واتساب بعد الآن» فهي بلا مدة ولا تنتهي بمرور الوقت، ولا يرفعها إلا قبول طلب مراجعة. الانتظار مع هذه الرسالة إهدار للوقت وحده." },
+  { q: "لماذا ظهرت لي هذه الرسالة دون سابق إنذار؟", a: "واتساب لا تذكر السبب المحدد في الرسالة، لكن أكثر ما يسبقها: استخدام نسخة معدّلة من التطبيق، أو إرسال رسائل كثيرة لأرقام لا تحتفظ بك في جهات اتصالها، أو إضافة أعداد كبيرة إلى مجموعات، أو تجمّع عدة إبلاغات متقاربة من مستلمين. الحظر هنا قرار آلي يُفعَّل عند تجاوز حدّ معيّن، فيبدو مفاجئاً." },
+  { q: "هل أفقد محادثاتي إذا بقيت هذه الرسالة؟", a: "المحادثات تبقى على جهازك حتى تحذف التطبيق. رسائل واتساب مشفّرة ولا تُحفظ على خوادم الشركة، فلا أحد يستطيع إرجاعها لك من عندها ولا واتساب نفسها. لذلك لا تحذف التطبيق ولا تفرّغ بياناته أثناء الحظر، وتحقق أن النسخ الاحتياطي على Google Drive أو iCloud مفعّل قبل أي خطوة." },
+];
+
 const schema = JSON.stringify([
   {
     "@context": "https://schema.org",
@@ -18,18 +26,7 @@ const schema = JSON.stringify([
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "ماذا تعني رسالة لا يمكن لهذا الحساب استخدام واتساب بعد الآن؟",
-        "acceptedAnswer": { "@type": "Answer", "text": "هذه الرسالة تعني أن حسابك محظور بشكل نهائي من واتساب بسبب انتهاك شروط الاستخدام. الحل هو تقديم طلب مراجعة رسمي عبر الزر الظاهر في التطبيق أو عبر support.whatsapp.com." }
-      },
-      {
-        "@type": "Question",
-        "name": "هل يمكن حل رسالة لا يمكن لهذا الحساب؟",
-        "acceptedAnswer": { "@type": "Answer", "text": "نعم، في كثير من الحالات يمكن حلها عبر تقديم طلب مراجعة رسمي ومكتوب بشكل صحيح. WFixerX تساعدك في إعداد هذا الطلب." }
-      }
-    ]
+    "mainEntity": faqs.filter(f => !f.noSchema).map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
   },
   {
     "@context": "https://schema.org",
@@ -255,5 +252,19 @@ const schema = JSON.stringify([
         <a href="/مدونة/تفعيل-واتساب-بعد-الحظر/" class="bg-[#0a1628] border border-white/8 rounded-xl p-4 hover:border-[#25D366]/40 transition-colors group"><p class="font-semibold text-white/80 text-sm group-hover:text-[#25D366]">تفعيل واتساب بعد الحظر ←</p></a>
       </div>
     </div>
+  
+    <!-- FAQ Section -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 mt-12">
+      <h2 class="text-2xl font-bold text-white mb-6">أسئلة شائعة عن هذه الرسالة</h2>
+      <div class="space-y-3">
+        {faqs.map(item => (
+          <details class="bg-[#0a1628] border border-white/8 rounded-xl overflow-hidden">
+            <summary class="p-4 font-semibold text-white cursor-pointer hover:bg-white/5 transition-colors">{item.q}</summary>
+            <p class="px-4 pb-4 text-white/65 text-sm leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
   </article>
 </BaseLayout>

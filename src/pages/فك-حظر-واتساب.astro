@@ -5,6 +5,14 @@ import WhatsAppBanScreen from '../components/WhatsAppBanScreen.astro';
 const WA_LINK = "https://wa.me/962795827790?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20WFixerX%20%F0%9F%91%8B%20%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A%20%D9%85%D8%AD%D8%B8%D9%88%D8%B1%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%7C%20وصلت%20من%20موقع%20wfixerx.com";
 const TG_LINK = "https://t.me/+962795827790";
 
+const faqs = [
+  { q: "هل يمكن فك حظر واتساب بشكل نهائي؟", a: "نعم، في كثير من الحالات يمكن رفع الحظر عبر تقديم طلب مراجعة رسمي. النجاح يعتمد على سبب الحظر وتفاصيل الحساب." },
+  { q: "كم تستغرق عملية فك الحظر؟", a: "الحظر المؤقت يُرفع خلال 24-72 ساعة. طلب المراجعة قد يأخذ من أيام إلى أسابيع حسب استجابة واتساب." },
+  { q: "ما أول خطوة صحيحة لفك حظر واتساب؟", a: "اقرأ نص الرسالة على شاشتك قبل أي إجراء، فهي تحدد المسار. عداد تنازلي يعني حظراً مؤقتاً ينتهي وحده، ولا تفعل معه شيئاً. رسالة بلا عداد مع زر «طلب مراجعة» تعني حظراً مشدداً. رسالة «لا يمكن لهذا الحساب استخدام واتساب بعد الآن» تعني حظراً نهائياً. تطبيق حل نوع على نوع آخر يضيّع وقتك وقد يضيّع فرصتك." },
+  { q: "هل إعادة تثبيت واتساب أو تغيير الجهاز تفك الحظر؟", a: "لا. الحظر مرتبط برقم هاتفك في سجلات واتساب، لا بالتطبيق ولا بالجهاز. إعادة التثبيت تحذف بياناتك المحلية فقط وتزيد خطر فقدان محادثاتك إن لم تكن لديك نسخة احتياطية، ولا تغيّر حالة الحظر إطلاقاً. وكذلك تغيير الجهاز أو تبديل الشريحة إلى هاتف آخر." },
+  { q: "هل توجد برامج أو أكواد تفك حظر واتساب؟", a: "لا توجد، وكل ما يُسوَّق على هذا النحو ضار. لا تملك أي جهة خارجية صلاحية تعديل حالة حسابك في أنظمة واتساب، والقناة الوحيدة هي طلب المراجعة الرسمي. هذه البرامج تطلب رمز التحقق أو تدفعك إلى نسخة معدّلة، والنتيجة سرقة الحساب أو حظر جديد أشد. نحن لا نطلب كلمة مرورك ولا رمز التحقق في أي حالة." },
+];
+
 const schema = JSON.stringify([
   {
     "@context": "https://schema.org",
@@ -58,18 +66,7 @@ const schema = JSON.stringify([
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "هل يمكن فك حظر واتساب بشكل نهائي؟",
-        "acceptedAnswer": { "@type": "Answer", "text": "نعم، في كثير من الحالات يمكن رفع الحظر عبر تقديم طلب مراجعة رسمي. النجاح يعتمد على سبب الحظر وتفاصيل الحساب." }
-      },
-      {
-        "@type": "Question",
-        "name": "كم تستغرق عملية فك الحظر؟",
-        "acceptedAnswer": { "@type": "Answer", "text": "الحظر المؤقت يُرفع خلال 24-72 ساعة. طلب المراجعة قد يأخذ من أيام إلى أسابيع حسب استجابة واتساب." }
-      }
-    ]
+    "mainEntity": faqs.filter(f => !f.noSchema).map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
   },
   {
     "@context": "https://schema.org",
@@ -345,6 +342,20 @@ const schema = JSON.stringify([
         </a>
       </div>
     </div>
+
+  
+    <!-- FAQ Section -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 mt-12">
+      <h2 class="text-2xl font-bold text-white mb-6">أسئلة شائعة عن فك حظر واتساب</h2>
+      <div class="space-y-3">
+        {faqs.map(item => (
+          <details class="bg-[#0a1628] border border-white/8 rounded-xl overflow-hidden">
+            <summary class="p-4 font-semibold text-white cursor-pointer hover:bg-white/5 transition-colors">{item.q}</summary>
+            <p class="px-4 pb-4 text-white/65 text-sm leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
 
   </article>
 </BaseLayout>
