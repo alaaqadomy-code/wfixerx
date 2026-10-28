@@ -10,7 +10,9 @@ const faqs = [
         { q: "كيف أعرف نوع الحظر الذي أصابني؟", a: "إذا ظهر عداد ينقص التوقيت فهو حظر مؤقت. إذا ظهرت رسالة بدون عداد أو ظهر رابط طلب المراجعة فهو مشدد أو نهائي ويحتاج مراجعة." },
         { q: "هل ينتهي الحظر المشدد من تلقاء نفسه؟", a: "لا، الحظر المشدد لا ينتهي تلقائياً في الغالب. يجب تقديم طلب مراجعة رسمي عبر تطبيق واتساب أو موقع support.whatsapp.com." },
         { q: "ماذا أفعل إذا انتهى عداد الحظر ولم يُرفع؟", a: "إذا انتهى العداد ولم يُرفع الحظر، فهذا يعني تحوّله لحظر مشدد. تواصل مع دعم واتساب أو استعن بمتخصص لتقييم الحالة." },
-      ];
+  { q: "هل تختلف مدة حظر واتساب في السعودية والخليج؟", a: "لا. مدد الحظر وأنواعه واحدة في كل الدول، لأن القرار يصدر من أنظمة واتساب نفسها لا من شركات الاتصالات. ما يختلف محلياً هو إجراءات شركة الاتصالات إن احتجت إلى بدل فاقد للشريحة." },
+  { q: "هل يقصّر طلب المراجعة مدة الحظر المؤقت؟", a: "لا تعوّل على ذلك. الحظر المؤقت مصمم لينتهي وحده، وما يفيدك خلاله هو الانتظار ومعالجة السبب. طلب المراجعة مخصص للحظر الذي لا ينتهي تلقائياً." },
+];
 
 const schema = JSON.stringify([
   {
@@ -21,7 +23,7 @@ const schema = JSON.stringify([
     "author": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
     "publisher": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
     "datePublished": "2026-10-13",
-    "dateModified": "2026-10-13",
+    "dateModified": "2026-10-28",
     "inLanguage": "ar",
     "url": "https://wfixerx.com/مدونة/كم-مدة-حظر-واتساب/"
   },
@@ -33,7 +35,7 @@ const schema = JSON.stringify([
 ]);
 ---
 
-<BaseLayout title="كم مدة حظر واتساب؟ — دليل شامل لجميع أنواع الحظر" description="تعرف على مدة حظر واتساب الحقيقية: من 24 ساعة للمؤقت إلى أسابيع للمشدد وصولاً للنهائي. دليل كامل لكل نوع وكيف تتصرف." schema={schema}>
+<BaseLayout title="كم مدة حظر واتساب؟ — دليل شامل لجميع أنواع الحظر" description="كم مدة حظر واتساب؟ المؤقت من 24 إلى 72 ساعة ويُرفع وحده، والمشدد أسابيع ويحتاج مراجعة، والنهائي بلا مدة. اعرف نوعك وماذا تفعل إن انتهى العداد ولم يُرفع." schema={schema}>
 
   <nav class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-2" aria-label="مسار التنقل">
     <ol class="flex items-center gap-2 text-sm text-white/40 flex-wrap">
@@ -47,7 +49,7 @@ const schema = JSON.stringify([
 
   <header class="bg-gradient-to-b from-[#040b18] to-[#060d1a] py-12 px-4 sm:px-6 border-b border-white/8">
     <div class="max-w-4xl mx-auto">
-      <p class="text-xs text-white/40 mb-4">أكتوبر 2026 · وقت القراءة: 6 دقائق</p>
+      <p class="text-xs text-white/40 mb-4">آخر تحديث: 28 أكتوبر 2026 · وقت القراءة: 9 دقائق</p>
       <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">كم مدة حظر واتساب؟ — دليل شامل لجميع أنواع الحظر</h1>
       <p class="text-lg text-white/60 leading-relaxed">
         واتساب محظور وتتساءل كم ستبقى هكذا؟ المدة تختلف اختلافاً كبيراً بحسب نوع الحظر. بعض الحالات تنتهي في 24 ساعة تلقائياً، وأخرى تستمر أسابيع وتحتاج تدخلاً، وثالثة قد تكون نهائية وتستلزم مراجعة متخصصة. هذا الدليل يوضح الفرق بين كل نوع بالتفصيل لتعرف أين تقف وما الخطوة القادمة.
@@ -169,6 +171,42 @@ const schema = JSON.stringify([
       ))}
     </ul>
 
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">جدول سريع: المدة المتوقعة لكل حالة وما تفعله خلالها</h2>
+    <p class="text-white/70 leading-relaxed mb-4">هذا الجدول يلخص ما يهمك عملياً: كم ستنتظر، وما الذي يجب ألا تفعله أثناء الانتظار، وما الخطوة التالية بعد انتهاء المدة.</p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-right border-collapse text-sm">
+        <thead><tr class="border-b border-white/15"><th class="py-3 px-3 text-white font-bold">الحالة</th><th class="py-3 px-3 text-white font-bold">المدة الشائعة</th><th class="py-3 px-3 text-white font-bold">خلال المدة</th><th class="py-3 px-3 text-white font-bold">بعد انتهائها</th></tr></thead>
+        <tbody>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">حظر مؤقت بعداد</th><td class="py-3 px-3 text-white/70 align-top">24 إلى 72 ساعة</td><td class="py-3 px-3 text-white/70 align-top">لا تفتح التطبيق ولا تُعد تثبيته</td><td class="py-3 px-3 text-white/70 align-top">عُد تدريجياً وعالج السبب. <a href="/مدونة/حظر-واتساب-24-ساعة/" class="text-[#25D366] hover:underline">حظر 24 ساعة</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">حظر 7 أيام أو أكثر</th><td class="py-3 px-3 text-white/70 align-top">أيام إلى أسابيع</td><td class="py-3 px-3 text-white/70 align-top">طلب مراجعة واحد إن ظهر الزر</td><td class="py-3 px-3 text-white/70 align-top">تعامل معه كإنذار أخير. <a href="/مدونة/واتساب-محظور-7-أيام/" class="text-[#25D366] hover:underline">التفاصيل</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">حظر مشدد بلا عداد</th><td class="py-3 px-3 text-white/70 align-top">لا مدة معلنة</td><td class="py-3 px-3 text-white/70 align-top">طلب مراجعة مدروس بعد معالجة السبب</td><td class="py-3 px-3 text-white/70 align-top">انتظر الرد ولا تكرر الطلب. <a href="/مدونة/حظر-واتساب-مشدد/" class="text-[#25D366] hover:underline">الحظر المشدد</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">حظر نهائي</th><td class="py-3 px-3 text-white/70 align-top">دائم ما لم يُقبل الاستئناف</td><td class="py-3 px-3 text-white/70 align-top">قرر: استئناف أم رقم جديد</td><td class="py-3 px-3 text-white/70 align-top"><a href="/مدونة/واتساب-محظور-نهائياً/" class="text-[#25D366] hover:underline">واتساب محظور نهائياً</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">كم يستغرق الرد على طلب المراجعة؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">مدة الحظر شيء ومدة انتظار الرد شيء آخر. حين تقدّم طلب مراجعة لا تعلن واتساب مدة ثابتة للرد، ويختلف الانتظار بحسب ضغط الطلبات ونوع الحساب، وحسابات الأعمال قد تأخذ وقتاً أطول لأن مراجعتها أوسع. القاعدة العملية: طلب واحد، ثم انتظار، ثم متابعة البريد والتطبيق يومياً. تفاصيل الصيغة والجدول الزمني في <a href="/طلب-مراجعة-واتساب/" class="text-[#25D366] hover:underline">دليل طلب مراجعة واتساب</a>.</p>
+    <p class="text-white/70 leading-relaxed mb-4">وإن مرّ وقت طويل بلا رد فلا تفسّر الصمت رفضاً ولا قبولاً. افتح التطبيق مرة واحدة يومياً لترى هل تغيّرت الرسالة، ولا تقدّم طلباً جديداً فوق طلب ما زال قائماً.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">لماذا تطول مدة الحظر في المرة الثانية؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">نظام الحماية في واتساب يتعامل مع سجل الحساب لا مع الحادثة الواحدة. الحساب الذي حُظر مؤقتاً ثم عاد إلى السلوك نفسه يُعامل في المرة التالية بقسوة أكبر، فتطول المدة أو يتحول الحظر إلى مشدد. لذلك فإن ما تفعله بعد انتهاء العداد أهم من العداد نفسه:</p>
+    <ul class="list-disc pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>راجع آخر ما فعلته قبل الحظر: إرسال جماعي، أو إضافة أشخاص إلى مجموعات دون إذن، أو تطبيق جديد مرتبط بواتساب. <a href="/مدونة/أسباب-حظر-واتساب/" class="text-[#25D366] hover:underline">أسباب حظر واتساب</a></li>
+      <li>أوقف السبب نهائياً لا مؤقتاً، فالعودة إليه بعد أسبوع تعيدك إلى نقطة أسوأ.</li>
+      <li>عُد إلى الاستخدام تدريجياً في الأيام الأولى بدل الاندفاع لتعويض ما فاتك من رسائل.</li>
+      <li>احذف أي نسخة معدّلة حتى لو لم تكن سبب الحظر هذه المرة.</li>
+    </ul>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ماذا تفعل إذا انتهت مدة الحظر ولم يُرفع؟</h2>
+    <ol class="list-decimal pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>تأكد أولاً أن المشكلة حظر لا عطل: إن كان التطبيق لا يفتح أصلاً فالسبب مختلف. <a href="/مدونة/واتساب-معطل/" class="text-[#25D366] hover:underline">واتساب معطل</a></li>
+      <li>إن كان العائق أن رمز التحقق لا يصلك بعد انتهاء المدة، فهذه مشكلة تحقق لها حلولها. <a href="/مدونة/واتساب-لا-يرسل-كود-التحقق/" class="text-[#25D366] hover:underline">واتساب لا يرسل كود التحقق</a></li>
+      <li>حدّث التطبيق من المتجر الرسمي وأعد تشغيل الهاتف مرة واحدة فقط.</li>
+      <li>إن بقيت رسالة الحظر بلا تغيير بعد انتهاء العداد، فاعتبر أن الحظر صار أشد وقدّم طلب مراجعة واحداً.</li>
+      <li>إن لم يظهر زر المراجعة داخل التطبيق فاستخدم قنوات الدعم الرسمية. <a href="/مدونة/دعم-واتساب-لفك-الحظر/" class="text-[#25D366] hover:underline">دعم واتساب لفك الحظر</a></li>
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-4">وفي السعودية والإمارات والكويت وقطر وبقية دول الخليج، مدد الحظر هي نفسها لأن القرار يصدر من أنظمة واتساب لا من شركات الاتصالات المحلية. إن كان واتساب يعمل لدى غيرك على الشبكة نفسها ولا يعمل عندك، فالمشكلة في حسابك لا في الشبكة. <a href="/مدونة/حظر-واتساب-في-السعودية/" class="text-[#25D366] hover:underline">حظر واتساب في السعودية</a>.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">هل يمكن معرفة سبب الحظر من مدته؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">إلى حد ما. المدة القصيرة بعداد واضح ترتبط غالباً بنمط استخدام مؤقت مثل الإرسال لعدد كبير في وقت قصير، والمدة الأطول أو غياب العداد يرتبطان غالباً بتكرار المخالفة أو بسبب أشد مثل النسخ المعدّلة. لكن المدة وحدها لا تكفي لتحديد السبب بدقة، فاجمعها مع ما كنت تفعله قبل الحظر مباشرة، وقارن ذلك بقائمة <a href="/مدونة/أسباب-حظر-واتساب/" class="text-[#25D366] hover:underline">أسباب حظر واتساب</a>. وإن ظهر الحظر فجأة دون أي سلوك تتذكره، فاقرأ <a href="/مدونة/حظر-واتساب-بدون-سبب/" class="text-[#25D366] hover:underline">حظر واتساب بدون سبب</a> قبل أن تفترض أنه خطأ.</p>
     <!-- FAQ Section -->
     <h2 class="text-2xl font-bold text-white mt-12 mb-6">أسئلة شائعة</h2>
     <div class="space-y-3">

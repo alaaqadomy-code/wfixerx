@@ -11,6 +11,8 @@ const faqs = [
   { q: "ما أول خطوة صحيحة لفك حظر واتساب؟", a: "اقرأ نص الرسالة على شاشتك قبل أي إجراء، فهي تحدد المسار. عداد تنازلي يعني حظراً مؤقتاً ينتهي وحده، ولا تفعل معه شيئاً. رسالة بلا عداد مع زر «طلب مراجعة» تعني حظراً مشدداً. رسالة «لا يمكن لهذا الحساب استخدام واتساب بعد الآن» تعني حظراً نهائياً. تطبيق حل نوع على نوع آخر يضيّع وقتك وقد يضيّع فرصتك." },
   { q: "هل إعادة تثبيت واتساب أو تغيير الجهاز تفك الحظر؟", a: "لا. الحظر مرتبط برقم هاتفك في سجلات واتساب، لا بالتطبيق ولا بالجهاز. إعادة التثبيت تحذف بياناتك المحلية فقط وتزيد خطر فقدان محادثاتك إن لم تكن لديك نسخة احتياطية، ولا تغيّر حالة الحظر إطلاقاً. وكذلك تغيير الجهاز أو تبديل الشريحة إلى هاتف آخر." },
   { q: "هل توجد برامج أو أكواد تفك حظر واتساب؟", a: "لا توجد، وكل ما يُسوَّق على هذا النحو ضار. لا تملك أي جهة خارجية صلاحية تعديل حالة حسابك في أنظمة واتساب، والقناة الوحيدة هي طلب المراجعة الرسمي. هذه البرامج تطلب رمز التحقق أو تدفعك إلى نسخة معدّلة، والنتيجة سرقة الحساب أو حظر جديد أشد. نحن لا نطلب كلمة مرورك ولا رمز التحقق في أي حالة." },
+  { q: "هل يختلف فك حظر واتساب في السعودية والخليج عن غيرها؟", a: "لا. مسار فك الحظر واحد في كل الدول: الانتظار في المؤقت، وطلب مراجعة في المشدد والنهائي. ما يهم في الخليج هو كتابة الرقم بالصيغة الدولية الصحيحة مع رمز الدولة، والتأكد أن الشريحة فعّالة لتستقبل رمز التحقق بعد رفع الحظر." },
+  { q: "هل تفك WFixerX الحظر بنفسها؟", a: "لا. لا أحد خارج واتساب يملك صلاحية رفع الحظر. ما نقدمه خدمة مدفوعة لتشخيص الحالة وصياغة طلب المراجعة وتقديمه في القناة الصحيحة ومتابعته، وكلفتها حسب الحالة بعد تقييم أولي مجاني، ولا نضمن النتيجة." },
 ];
 
 const schema = JSON.stringify([
@@ -60,7 +62,7 @@ const schema = JSON.stringify([
     "description": "دليل شامل لفك حظر واتساب، يشمل أنواع الحظر وطرق الحل وكيفية تقديم طلب المراجعة الرسمي.",
     "author": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
     "publisher": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
-    "dateModified": "2026-10-13",
+    "dateModified": "2026-10-28",
     "inLanguage": "ar"
   },
   {
@@ -81,7 +83,7 @@ const schema = JSON.stringify([
 
 <BaseLayout
   title="فك حظر واتساب — الدليل الشامل 2026"
-  description="كيف تفك حظر واتساب لكل نوع: المؤقت والمشدد والنهائي وحسابات الأعمال. صيغة طلب المراجعة، القناة الصحيحة، والأخطاء التي تحرق فرصتك الأولى."
+  description="فك حظر واتساب خطوة بخطوة لكل نوع: المؤقت والمشدد والنهائي وحسابات الأعمال، مع صيغة طلب المراجعة، والمسار المجاني، وما يختلف إن كنت في السعودية أو الخليج."
   schema={schema}
 >
 
@@ -99,7 +101,7 @@ const schema = JSON.stringify([
     <div class="max-w-4xl mx-auto">
       <div class="flex items-center gap-2 mb-4">
         <span class="text-xs font-medium text-[#25D366] bg-[#25D366]/10 px-3 py-1 rounded-full border border-[#25D366]/20">وقت القراءة: 8 دقائق</span>
-        <span class="text-xs text-white/35">آخر تحديث: أكتوبر 2026</span>
+        <span class="text-xs text-white/35">آخر تحديث: 28 أكتوبر 2026</span>
       </div>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
         فك حظر واتساب — الدليل الشامل 2026
@@ -244,6 +246,41 @@ const schema = JSON.stringify([
       <li class="flex items-start gap-3"><span class="text-orange-400 shrink-0">→</span>حسابك لنشاط تجاري وكل يوم يكلفك.</li>
       <li class="flex items-start gap-3"><span class="text-orange-400 shrink-0">→</span>لا تعرف سبب الحظر ولا كيف تصيغ طلباً مناسباً.</li>
     </ul>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ما الذي يفك حظر واتساب فعلاً وما الذي لا يفكه؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">يتداول الناس عشرات الطرق لفك الحظر، ومعظمها لا أثر له أو يضر. هذا الجدول يفصل بين ما يعمل وما لا يعمل، حتى لا تحرق فرصتك الأولى في تجربة لا طائل منها:</p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-right border-collapse text-sm">
+        <thead><tr class="border-b border-white/15"><th class="py-3 px-3 text-white font-bold">الإجراء</th><th class="py-3 px-3 text-white font-bold">أثره على الحظر</th><th class="py-3 px-3 text-white font-bold">التفصيل</th></tr></thead>
+        <tbody>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">طلب مراجعة واحد مدروس</th><td class="py-3 px-3 text-white/70 align-top">المسار الرسمي الوحيد</td><td class="py-3 px-3 text-white/70 align-top"><a href="/طلب-مراجعة-واتساب/" class="text-[#25D366] hover:underline">طلب مراجعة واتساب</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">رسالة إلى قنوات الدعم الرسمية</th><td class="py-3 px-3 text-white/70 align-top">مساندة حين لا يظهر زر المراجعة</td><td class="py-3 px-3 text-white/70 align-top"><a href="/مدونة/ايميل-واتساب-لفك-الحظر/" class="text-[#25D366] hover:underline">ايميل واتساب لفك الحظر</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">إعادة التثبيت أو تغيير الهاتف</th><td class="py-3 px-3 text-white/70 align-top">لا أثر، والحظر على الرقم</td><td class="py-3 px-3 text-white/70 align-top">قد تفقد محادثات غير محفوظة</td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">برامج وأكواد «فك الحظر»</th><td class="py-3 px-3 text-white/70 align-top">لا أثر، وخطر سرقة الحساب</td><td class="py-3 px-3 text-white/70 align-top"><a href="/مدونة/برنامج-فك-حظر-الواتس-اب/" class="text-[#25D366] hover:underline">الحقيقة الكاملة</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">التسجيل برقم وهمي</th><td class="py-3 px-3 text-white/70 align-top">لا يرفع الحظر ويعرّض الرقم الجديد للحظر</td><td class="py-3 px-3 text-white/70 align-top"><a href="/مدونة/رقم-وهمي-واتساب/" class="text-[#25D366] hover:underline">رقم وهمي واتساب</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">هل يمكن فك حظر واتساب مجاناً دون أي خدمة؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">نعم، والمسار الرسمي مجاني بالكامل لكل من يعرف نوع حظره ويكتب طلباً جيداً. كثير من الحالات تُحل بهذه الطريقة دون أي طرف ثالث، والخطوات مرتبة في <a href="/مدونة/فك-حظر-واتساب-مجاناً/" class="text-[#25D366] hover:underline">فك حظر واتساب مجاناً</a>. وإن لم يظهر زر المراجعة داخل التطبيق فطريقة الوصول إلى الدعم في <a href="/مدونة/دعم-واتساب-لفك-الحظر/" class="text-[#25D366] hover:underline">دعم واتساب لفك الحظر</a>.</p>
+    <p class="text-white/70 leading-relaxed mb-4">الخدمة المدفوعة منطقية حين تفشل المحاولة الأولى، أو حين يكون الحساب تجارياً وكل يوم توقف له كلفة. <a href="/خدمة-فك-حظر-واتساب/" class="text-[#25D366] hover:underline">خدمة فك حظر واتساب</a> لدينا تُسعَّر حسب الحالة بعد تقييم أولي مجاني، ولا تضمن النتيجة لأن القرار لواتساب وحدها.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">كيف تفك حظر واتساب من السعودية والإمارات ودول الخليج؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">المسار واحد في كل الدول، لكن انتبه لثلاث تفاصيل عملية تهم من يقدّم الطلب من الخليج:</p>
+    <ol class="list-decimal pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>اكتب رقمك في الطلب بالصيغة الدولية الصحيحة مع رمز الدولة: ‎+966 السعودية، ‎+971 الإمارات، ‎+965 الكويت، ‎+974 قطر، ‎+973 البحرين، ‎+968 عُمان.</li>
+      <li>تأكد أن الشريحة فعّالة ولم تتوقف لعدم الشحن، لأن رمز التحقق سيصل إليها بعد رفع الحظر، وفقدان الرقم في تلك اللحظة يعني بدء مشكلة جديدة.</li>
+      <li>إن كان الحساب تجارياً فاتبع مسار الأعمال لا مسار الحساب الشخصي. <a href="/حظر-واتساب-للاعمال/" class="text-[#25D366] hover:underline">حظر واتساب الأعمال</a></li>
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-4">وللتفاصيل المحلية لكل بلد: <a href="/مدونة/حظر-واتساب-في-السعودية/" class="text-[#25D366] hover:underline">السعودية</a>، <a href="/مدونة/حظر-واتساب-في-الإمارات/" class="text-[#25D366] hover:underline">الإمارات</a>، <a href="/مدونة/حظر-واتساب-في-الكويت/" class="text-[#25D366] hover:underline">الكويت</a>.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ماذا تفعل في الأسبوع الأول بعد فك الحظر؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">الأيام الأولى بعد رفع الحظر هي الأخطر، لأن العودة السريعة إلى السلوك القديم تعيد الحساب إلى نقطة أسوأ مما كان عليه. اتبع هذا الترتيب:</p>
+    <ol class="list-decimal pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>استعد النسخة الاحتياطية إن طُلب منك ذلك عند التفعيل، ولا تتخطاها على عجل. <a href="/مدونة/نسخ-احتياطي-واتساب/" class="text-[#25D366] hover:underline">النسخ الاحتياطي</a></li>
+      <li>فعّل التحقق بخطوتين فوراً لحماية الحساب من السرقة. <a href="/مدونة/التحقق-بخطوتين-واتساب/" class="text-[#25D366] hover:underline">التحقق بخطوتين</a></li>
+      <li>راجع قائمة الأجهزة المرتبطة وأزل ما لا تعرفه.</li>
+      <li>عُد إلى الإرسال تدريجياً، ولا تبدأ برسائل جماعية لتعويض ما فاتك.</li>
+      <li>طبّق قواعد الوقاية حتى لا يتكرر الحظر. <a href="/مدونة/كيف-تتجنب-حظر-واتساب/" class="text-[#25D366] hover:underline">كيف تتجنب حظر واتساب</a></li>
+    </ol>
 
     <!-- Topic Cluster Hub -->
     <h2 class="text-2xl font-bold text-white mt-12 mb-2">دليل حظر واتساب — جميع المواضيع</h2>

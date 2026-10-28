@@ -13,6 +13,7 @@ const faqs = [
   { q: "أي نوع حظر هو الأخطر؟", a: "الأخطر ليس النهائي بل المشدد الذي يُهمَل. فالحظر المؤقت ينتهي وحده، والنهائي واضح ويدفع صاحبه إلى التصرف فوراً. أما المشدد فلا عداد له فيظنّه صاحبه مؤقتاً وينتظر أسابيع بلا فائدة، وفي أثناء ذلك تضيع أفضل أوقات تقديم طلب المراجعة. وقد يتحول إلى نهائي إن تكرر السلوك. فالقاعدة: غياب العداد يعني أن الانتظار ليس خطتك." },
   { q: "هل يختلف نوع الحظر بين الأندرويد والآيفون؟", a: "لا. الحظر قرار يُتخذ على رقمك في سجلات واتساب لا على نظام تشغيل جهازك، وأنواعه ومدده ومسار المراجعة واحدة في الأندرويد والآيفون. ما يختلف فعلاً هو موضع النسخ الاحتياطي: Google Drive في الأندرويد وiCloud في الآيفون، ولهذا لا تنتقل المحادثات تلقائياً بين النظامين. وتسجيل الرقم المحظور على جهاز بنظام آخر لا يتجاوز الحظر." },
   { q: "هل حظر حساب الأعمال نوع مختلف؟", a: "نعم، وله مساره الخاص. حسابات الأعمال تخضع لسياسات تجارية إضافية، ويسبق تقييدها غالباً هبوط في تقييم جودة الحساب، وقد يُقيَّد الكتالوج وحده دون الحساب كله. ومراجعة حسابات واجهة واتساب الرسمية للأعمال تُدار من لوحة إدارة الحساب التجاري لا من زر داخل التطبيق، وقد يُطلب فيها ما يثبت نشاط النشاط التجاري." },
+  { q: "هل التقييد نوع من أنواع حظر واتساب؟", a: "ليس بالمعنى الدقيق. التقييد يعطّل مؤقتاً بعض الميزات مثل بدء محادثات جديدة أو إضافة أشخاص إلى المجموعات، بينما يبقى حسابك يعمل. لكنه إنذار مبكر: تجاهله واستمرار نمط الإرسال نفسه قد ينتهي بحظر حقيقي." },
 ];
 
 const schema = JSON.stringify([
@@ -24,7 +25,7 @@ const schema = JSON.stringify([
     "author": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
     "publisher": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
     "datePublished": "2026-10-13",
-    "dateModified": "2026-10-13",
+    "dateModified": "2026-10-28",
     "inLanguage": "ar",
     "url": "https://wfixerx.com/مدونة/أنواع-حظر-واتساب/"
   },
@@ -36,7 +37,7 @@ const schema = JSON.stringify([
 ]);
 ---
 
-<BaseLayout title="أنواع حظر واتساب — مقارنة شاملة بين المؤقت والمشدد والنهائي" description="تعرف على جميع أنواع حظر واتساب: المؤقت والمشدد والنهائي وحظر الأعمال. جدول مقارنة شامل وكيف تتعامل مع كل نوع." schema={schema}>
+<BaseLayout title="أنواع حظر واتساب — مقارنة شاملة بين المؤقت والمشدد والنهائي" description="أنواع حظر واتساب: المؤقت والمشدد والنهائي وحظر الأعمال، مع جدول بالعلامة والمدة والحل لكل نوع، وكيف تميّزها عن التقييد والحظر الشخصي وأعطال التطبيق." schema={schema}>
 
   <nav class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-2" aria-label="مسار التنقل">
     <ol class="flex items-center gap-2 text-sm text-white/40 flex-wrap">
@@ -50,7 +51,7 @@ const schema = JSON.stringify([
 
   <header class="bg-gradient-to-b from-[#040b18] to-[#060d1a] py-12 px-4 sm:px-6 border-b border-white/8">
     <div class="max-w-4xl mx-auto">
-      <p class="text-xs text-white/40 mb-4">أكتوبر 2026 · وقت القراءة: 7 دقائق</p>
+      <p class="text-xs text-white/40 mb-4">آخر تحديث: 28 أكتوبر 2026 · وقت القراءة: 10 دقائق</p>
       <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">أنواع حظر واتساب — مقارنة شاملة بين المؤقت والمشدد والنهائي</h1>
       <p class="text-lg text-white/60 leading-relaxed">
         ليس كل حظر في واتساب متساوياً. هناك أنواع مختلفة تماماً في طبيعتها وشدتها وطريقة التعامل معها. معرفة نوع حظرك بدقة هي الخطوة الأولى والأهم نحو الحل الصحيح. هذه المقالة تقدم مقارنة شاملة لجميع أنواع الحظر المعروفة مع جدول مرجعي سهل الاستخدام.
@@ -167,6 +168,42 @@ const schema = JSON.stringify([
       <p class="font-medium text-white text-sm">الإجراء: <span class="text-white/60 font-normal">راجع سياسات واتساب بزنس وقدّم إثباتاً بالامتثال في طلب المراجعة.</span></p>
     </div>
 
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ما الذي يشبه حظر واتساب وليس حظراً؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">كثير ممن يظنون أنهم محظورون ليسوا محظورين فعلاً. أربع حالات تتشابه مع الحظر في الإحساس وتختلف عنه تماماً في الحل، والخلط بينها وبين أنواع الحظر الحقيقية يدفع أصحابها إلى خطوات خاطئة مثل طلب مراجعة لا داعي له أو حذف التطبيق:</p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-right border-collapse text-sm">
+        <thead><tr class="border-b border-white/15"><th class="py-3 px-3 text-white font-bold">الحالة</th><th class="py-3 px-3 text-white font-bold">كيف تميّزها</th><th class="py-3 px-3 text-white font-bold">الحل</th></tr></thead>
+        <tbody>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">التقييد</th><td class="py-3 px-3 text-white/70 align-top">رسالة «حسابك مقيد حالياً»، والحساب يعمل في الاستقبال والقراءة</td><td class="py-3 px-3 text-white/70 align-top">أوقف نمط الإرسال. <a href="/مدونة/واتساب-مقيد/" class="text-[#25D366] hover:underline">واتساب مقيد</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">حظر شخصي من مستخدم</th><td class="py-3 px-3 text-white/70 align-top">حسابك يعمل مع الجميع إلا شخصاً واحداً</td><td class="py-3 px-3 text-white/70 align-top">لا حل تقني، القرار لصاحب الحساب. <a href="/مدونة/حظر-رقم-واتساب/" class="text-[#25D366] hover:underline">حظر رقم واتساب</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">تعليق التطبيق أو تجمّده</th><td class="py-3 px-3 text-white/70 align-top">التطبيق لا يفتح أو يتوقف دون أي رسالة حظر</td><td class="py-3 px-3 text-white/70 align-top">حلول الجهاز والتخزين. <a href="/مدونة/واتساب-معلق/" class="text-[#25D366] hover:underline">واتساب معلق</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">مشكلة رمز التحقق</th><td class="py-3 px-3 text-white/70 align-top">لا يصلك الرمز عند التسجيل ولا تظهر رسالة حظر</td><td class="py-3 px-3 text-white/70 align-top">عالج الشبكة والرقم. <a href="/مدونة/واتساب-لا-يرسل-كود-التحقق/" class="text-[#25D366] hover:underline">كود التحقق</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">كيف يتحول نوع الحظر إلى نوع أشد؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">أنواع الحظر ليست صناديق منفصلة، بل درجات على سلّم واحد. الحساب يصعد السلّم حين يتكرر السبب نفسه، وهذه الأنماط الأكثر ارتباطاً بالتصعيد:</p>
+    <ol class="list-decimal pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>حظر مؤقت ثم عودة سريعة إلى الإرسال الجماعي نفسه بعد انتهاء العداد. <a href="/مدونة/حظر-واتساب-بسبب-الرسائل-الجماعية/" class="text-[#25D366] hover:underline">الحظر بسبب الرسائل الجماعية</a></li>
+      <li>محاولة تجاوز الحظر بنسخة معدّلة، وهي أسرع طريق إلى الحظر النهائي. <a href="/مدونة/حظر-واتساب-بسبب-نسخة-معدلة/" class="text-[#25D366] hover:underline">الحظر بسبب نسخة معدّلة</a></li>
+      <li>تراكم البلاغات من أشخاص أُضيفوا إلى مجموعات دون إذنهم. <a href="/مدونة/حظر-واتساب-بسبب-الإبلاغ/" class="text-[#25D366] hover:underline">الحظر بسبب الإبلاغ</a></li>
+      <li>تقديم طلبات مراجعة متكررة بالصيغة نفسها بدل طلب واحد مدروس.</li>
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-4">والعكس صحيح أيضاً: الحساب الذي يتوقف عند أول إنذار ويعالج السبب يبقى غالباً في الدرجة الأخف، وينتهي أمره بانتظار ساعات بدل استئناف قد يطول.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">أي نوع حظر يحتاج مساعدة متخصصة؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">الحظر المؤقت لا يحتاج أحداً: انتظر وعالج السبب. والحظر المشدد يستطيع كثيرون التعامل معه بأنفسهم إن كتبوا <a href="/طلب-مراجعة-واتساب/" class="text-[#25D366] hover:underline">طلب مراجعة</a> جيداً. أما المساعدة المتخصصة فتكون منطقية في ثلاث حالات: حظر نهائي على رقم مهم لا يمكن استبداله، أو حساب أعمال يعتمد عليه دخلك، أو طلب رُفض ولا تعرف لماذا.</p>
+    <p class="text-white/70 leading-relaxed mb-4">وفي كل الحالات لا يوجد ضمان للنتيجة، لأن القرار لواتساب وحدها. <a href="/خدمة-فك-حظر-واتساب/" class="text-[#25D366] hover:underline">خدمة فك حظر واتساب</a> لدينا مدفوعة، وكلفتها حسب الحالة بعد تقييم أولي مجاني، ونقول لك بصراحة إن كانت حالتك لا تحتاجها.</p>
+    <p class="text-white/70 leading-relaxed mb-4">ويواجه أصحاب المتاجر في السعودية والإمارات وقطر والكويت النوع الرابع أكثر من غيرهم، أي حظر حسابات الأعمال، لأن واتساب قناة البيع الأساسية لكثير من المتاجر هناك. مساره مختلف ومشروح في <a href="/حظر-واتساب-للاعمال/" class="text-[#25D366] hover:underline">دليل حظر واتساب الأعمال</a>.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">أربعة أسئلة تحدد نوع حظرك في دقيقة</h2>
+    <p class="text-white/70 leading-relaxed mb-4">لا تحتاج إلى خبير لتعرف نوع حظرك. أجب عن هذه الأسئلة بالترتيب، وتوقف عند أول إجابة بنعم:</p>
+    <ol class="list-decimal pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li><strong class="text-white">هل يظهر عداد بالساعات أو الأيام؟</strong> نعم يعني حظراً مؤقتاً ينتهي وحده. انتظر ولا تفعل شيئاً آخر.</li>
+      <li><strong class="text-white">هل الحساب تجاري وتظهر الرسالة في تطبيق الأعمال أو لوحة الإدارة؟</strong> نعم يعني مسار حظر الأعمال بأدواته الخاصة.</li>
+      <li><strong class="text-white">هل تقول الرسالة إن الحساب لا يمكنه استخدام واتساب بعد الآن؟</strong> نعم يعني حظراً نهائياً يحتاج استئنافاً مدروساً. <a href="/رسالة-لا-يمكن-لهذا-الحساب/" class="text-[#25D366] hover:underline">شرح الرسالة</a></li>
+      <li><strong class="text-white">هل توجد رسالة حظر بلا عداد ومعها زر مراجعة؟</strong> نعم يعني حظراً مشدداً، وطلب المراجعة هو خطوتك الوحيدة.</li>
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-4">وإن كانت إجاباتك كلها لا، فالأرجح أنك لست محظوراً أصلاً، وأن المشكلة واحدة من الحالات المشابهة في الجدول السابق.</p>
     <!-- Mid CTA -->
     <div class="bg-gradient-to-br from-[#0d2844] to-[#041a0c] rounded-2xl p-6 my-10 border border-[#25D366]/15 text-center">
       <p class="font-semibold text-white mb-2">تحتاج مساعدة متخصصة؟</p>

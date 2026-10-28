@@ -24,8 +24,10 @@ const faqs = [
         {
           q: "ماذا أفعل إذا رفض واتساب طلب المراجعة؟",
           a: "إذا رُفض الطلب، يمكن إعادة التقديم بعد فترة مع تقديم تفاصيل إضافية. يمكن أيضاً التواصل مع متخصصين في استرداد الحسابات للمساعدة."
-        }
-      ];
+        },
+  { q: "هل أقدّم طلب مراجعة الحظر المشدد فوراً أم أنتظر؟", a: "قدّمه بعد أن تعالج السبب لا قبله. احذف النسخة المعدّلة أو أوقف أداة الإرسال أولاً، ثم اكتب طلباً واحداً يذكر ما غيّرته. التقديم المتعجل قبل المعالجة يضيّع فرصة الطلب الأول." },
+  { q: "هل يمكنني استخدام واتساب ويب لتجاوز الحظر المشدد؟", a: "لا. واتساب ويب والأجهزة المرتبطة امتداد للحساب نفسه وليست حساباً مستقلاً، فلا تتجاوز الحظر الواقع على الرقم. ومحاولة الالتفاف عليه بأي وسيلة، بجهاز آخر أو تطبيق آخر، قد تُقرأ إصراراً على المخالفة وتضعف طلب المراجعة." },
+];
 
 const schema = JSON.stringify([
   {
@@ -34,7 +36,7 @@ const schema = JSON.stringify([
     "headline": "حظر واتساب المشدد — ما هو وكيف تفكه",
     "description": "شرح مفصل لحظر واتساب المشدد: علاماته، أسبابه، وكيفية رفعه عبر طلب المراجعة الرسمي.",
     "author": { "@type": "Organization", "name": "WFixerX" },
-    "dateModified": "2026-10-13",
+    "dateModified": "2026-10-28",
     "inLanguage": "ar"
   },
   {
@@ -55,8 +57,8 @@ const schema = JSON.stringify([
 ---
 
 <BaseLayout
-  title="حظر واتساب المشدد — ما هو وكيف تفكه"
-  description="حظر واتساب المشدد: علاماته ومدده التي تصل إلى ثلاثين يوماً، أسبابه الحقيقية، وكيف تكتب طلب مراجعة لحالتك. معالجة السبب أهم من الانتظار."
+  title="حظر واتساب المشدد — علاماته ومدته وكيف تفكه خطوة بخطوة"
+  description="حظر واتساب المشدد: كيف تميّزه عن المؤقت والنهائي، ولماذا لا ينتهي وحده، وماذا تكتب في طلب المراجعة، وكيف تتصرف أثناء الانتظار في السعودية والخليج."
   schema={schema}
 >
 
@@ -72,7 +74,7 @@ const schema = JSON.stringify([
 
   <header class="bg-gradient-to-b from-[#07111f] to-[#060d1a] py-12 px-4 sm:px-6 border-b border-white/8">
     <div class="max-w-4xl mx-auto">
-      <p class="text-xs text-white/40 mb-4">أكتوبر 2026 · وقت القراءة: 6 دقائق</p>
+      <p class="text-xs text-white/40 mb-4">آخر تحديث: 28 أكتوبر 2026 · وقت القراءة: 9 دقائق</p>
       <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
         حظر واتساب المشدد — ما هو وكيف تفكه
       </h1>
@@ -214,6 +216,47 @@ const schema = JSON.stringify([
       </div>
     </div>
 
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ماذا تكتب في طلب مراجعة الحظر المشدد تحديداً؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">طلب الحظر المشدد يختلف عن طلب الحظر النهائي في نقطة جوهرية: المشدد يعني أن واتساب ترى المخالفة قابلة للتصحيح، فطلبك يجب أن يُثبت أن التصحيح حدث فعلاً لا أن يكتفي بالاعتذار. ركّز على أربعة عناصر بهذا الترتيب:</p>
+    <ol class="list-decimal pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li><strong class="text-white">تعريف قصير:</strong> رقمك بالصيغة الدولية، وطبيعة استخدامك للحساب: شخصي، أو عائلي، أو عمل صغير.</li>
+      <li><strong class="text-white">إقرار محدد:</strong> اذكر ما قد يكون سبب الحظر إن كنت تعرفه، دون مبالغة ولا إنكار.</li>
+      <li><strong class="text-white">ما غيّرته فعلاً:</strong> حذف نسخة معدّلة، أو إيقاف أداة إرسال، أو التوقف عن إضافة أشخاص دون إذن.</li>
+      <li><strong class="text-white">طلب واضح:</strong> اطلب مراجعة القرار بلغة مهذبة وقصيرة، في فقرة لا في صفحة.</li>
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-4">وتجنب الرسائل الطويلة العاطفية، والتهديد بترك التطبيق، والادعاء بأن الحساب مخترق إن لم يكن كذلك. تجد صيغاً جاهزة وتفاصيل الوصول إلى الرابط في <a href="/مدونة/رابط-طلب-مراجعة-واتساب/" class="text-[#25D366] hover:underline">رابط طلب مراجعة واتساب</a> و<a href="/طلب-مراجعة-واتساب/" class="text-[#25D366] hover:underline">دليل طلب المراجعة</a>.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">كيف تتصرف أثناء انتظار الرد على الحظر المشدد؟</h2>
+    <ul class="list-disc pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>لا تثبّت أي نسخة معدّلة، ولا تحاول تشغيل الرقم نفسه على تطبيق آخر.</li>
+      <li>تابع البريد الإلكتروني الذي ذكرته في الطلب، فالرد قد يصل إليه. <a href="/مدونة/ايميل-واتساب-لفك-الحظر/" class="text-[#25D366] hover:underline">ايميل واتساب لفك الحظر</a></li>
+      <li>لا تحذف التطبيق: إعادة التثبيت لا تؤثر في الحظر، وقد تعرّض محادثاتك للضياع إن لم تكن لديك نسخة حديثة. <a href="/مدونة/نسخ-احتياطي-واتساب/" class="text-[#25D366] hover:underline">النسخ الاحتياطي</a></li>
+      <li>أبلغ جهات الاتصال المهمة بوسيلة تواصل بديلة مؤقتاً، دون أن تكرر على رقم آخر السلوك الذي سبب الحظر.</li>
+    </ul>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">حالات شائعة للحظر المشدد وكيف تُعالج كل حالة</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-right border-collapse text-sm">
+        <thead><tr class="border-b border-white/15"><th class="py-3 px-3 text-white font-bold">الحالة</th><th class="py-3 px-3 text-white font-bold">السبب الأرجح</th><th class="py-3 px-3 text-white font-bold">المعالجة قبل الطلب</th></tr></thead>
+        <tbody>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">متجر يرسل عروضاً لقائمة أرقام مشتراة</th><td class="py-3 px-3 text-white/70 align-top">إرسال لغرباء وبلاغات</td><td class="py-3 px-3 text-white/70 align-top">توقف عن القوائم المشتراة وراسل من طلب التواصل فقط</td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">مشرف يضيف أعضاء إلى مجموعات دون إذن</th><td class="py-3 px-3 text-white/70 align-top">بلاغات متكررة</td><td class="py-3 px-3 text-white/70 align-top">اطلب الإذن قبل الإضافة واستخدم روابط الدعوة</td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">مستخدم نسخة معدّلة لميزات إضافية</th><td class="py-3 px-3 text-white/70 align-top">مخالفة شروط الاستخدام</td><td class="py-3 px-3 text-white/70 align-top">احذف النسخة وثبّت التطبيق الرسمي. <a href="/مدونة/حظر-واتساب-الذهبي/" class="text-[#25D366] hover:underline">الواتس الذهبي</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">رسالة واحدة لعدد كبير في وقت قصير</th><td class="py-3 px-3 text-white/70 align-top">نمط يشبه الإرسال الآلي</td><td class="py-3 px-3 text-white/70 align-top">قلّل الحجم ووزّع الإرسال على فترات</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-4">وتتكرر هذه الحالات في السعودية والإمارات والكويت مع مواسم العروض مثل رمضان والجمعة البيضاء، حين يقفز حجم الإرسال فجأة من حساب اعتاد حجماً صغيراً. إن كان حسابك تجارياً فاقرأ أيضاً <a href="/مدونة/حظر-واتساب-في-السعودية/" class="text-[#25D366] hover:underline">حظر واتساب في السعودية</a> و<a href="/مدونة/واتساب-بزنس-محظور/" class="text-[#25D366] hover:underline">واتساب بزنس محظور</a>.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">متى يتحول الحظر المشدد إلى نهائي؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">لا تعلن واتساب قاعدة محددة لذلك، لكن الأنماط واضحة: تكرار المخالفة نفسها بعد رفع الحظر، أو محاولة الالتفاف عليه بنسخة معدّلة، أو تجاهل الإنذار والاستمرار في الإرسال الجماعي. الحظر المشدد فرصة أخيرة لتصحيح المسار، ومن يعامله كإجراء عابر يخاطر بأن يصل إلى <a href="/مدونة/واتساب-محظور-نهائياً/" class="text-[#25D366] hover:underline">الحظر النهائي</a> حيث تصبح الخيارات أضيق بكثير.</p>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">كيف تعرف أن طلب مراجعة الحظر المشدد قُبل؟ وماذا بعده؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">حين يُقبل الطلب تختفي رسالة الحظر عادة عند فتح التطبيق، ويُطلب منك التحقق من رقمك من جديد برمز يصل إلى الشريحة. لذلك تأكد قبل أي شيء أن الشريحة في هاتفك وفعّالة، فقبول الطلب لا يفيدك إن لم تستطع استقبال الرمز. وإن وصلك رد على البريد الإلكتروني فاقرأه كاملاً، فقد يتضمن تعليمات أو تنبيهاً بشأن السلوك الذي سبب الحظر.</p>
+    <p class="text-white/70 leading-relaxed mb-4">بعد العودة، تذكّر أن الحساب الذي رُفع عنه حظر مشدد يبقى حساساً لفترة. ثلاثة أمور تحميه:</p>
+    <ul class="list-disc pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>لا تعد إلى السبب نفسه ولو بحجم أصغر، فالتكرار بعد الرفع أقصر طريق إلى الحظر النهائي.</li>
+      <li>فعّل التحقق بخطوتين وراجع الأجهزة المرتبطة في اليوم الأول. <a href="/مدونة/التحقق-بخطوتين-واتساب/" class="text-[#25D366] hover:underline">التحقق بخطوتين</a></li>
+      <li>طبّق قواعد الوقاية العشر بدءاً من الأسبوع الأول. <a href="/مدونة/كيف-تتجنب-حظر-واتساب/" class="text-[#25D366] hover:underline">كيف تتجنب حظر واتساب</a></li>
+    </ul>
+    <p class="text-white/70 leading-relaxed mb-4">أما إن جاء الرد رفضاً، فلا تقدّم الطلب نفسه مرة أخرى في اليوم ذاته. اقرأ <a href="/فك-حظر-واتساب/" class="text-[#25D366] hover:underline">دليل فك حظر واتساب</a> لتعرف متى تعيد المحاولة وبأي زاوية.</p>
     <h2 class="text-2xl font-bold text-white mb-6">الأسئلة الشائعة</h2>
     <div class="space-y-3 mb-10">
       {faqs.map(faq => (

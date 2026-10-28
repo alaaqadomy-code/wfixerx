@@ -10,18 +10,20 @@ const faqs = [
         { q: "كيف أسترجع حساب واتساب المحظور؟", a: "قدّم طلب مراجعة عبر التطبيق أو موقع support.whatsapp.com. اشرح حالتك باحترافية وانتظر الرد. إذا رُفض، أعد التقديم أو استشر متخصصاً." },
         { q: "هل يمكن استرداد رسائل حساب واتساب المحظور؟", a: "إذا كان لديك نسخة احتياطية من الرسائل (Google Drive أو iCloud)، يمكن استعادتها بعد رفع الحظر وإعادة تفعيل الحساب." },
         { q: "كم يستغرق استرجاع حساب واتساب المحظور؟", a: "المدة تعتمد على نوع الحظر ومدى احترافية طلب المراجعة. قد تتراوح بين أيام وأسابيع. الحظر المشدد أسرع في الغالب من النهائي." },
-      ];
+  { q: "هل أحتاج إلى شريحة الرقم نفسه لاسترجاع حساب واتساب المحظور؟", a: "نعم. حتى لو رُفع الحظر، يتطلب تفعيل واتساب استقبال رمز التحقق على الرقم نفسه. إن فقدت الشريحة فاستخرج بدل فاقد بالرقم نفسه من شركة الاتصالات قبل تقديم الطلب أو بالتوازي معه." },
+  { q: "هل تختلف خطوات استرجاع الحساب المحظور في السعودية والإمارات؟", a: "لا. مسار المراجعة لدى واتساب واحد في كل الدول، ويُقدَّم الطلب من داخل التطبيق أو عبر قنوات الدعم الرسمية. ما يختلف محلياً هو إجراءات شركة الاتصالات عند فقدان الشريحة أو نقل الرقم." },
+];
 
 const schema = JSON.stringify([
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "استرجاع حساب واتساب محظور — الفرق بين الحظر والفقدان وخطوات الاسترداد",
-    "description": "كيف تسترجع حساب واتساب المحظور؟ الفرق بين الحظر والفقدان وخطوات استرداد حسابك بشكل صحيح ومنظم.",
+    "description": "استرجاع حساب واتساب محظور في السعودية والخليج: فرّق بين الحظر والفقدان، اعرف نوعك من نص الشاشة، واتبع خطوات الاسترداد وما تفعله إن رُفض طلبك.",
     "author": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
     "publisher": { "@type": "Organization", "name": "WFixerX", "url": "https://wfixerx.com" },
     "datePublished": "2026-10-13",
-    "dateModified": "2026-10-13",
+    "dateModified": "2026-10-28",
     "inLanguage": "ar",
     "url": "https://wfixerx.com/مدونة/استرجاع-حساب-واتساب-محظور/"
   },
@@ -33,7 +35,7 @@ const schema = JSON.stringify([
 ]);
 ---
 
-<BaseLayout title="استرجاع حساب واتساب محظور — الفرق بين الحظر والفقدان وخطوات الاسترداد" description="استرجاع حساب واتساب المحظور: الفرق بين الحظر والفقدان، تشخيص نوعك من نص الشاشة، وخطوات الاسترداد لكل نوع. ولا توجد طريقة تقنية لتجاوز الحظر." schema={schema}>
+<BaseLayout title="استرجاع حساب واتساب محظور — خطوات الاسترداد لكل نوع حظر" description="استرجاع حساب واتساب محظور في السعودية والخليج: فرّق بين الحظر والفقدان، اعرف نوعك من نص الشاشة، واتبع خطوات الاسترداد وما تفعله إن رُفض طلبك." schema={schema}>
 
   <nav class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-2" aria-label="مسار التنقل">
     <ol class="flex items-center gap-2 text-sm text-white/40 flex-wrap">
@@ -47,7 +49,7 @@ const schema = JSON.stringify([
 
   <header class="bg-gradient-to-b from-[#040b18] to-[#060d1a] py-12 px-4 sm:px-6 border-b border-white/8">
     <div class="max-w-4xl mx-auto">
-      <p class="text-xs text-white/40 mb-4">أكتوبر 2026 · وقت القراءة: 7 دقائق</p>
+      <p class="text-xs text-white/40 mb-4">آخر تحديث: 28 أكتوبر 2026 · وقت القراءة: 10 دقائق</p>
       <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">استرجاع حساب واتساب محظور — الفرق بين الحظر والفقدان وخطوات الاسترداد</h1>
       <p class="text-lg text-white/60 leading-relaxed">
         حسابك على واتساب لا يعمل وتريد استرجاعه؟ أول خطوة هي تحديد ما الذي حدث بالضبط: هل حُظر الحساب أم فقدت الوصول إليه؟ هذا الفرق الدقيق يحدد كل الخطوات التالية. هذا الدليل يشرح بوضوح كيف تميّز بين الحالتين وما هي الخطوات الصحيحة لاسترجاع حسابك في كل حالة.
@@ -155,6 +157,46 @@ const schema = JSON.stringify([
       ))}
     </ul>
 
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">كيف تعرف أن حسابك محظور وليس مفقوداً أو معطلاً؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">الحالات الثلاث تنتهي بالنتيجة نفسها: لا تستطيع استخدام واتساب. لكن لكل حالة علامة مختلفة على الشاشة وعلاجاً مختلفاً تماماً، وتطبيق علاج حالة على أخرى يضيّع وقتك. قارن ما يظهر لك بهذا الجدول قبل أي خطوة:</p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-right border-collapse text-sm">
+        <thead><tr class="border-b border-white/15"><th class="py-3 px-3 text-white font-bold">ما تراه على الشاشة</th><th class="py-3 px-3 text-white font-bold">الحالة</th><th class="py-3 px-3 text-white font-bold">ما تفعله</th></tr></thead>
+        <tbody>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">رسالة صريحة بأن رقمك محظور، وأحياناً معها زر «طلب مراجعة»</th><td class="py-3 px-3 text-white/70 align-top">حظر من واتساب</td><td class="py-3 px-3 text-white/70 align-top">طلب مراجعة واحد مدروس. <a href="/طلب-مراجعة-واتساب/" class="text-[#25D366] hover:underline">الطريقة</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">«لا يمكن لهذا الحساب استخدام واتساب بعد الآن»</th><td class="py-3 px-3 text-white/70 align-top">حظر نهائي</td><td class="py-3 px-3 text-white/70 align-top">اقرأ معنى صيغتك أولاً. <a href="/رسالة-لا-يمكن-لهذا-الحساب/" class="text-[#25D366] hover:underline">الشرح</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">لا يصلك رمز التحقق عند التسجيل</th><td class="py-3 px-3 text-white/70 align-top">مشكلة تحقق لا حظر</td><td class="py-3 px-3 text-white/70 align-top">عالج الشبكة والرقم. <a href="/مدونة/واتساب-لا-يرسل-كود-التحقق/" class="text-[#25D366] hover:underline">الحلول</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">خرجت من الحساب فجأة ورقمك مسجل على جهاز آخر</th><td class="py-3 px-3 text-white/70 align-top">اختراق محتمل</td><td class="py-3 px-3 text-white/70 align-top">استعد الرقم فوراً. <a href="/مدونة/استرجاع-واتساب-بعد-الاختراق/" class="text-[#25D366] hover:underline">الخطوات</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">فقدت الشريحة أو الهاتف</th><td class="py-3 px-3 text-white/70 align-top">فقدان وصول</td><td class="py-3 px-3 text-white/70 align-top">بدل فاقد بالرقم نفسه. <a href="/مدونة/استرجاع-حساب-واتساب-بدون-رقم/" class="text-[#25D366] hover:underline">التفاصيل</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">التطبيق لا يفتح أو يتجمد بلا رسالة حظر</th><td class="py-3 px-3 text-white/70 align-top">عطل تقني</td><td class="py-3 px-3 text-white/70 align-top">شخّص الجهاز والشبكة. <a href="/مدونة/واتساب-معطل/" class="text-[#25D366] hover:underline">الحلول</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ما المعلومات التي تجهزها قبل طلب استرجاع الحساب المحظور؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">طلب المراجعة يُقرأ في الغالب مرة واحدة، فجهّز ما يحتاجه قبل أن تكتب كلمة. الحساب الشخصي لا يحتاج وثائق رسمية، لكن المعلومات الناقصة أو المتناقضة تضعف الطلب أكثر مما تتوقع:</p>
+    <ol class="list-decimal pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>رقم الهاتف بالصيغة الدولية كاملاً مع رمز الدولة، مثل ‎+966 للسعودية أو ‎+971 للإمارات أو ‎+965 للكويت.</li>
+      <li>نص رسالة الحظر حرفياً كما يظهر على شاشتك، ويُفضّل أن تحتفظ بلقطة شاشة لها.</li>
+      <li>التاريخ التقريبي لظهور الحظر، وما كنت تفعله قبله مباشرة: إرسال لعدد كبير، أو إضافة أشخاص إلى مجموعات، أو تثبيت تطبيق جديد مرتبط بواتساب.</li>
+      <li>نوع التطبيق الذي كنت تستخدمه: واتساب الرسمي، أو واتساب للأعمال، أو نسخة معدّلة. الصدق هنا يخدمك لأن سجل الاستخدام موجود أصلاً لدى المراجعة.</li>
+      <li>بريد إلكتروني تتابعه يومياً، لأن الرد قد يصل إليه لا إلى التطبيق.</li>
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-4">ولا تحتاج في أي مرحلة إلى مشاركة رمز التحقق أو كلمة المرور مع أي شخص. من يطلبهما منك يريد حسابك لا مساعدتك، مهما بدا رسمياً.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ما الأخطاء التي تُضعف فرصة استرجاع الحساب؟</h2>
+    <ul class="list-disc pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li><strong class="text-white">حذف التطبيق وإعادة تثبيته مرات متتالية:</strong> لا يغيّر شيئاً لأن الحظر مرتبط بالرقم، وقد يمسح محادثات لم تدخل أي نسخة احتياطية.</li>
+      <li><strong class="text-white">تشغيل الرقم نفسه عبر نسخة معدّلة:</strong> يحوّل حالتك إلى انتهاك موثّق ويكاد يغلق باب المراجعة. <a href="/مدونة/حظر-واتساب-بسبب-نسخة-معدلة/" class="text-[#25D366] hover:underline">لماذا</a></li>
+      <li><strong class="text-white">إنكار ما هو واضح:</strong> إن كنت ترسل رسائل جماعية فقل إنك أوقفتها. الإنكار التام لما تُظهره السجلات يجعل الطلب غير مقنع.</li>
+      <li><strong class="text-white">إرسال الطلب نفسه مرات كثيرة:</strong> التكرار لا يسرّع الرد، بل يجعل الطلب يبدو آلياً.</li>
+      <li><strong class="text-white">الدفع لمن يعد بالرفع خلال ساعات:</strong> لا أحد خارج واتساب يملك هذه الصلاحية. <a href="/مدونة/برنامج-فك-حظر-الواتس-اب/" class="text-[#25D366] hover:underline">حقيقة برامج فك الحظر</a></li>
+    </ul>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ماذا تفعل إن رُفض طلب استرجاع الحساب؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">الرفض الأول ليس نهاية المسار دائماً. اقرأ رسالة الرفض بعناية: إن نصّت على أن القرار نهائي ولا يقبل مراجعة أخرى، فاستمرار المحاولة يستهلك وقتك، والأجدى أن تحفظ ما يمكن حفظه وتبدأ برقم جديد بعد إزالة سبب الحظر. اقرأ قبل ذلك <a href="/مدونة/هل-يمكن-استخدام-رقم-آخر-بعد-حظر-واتساب/" class="text-[#25D366] hover:underline">هل يمكن استخدام رقم آخر بعد الحظر</a>.</p>
+    <p class="text-white/70 leading-relaxed mb-4">أما إن جاء الرفض عاماً بلا تفاصيل، فانتظر عدة أيام ثم أعد الصياغة من زاوية مختلفة: ركّز على ما تغيّر فعلاً في استخدامك، لا على تكرار الاعتذار. وتجد صيغة جاهزة وجدولاً زمنياً لما بعد الإرسال في <a href="/طلب-مراجعة-واتساب/" class="text-[#25D366] hover:underline">دليل طلب مراجعة واتساب</a>.</p>
+    <p class="text-white/70 leading-relaxed mb-4">وفي السعودية والإمارات والكويت وبقية دول الخليج، كثير من الحسابات المحظورة حسابات عمل صغيرة تُدار من رقم شخصي. إن كان هذا وضعك فراجع <a href="/مدونة/حظر-واتساب-في-السعودية/" class="text-[#25D366] hover:underline">حظر واتساب في السعودية</a> و<a href="/حظر-واتساب-للاعمال/" class="text-[#25D366] hover:underline">حظر واتساب الأعمال</a>، لأن مسار حسابات الأعمال يختلف عن الحساب الشخصي.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">متى تحتاج مساعدة متخصصة في استرجاع الحساب المحظور؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">معظم أصحاب الحسابات المحظورة يستطيعون تقديم الطلب بأنفسهم مجاناً. المساعدة المتخصصة منطقية حين يكون الرقم مرتبطاً بعمل أو عملاء، أو حين رُفض طلبك ولا تعرف السبب، أو حين لا تعرف نوع حظرك أصلاً. <a href="/خدمة-فك-حظر-واتساب/" class="text-[#25D366] hover:underline">خدمتنا</a> مدفوعة وكلفتها حسب الحالة بعد تقييم أولي مجاني، ولا تضمن النتيجة لأن القرار لواتساب وحدها.</p>
     <!-- Mid CTA -->
     <div class="bg-gradient-to-br from-[#0d2844] to-[#041a0c] rounded-2xl p-6 my-10 border border-[#25D366]/15 text-center">
       <p class="font-semibold text-white mb-2">تحتاج مساعدة متخصصة؟</p>

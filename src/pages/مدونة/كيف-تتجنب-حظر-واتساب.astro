@@ -15,8 +15,11 @@ const faqs = [
         {
           q: "هل يمكن رفع الحظر بعد استخدام نسخة معدّلة؟",
           a: "نعم في بعض الحالات، خاصةً إذا كان الحظر الأول. احذف النسخة المعدّلة، نزّل التطبيق الرسمي، وقدّم طلب مراجعة."
-        }
-      ];
+        },
+  { q: "هل تفعيل التحقق بخطوتين يمنع حظر واتساب؟", a: "لا. التحقق بخطوتين يحمي حسابك من السرقة والاختراق، لكنه لا يمنع الحظر الناتج عن مخالفة سياسات واتساب. هو حماية مختلفة ومهمة، وتحتاج الاثنين معاً: سلوكاً سليماً وحساباً محمياً." },
+  { q: "هل الإرسال لجهات الاتصال المحفوظة آمن دائماً؟", a: "أكثر أماناً لكنه ليس آمناً مطلقاً. إن أرسلت رسالة واحدة لعدد كبير من جهات الاتصال في وقت قصير، أو أبلغ عنك بعضهم، فقد يُقيَّد الحساب. وزّع الإرسال واجعله ذا صلة بمن يستقبله." },
+  { q: "هل يُحظر حساب واتساب بسبب كثرة المجموعات؟", a: "ليس عدد المجموعات بحد ذاته هو المشكلة، بل طريقة الإضافة إليها والنشر فيها. إضافة أشخاص لا يعرفونك، أو نشر الرسالة نفسها في مجموعات كثيرة خلال وقت قصير، يرفع احتمال البلاغات والتقييد. انضم بروابط الدعوة، واطلب الإذن قبل إضافة أي شخص، وغادر المجموعات التي تنشر روابط مشبوهة." },
+];
 
 const schema = JSON.stringify([
   {
@@ -25,7 +28,7 @@ const schema = JSON.stringify([
     "headline": "كيف تتجنب حظر واتساب — 10 قواعد تحمي حسابك",
     "description": "دليل شامل لحماية حساب واتساب من الحظر: القواعد الذهبية، الأخطاء الشائعة، ونصائح عملية للمستخدمين والأعمال.",
     "author": { "@type": "Organization", "name": "WFixerX" },
-    "dateModified": "2026-10-13",
+    "dateModified": "2026-10-28",
     "inLanguage": "ar"
   },
   {
@@ -47,7 +50,7 @@ const schema = JSON.stringify([
 
 <BaseLayout
   title="كيف تتجنب حظر واتساب — 10 قواعد تحمي حسابك"
-  description="دليل شامل لحماية حساب واتساب من الحظر: القواعد الذهبية، الأخطاء الشائعة، ونصائح عملية للمستخدمين والأعمال."
+  description="كيف تتجنب حظر واتساب: 10 قواعد عملية للحساب الشخصي وحساب الأعمال، والإشارات المبكرة قبل الحظر، وأخطاء متاجر الخليج، وقائمة فحص شهرية تحمي رقمك."
   schema={schema}
 >
 
@@ -63,7 +66,7 @@ const schema = JSON.stringify([
 
   <header class="bg-gradient-to-b from-[#07111f] to-[#060d1a] py-12 px-4 sm:px-6 border-b border-white/8">
     <div class="max-w-4xl mx-auto">
-      <p class="text-xs text-white/40 mb-4">أكتوبر 2026 · وقت القراءة: 5 دقائق</p>
+      <p class="text-xs text-white/40 mb-4">آخر تحديث: 28 أكتوبر 2026 · وقت القراءة: 8 دقائق</p>
       <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
         كيف تتجنب حظر واتساب — 10 قواعد تحمي حسابك
       </h1>
@@ -209,6 +212,50 @@ const schema = JSON.stringify([
       <a href={WA_LINK} target="_blank" rel="noopener" class="btn-wa">تواصل عبر واتساب</a>
     </div>
 
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ما الإشارات المبكرة التي تسبق حظر واتساب؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">نادراً ما يأتي الحظر بلا مقدمات. هذه الإشارات تعني أن حسابك يقترب من الحد، وأن تغيير نمط الاستخدام الآن أرخص بكثير من التعامل مع الحظر لاحقاً:</p>
+    <ul class="list-disc pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>رسالة «حسابك مقيد حالياً» أو منعك مؤقتاً من بدء محادثات جديدة. <a href="/مدونة/واتساب-مقيد/" class="text-[#25D366] hover:underline">معنى التقييد</a></li>
+      <li>انخفاض تقييم الجودة في حساب الأعمال أو ظهور تحذير في إعداداته. <a href="/مدونة/تقييم-جودة-واتساب-بزنس/" class="text-[#25D366] hover:underline">تقييم جودة واتساب بزنس</a></li>
+      <li>أشخاص يردّون بأنهم لا يعرفونك، أو يغادرون المجموعة فور إضافتهم إليها.</li>
+      <li>حظر مؤقت سابق حتى لو انتهى بسلام، لأنه يبقى جزءاً من سجل الحساب.</li>
+    </ul>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ما الأخطاء التي تعرّض متاجر السعودية والخليج للحظر؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">كثير من المتاجر الصغيرة في السعودية والإمارات والكويت وقطر تبيع عبر واتساب مباشرة، والأخطاء التالية هي الأكثر تكراراً في حسابات هذه المتاجر:</p>
+    <ol class="list-decimal pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>شراء قوائم أرقام أو جمعها من مجموعات عامة ثم مراسلتها بالعروض.</li>
+      <li>إرسال عرض واحد لكل جهات الاتصال في يوم واحد مع بداية موسم مثل رمضان أو الجمعة البيضاء.</li>
+      <li>تشغيل تطبيق الأعمال على رقم شخصي ثم ربطه بأداة إرسال غير رسمية.</li>
+      <li>إضافة العملاء إلى مجموعات العروض دون سؤالهم.</li>
+      <li>تجاهل طلب العميل التوقف عن المراسلة، فيتحول طلبه إلى بلاغ.</li>
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-4">الحجم الكبير يحتاج القناة المصممة له رسمياً: <a href="/مدونة/واجهة-واتساب-الرسمية-للأعمال/" class="text-[#25D366] hover:underline">واجهة واتساب الرسمية للأعمال</a>. ومن حُظر حسابه التجاري رغم ذلك يجد مساره في <a href="/حظر-واتساب-للاعمال/" class="text-[#25D366] hover:underline">دليل حظر واتساب الأعمال</a>.</p>
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">قائمة فحص شهرية لحماية حساب واتساب</h2>
+    <p class="text-white/70 leading-relaxed mb-4">خمس دقائق مرة في الشهر تكفي لتتأكد أن حسابك بعيد عن أسباب الحظر الشائعة ومحمي من السرقة في الوقت نفسه:</p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-right border-collapse text-sm">
+        <thead><tr class="border-b border-white/15"><th class="py-3 px-3 text-white font-bold">البند</th><th class="py-3 px-3 text-white font-bold">كيف تتحقق منه</th></tr></thead>
+        <tbody>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">التطبيق رسمي ومحدّث</th><td class="py-3 px-3 text-white/70 align-top">ثبّته وحدّثه من المتجر الرسمي فقط، لا من رابط خارجي</td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">التحقق بخطوتين مفعّل</th><td class="py-3 px-3 text-white/70 align-top">من إعدادات الحساب. <a href="/مدونة/التحقق-بخطوتين-واتساب/" class="text-[#25D366] hover:underline">طريقة التفعيل</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">نسخة احتياطية حديثة</th><td class="py-3 px-3 text-white/70 align-top">راجع تاريخ آخر نسخة في إعدادات الدردشات. <a href="/مدونة/نسخ-احتياطي-واتساب/" class="text-[#25D366] hover:underline">النسخ الاحتياطي</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">لا أجهزة مرتبطة مجهولة</th><td class="py-3 px-3 text-white/70 align-top">راجع قائمة الأجهزة المرتبطة وأزل ما لا تعرفه. <a href="/مدونة/استخدام-واتساب-على-جهازين/" class="text-[#25D366] hover:underline">الأجهزة المرتبطة</a></td></tr>
+          <tr class="border-b border-white/8"><th scope="row" class="py-3 px-3 text-[#25D366] font-semibold align-top">لا أدوات إرسال آلي</th><td class="py-3 px-3 text-white/70 align-top">راجع التطبيقات التي منحتها صلاحية الوصول إلى واتساب واحذف غير الضروري</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-4">وإن وقع الحظر رغم كل ذلك، فابدأ بتحديد نوعه قبل أي خطوة: <a href="/مدونة/كيف-اعرف-اني-محظور-في-الواتس/" class="text-[#25D366] hover:underline">كيف تعرف أنك محظور في الواتس</a>، ثم اتبع <a href="/فك-حظر-واتساب/" class="text-[#25D366] hover:underline">دليل فك حظر واتساب</a>.</p>
+
+    <h2 class="text-2xl font-bold text-white mt-12 mb-4">ماذا تفعل إن وصلك تقييد أو إنذار اليوم؟</h2>
+    <p class="text-white/70 leading-relaxed mb-4">الإنذار المبكر فرصة لا تتكرر كثيراً، والتعامل الصحيح معه في الساعات الأولى قد يجنبك الحظر بالكامل. اتبع هذا الترتيب:</p>
+    <ol class="list-decimal pr-6 space-y-2 text-white/70 leading-relaxed mb-6">
+      <li>أوقف كل إرسال لأشخاص جدد فوراً، واكتفِ بالرد على من يراسلك.</li>
+      <li>حدّد آخر تغيير في طريقة استخدامك: حملة عروض، أو مجموعة جديدة، أو أداة ربطتها بالحساب مؤخراً.</li>
+      <li>أزل هذا التغيير كلياً، لا جزئياً. تخفيف الإرسال إلى النصف لا يكفي إن كان النمط نفسه هو المشكلة.</li>
+      <li>انتظر حتى تنتهي مدة التقييد كاملة قبل أن تعود إلى أي نشاط واسع، ثم عُد تدريجياً على مدى أيام.</li>
+      <li>إن كان الحساب تجارياً فراجع تقييم الجودة يومياً خلال الأسبوع التالي، وأوقف أي حملة يتراجع معها التقييم.</li>
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-4">وإن تحوّل الإنذار رغم ذلك إلى حظر، فلا تحاول الالتفاف عليه. ابدأ من <a href="/حظر-واتساب/" class="text-[#25D366] hover:underline">جدول تشخيص حظر واتساب</a> لتعرف نوعه، فلكل نوع مسار مختلف ومدة مختلفة.</p>
     <h2 class="text-2xl font-bold text-white mt-12 mb-6">الأسئلة الشائعة</h2>
     <div class="space-y-3">
       {faqs.map(faq => (
