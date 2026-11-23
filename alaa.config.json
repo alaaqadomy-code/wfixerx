@@ -1,0 +1,51 @@
+{
+  "_note": "أنشأه install.mjs من حزمة علاء. عدّل القيم لموقعك. لا أسرار هنا.",
+  "mode": "dist",
+  "domain": "https://wfixerx.com",
+  "dist": "dist",
+  "trailingSlash": true,
+  "contentPattern": "^/(مدونة/[^/]+|فك-حظر-واتساب|حظر-واتساب|حظر-واتساب-للاعمال|استرجاع-حساب-واتساب|رسالة-لا-يمكن-لهذا-الحساب|طلب-مراجعة-واتساب|خدمة-فك-حظر-واتساب)/?$",
+  "contentExclude": null,
+  "locales": null,
+  "titleMax": 60,
+  "descMin": 120,
+  "descMax": 160,
+  "moneyPages": [
+    "/خدمة-فك-حظر-واتساب/",
+    "/فك-حظر-واتساب/"
+  ],
+  "minMoney": 12,
+  "h1Exempt": "^/(404|404/)$",
+  "claimsProfile": "generic",
+  "selftestPage": null,
+  "touchGroups": [],
+  "typosPaths": [
+    "src"
+  ],
+  "liveAssets": [
+    "/favicon.ico",
+    "/llms.txt",
+    "/b751903050f94f32ad47312fa5150f8b.txt"
+  ],
+  "bannedLive": [
+    "نضمن",
+    "مضمون",
+    "AggregateRating",
+    "تابعون لواتساب",
+    "شركة واتساب الرسمية"
+  ],
+  "anchorBoxes": null,
+  "_similarityAllowWhy": "إخلاء المسؤولية (عدم التبعية لواتساب/ميتا ونفي الضمان) ودعوة التواصل: نصّان يتكرران عن قصد في كل صفحة لحماية الزائر وبيان حدود الخدمة، لا كتابة مكررة.",
+  "similarityAllow": [
+    "WFixerX خدمة مستقلة غير تابعة لواتساب أو ميتا",
+    "تواصل معنا وسنشرح لك الخيار المناسب دون طلب كلمة مرور ودون ضمان نتيجة"
+  ],
+  "content": {
+    "articles": null,
+    "services": null,
+    "noindex": null,
+    "layers": [],
+    "articlePrefix": "/مدونة/",
+    "servicePrefix": "/__none__/"
+  }
+}

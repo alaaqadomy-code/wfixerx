@@ -1,4 +1,8 @@
 ---
+import '@fontsource/ibm-plex-sans-arabic/400.css';
+import '@fontsource/ibm-plex-sans-arabic/500.css';
+import '@fontsource/ibm-plex-sans-arabic/600.css';
+import '@fontsource/ibm-plex-sans-arabic/700.css';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -17,7 +21,7 @@ const {
   description,
   canonical,
   schema,
-  ogImage = '/og-default.jpg'
+  ogImage = 'https://wfixerx.com/og-default.jpg'
 } = Astro.props;
 
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toString();
@@ -49,13 +53,6 @@ const pageTitle = title.includes(BRAND)
     <meta property="og:locale" content="ar_AR" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Fonts: non-render-blocking -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" /></noscript>
-
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -70,11 +67,6 @@ const pageTitle = title.includes(BRAND)
         "name": "WFixerX",
         "url": "https://wfixerx.com",
         "description": "خدمة متخصصة في مساعدة أصحاب حسابات واتساب المحظورة في العالم العربي",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": { "@type": "EntryPoint", "urlTemplate": "https://wfixerx.com/مدونة/?q={search_term_string}" },
-          "query-input": "required name=search_term_string"
-        }
       },
       {
         "@context": "https://schema.org",
@@ -83,9 +75,9 @@ const pageTitle = title.includes(BRAND)
         "url": "https://wfixerx.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://wfixerx.com/og-default.jpg",
-          "width": 1200,
-          "height": 630
+          "url": "https://wfixerx.com/favicon.svg",
+          "width": 512,
+          "height": 512
         },
         "description": "خدمة عربية متخصصة في مساعدة أصحاب حسابات واتساب المحظورة على استعادة حساباتهم",
         "areaServed": [

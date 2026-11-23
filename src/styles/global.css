@@ -352,3 +352,8 @@ details[open] summary { color: #25D366; }
     height: 50px;
   }
 }
+
+/* الهيدر لاصق: أبقِ العنوان المقصود تحته عند القفز برابط # */
+[id] {
+  scroll-margin-top: 5rem;
+}

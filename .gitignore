@@ -28,3 +28,9 @@ pnpm-debug.log*
 .claude/last-deploy.json
 
 .claude/worktrees/
+# حزمة علاء
+content-plan/gsc-raw.json
+content-plan/gsc-snapshots/
+content-plan/verify-live.json
+content-plan/index-request.json
+content-plan/index-coverage.json

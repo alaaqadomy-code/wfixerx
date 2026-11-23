@@ -40,39 +40,6 @@ const faqs = [
 const schema = JSON.stringify([
   {
     "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "كيف تفك حظر واتساب؟",
-    "description": "خطوات فك حظر واتساب بشكل صحيح — من تحديد نوع الحظر إلى تقديم طلب المراجعة",
-    "totalTime": "PT30M",
-    "step": [
-      {
-        "@type": "HowToStep",
-        "position": 1,
-        "name": "حدّد نوع الحظر",
-        "text": "تحقق من رسالة الحظر: إذا ظهر عداد وقت فهو حظر مؤقت. إذا ظهرت رسالة 'لا يمكن لهذا الحساب' فهو حظر نهائي."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 2,
-        "name": "انتظر للحظر المؤقت",
-        "text": "إذا كان الحظر مؤقتاً، أغلق التطبيق وانتظر من 24 إلى 72 ساعة دون تشغيله."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 3,
-        "name": "قدّم طلب مراجعة للحظر الدائم",
-        "text": "إذا كان الحظر نهائياً، اضغط على زر 'طلب مراجعة' في التطبيق أو زر support.whatsapp.com وأرسل طلباً احترافياً."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 4,
-        "name": "احصل على مساعدة متخصصة",
-        "text": "إذا رُفض طلبك أو لم تجد الزر، تواصل مع WFixerX للحصول على مساعدة في إعداد الطلب."
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": faqs.filter(f => !f.noSchema).map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
   }
@@ -93,9 +60,9 @@ const tgIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentCol
   <section class="hero-animated dot-grid relative overflow-hidden min-h-screen flex items-center">
 
     <!-- Radial glow layers -->
-    <div class="absolute top-[-10%] right-[-5%] w-[700px] h-[700px] bg-[#25D366]/8 rounded-full blur-[120px] pointer-events-none" aria-hidden="true"></div>
-    <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#0088CC]/8 rounded-full blur-[100px] pointer-events-none" aria-hidden="true"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#1A3C6E]/15 rounded-full blur-[80px] pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute top-[-10%] right-[-5%] w-[min(700px,90vw)] h-[700px] bg-[#25D366]/8 rounded-full blur-[120px] pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute bottom-[-10%] left-[-5%] w-[min(500px,90vw)] h-[500px] bg-[#0088CC]/8 rounded-full blur-[100px] pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(800px,90vw)] h-[400px] bg-[#1A3C6E]/15 rounded-full blur-[80px] pointer-events-none" aria-hidden="true"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 relative z-10 w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -111,9 +78,9 @@ const tgIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentCol
         </div>
 
         <h1 class="text-5xl sm:text-6xl md:text-7xl font-black text-white leading-[1.05] mb-6 animate-fade-up delay-1 tracking-tight">
-          حسابك<br>
-          واتساب<br>
-          <span class="text-gradient-green neon-text">محظور؟</span>
+          فك حظر<br>
+          واتساب —<br>
+          <span class="text-gradient-green neon-text">نساعدك الآن</span>
         </h1>
 
         <p class="text-lg sm:text-xl text-white/60 mb-4 max-w-xl leading-relaxed animate-fade-up delay-2">
